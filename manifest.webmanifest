@@ -1,0 +1,9 @@
+{
+  "name":"M's TOY BARN",
+  "short_name":"TOY BARN",
+  "start_url":"./",
+  "display":"standalone",
+  "background_color":"#3e2115",
+  "theme_color":"#6f351b",
+  "icons":[]
+}
