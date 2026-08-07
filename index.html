@@ -2,8 +2,8 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#ff5c6c">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+  <meta name="theme-color" content="#fff7f8">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <title>M's TOY BARN</title>
@@ -11,32 +11,48 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="app-shell">
-    <main id="app" aria-live="polite"></main>
-    <nav class="bottom-nav" aria-label="メインメニュー">
-      <button class="nav-item active" data-view="home"><span class="nav-icon">⌂</span><b>HOME</b></button>
-      <button class="nav-item" data-view="inventory"><span class="nav-icon">▣</span><b>商品</b></button>
-      <button class="nav-item nav-add" data-view="add"><span class="nav-icon">＋</span><b>登録</b></button>
-      <button class="nav-item" data-view="sales"><span class="nav-icon">↗</span><b>売上</b></button>
-      <button class="nav-item" data-view="settings"><span class="nav-icon">⚙</span><b>設定</b></button>
-    </nav>
-  </div>
+  <main class="dashboard">
+    <header class="topbar">
+      <div class="brandmark">m<span></span></div>
+      <div class="brandcopy"><b>M's TOY BARN</b><small>MERCARI MANAGER</small></div>
+      <button class="mini-btn" aria-label="設定">⚙︎</button>
+    </header>
 
-  <dialog id="itemDialog">
-    <form id="itemForm" class="dialog-card">
-      <header class="dialog-head">
-        <div><small>STOCK ENTRY</small><h2>商品を登録</h2></div>
-        <button type="button" class="close" data-close aria-label="閉じる">×</button>
-      </header>
-      <label>商品名<input id="name" required placeholder="例：Monkey D. Luffy #98"></label>
-      <div class="two"><label>仕入価格<input id="purchasePrice" type="number" min="0" inputmode="numeric" required placeholder="2500"></label><label>出品価格<input id="listingPrice" type="number" min="0" inputmode="numeric" placeholder="4980"></label></div>
-      <div class="two"><label>仕入先<select id="source"><option>メルカリ</option><option>Yahoo!フリマ</option><option>eBay</option><option>店舗</option><option>その他</option></select></label><label>状態<select id="status"><option>未出品</option><option>出品中</option><option>発送待ち</option><option>売却済み</option></select></label></div>
-      <label>発送費<input id="shippingFee" type="number" min="0" inputmode="numeric" value="750"></label>
-      <label>メモ<textarea id="memo" rows="3" placeholder="箱の状態・保管場所など"></textarea></label>
-      <button class="primary" type="submit">＋ 商品を登録する</button>
-    </form>
-  </dialog>
-  <div id="toast" role="status"></div>
+    <section class="hero">
+      <div><small>GOOD EVENING</small><h1>今日もええ感じでいこか！</h1></div>
+      <span class="hero-emoji">✨</span>
+    </section>
+
+    <section class="metrics" aria-label="サマリー">
+      <article class="metric pink"><div class="label"><span>📦</span>在庫数</div><strong id="inventory">236<em>点</em></strong><small>現在の在庫</small></article>
+      <article class="metric yellow"><div class="label"><span>🏷️</span>出品中</div><strong id="listed">128<em>点</em></strong><small>販売中の商品</small></article>
+      <article class="metric green"><div class="label"><span>¥</span>今月の利益</div><strong class="money" id="profit">¥128,450</strong><small>今月の確定利益</small></article>
+      <article class="metric blue"><div class="label"><span>🚚</span>発送待ち</div><strong id="shipping">7<em>件</em></strong><small>発送が必要</small></article>
+    </section>
+
+    <section class="chart-card">
+      <div class="chart-head"><div><b>📈 売上推移</b><small>今月</small></div><div class="legend"><span class="sale-dot"></span>売上 <span class="profit-dot"></span>利益</div></div>
+      <div class="chart-wrap">
+        <svg viewBox="0 0 340 120" preserveAspectRatio="none" role="img" aria-label="週間売上と利益の推移">
+          <defs><linearGradient id="bar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff7282"/><stop offset="1" stop-color="#ffb6bd"/></linearGradient></defs>
+          <g class="grid"><line x1="22" y1="20" x2="326" y2="20"/><line x1="22" y1="52" x2="326" y2="52"/><line x1="22" y1="84" x2="326" y2="84"/></g>
+          <g class="bars"><rect x="38" y="56" width="28" height="40" rx="7"/><rect x="98" y="38" width="28" height="58" rx="7"/><rect x="158" y="24" width="28" height="72" rx="7"/><rect x="218" y="42" width="28" height="54" rx="7"/><rect x="278" y="66" width="28" height="30" rx="7"/></g>
+          <polyline class="line" points="52,78 112,65 172,59 232,67 292,82"/>
+          <g class="points"><circle cx="52" cy="78" r="4"/><circle cx="112" cy="65" r="4"/><circle cx="172" cy="59" r="4"/><circle cx="232" cy="67" r="4"/><circle cx="292" cy="82" r="4"/></g>
+          <g class="weeks"><text x="52" y="114">W1</text><text x="112" y="114">W2</text><text x="172" y="114">W3</text><text x="232" y="114">W4</text><text x="292" y="114">W5</text></g>
+        </svg>
+      </div>
+      <div class="totals"><div><small>売上合計</small><b>¥289,540</b></div><div><small>利益合計</small><b>¥118,450</b></div></div>
+    </section>
+
+    <nav class="bottom-nav" aria-label="メインメニュー">
+      <button class="active"><span>⌂</span><b>HOME</b></button>
+      <button><span>📦</span><b>商品</b></button>
+      <button class="add"><span>＋</span><b>登録</b></button>
+      <button><span>↗</span><b>売上</b></button>
+      <button><span>⚙︎</span><b>設定</b></button>
+    </nav>
+  </main>
   <script src="app.js"></script>
 </body>
 </html>

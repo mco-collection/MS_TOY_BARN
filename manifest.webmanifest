@@ -1,10 +1,1 @@
-{
-  "name":"M's TOY BARN",
-  "short_name":"TOY BARN",
-  "start_url":"./",
-  "display":"standalone",
-  "background_color":"#f7f8fb",
-  "theme_color":"#ff5c6c",
-  "lang":"ja",
-  "orientation":"portrait"
-}
+{"name":"M's TOY BARN","short_name":"TOY BARN","start_url":"./","display":"standalone","background_color":"#ffffff","theme_color":"#fff7f8","lang":"ja"}
