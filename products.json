@@ -1285,7 +1285,9 @@
     "purchasePrice": 1781,
     "shipping": 450,
     "feeRate": 0.1,
-    "memo": ""
+    "memo": "",
+    "mercariId": "m32260630578",
+    "mercariSyncedAt": "2026-08-07T23:46:00+09:00"
   },
   {
     "id": "s026",
@@ -1299,6 +1301,90 @@
     "purchasePrice": null,
     "shipping": null,
     "feeRate": 0.1,
-    "memo": ""
+    "memo": "",
+    "mercariId": "m64128332655",
+    "mercariSyncedAt": "2026-08-07T23:46:00+09:00"
+  },
+  {
+    "id": "m001",
+    "pop": "",
+    "name": "宍田獣郎太",
+    "series": "My Hero Academia",
+    "price": 3099,
+    "status": "listing",
+    "mercariId": "m47713251532",
+    "mercariSyncedAt": "2026-08-07T23:46:00+09:00"
+  },
+  {
+    "id": "m002",
+    "pop": "",
+    "name": "ココポップス ココくん",
+    "series": "Coco Pops",
+    "price": 3999,
+    "status": "listing",
+    "mercariId": "m31169645572",
+    "mercariSyncedAt": "2026-08-07T23:46:00+09:00"
+  },
+  {
+    "id": "m003",
+    "pop": "",
+    "name": "ミッキーのジャックと豆の木",
+    "series": "Disney",
+    "price": 2799,
+    "status": "listing",
+    "mercariId": "m14880277411",
+    "mercariSyncedAt": "2026-08-07T23:46:00+09:00"
+  },
+  {
+    "id": "m004",
+    "pop": "",
+    "name": "うずまきナルト",
+    "series": "Naruto",
+    "price": 4699,
+    "status": "listing",
+    "mercariId": "m18854496560",
+    "mercariSyncedAt": "2026-08-07T23:46:00+09:00"
+  },
+  {
+    "id": "m005",
+    "pop": "",
+    "name": "ハローキティ 2体セット",
+    "series": "Hello Kitty / Sanrio",
+    "price": 7599,
+    "status": "listing",
+    "mercariId": "m31724542735",
+    "mercariSyncedAt": "2026-08-07T23:46:00+09:00"
+  },
+  {
+    "id": "m006",
+    "pop": "",
+    "name": "トイストーリー ミスター・プリックルパンツ",
+    "series": "Toy Story",
+    "price": 4899,
+    "status": "sold",
+    "soldYear": null,
+    "soldMonth": null,
+    "purchasePrice": null,
+    "shipping": null,
+    "feeRate": 0.1,
+    "memo": "メルカリ同期で販売済み確認。購入日時は連携データから取得不可。",
+    "mercariId": "m96200880891",
+    "mercariSyncedAt": "2026-08-07T23:46:00+09:00"
+  },
+  {
+    "id": "m007",
+    "pop": "",
+    "name": "マーベル 4体セット",
+    "series": "Marvel",
+    "price": 11099,
+    "status": "sold",
+    "soldYear": null,
+    "soldMonth": null,
+    "purchasePrice": null,
+    "shipping": null,
+    "feeRate": 0.1,
+    "memo": "メルカリ同期で販売済み確認。購入日時は連携データから取得不可。",
+    "mercariId": "m95655294837",
+    "mercariSyncedAt": "2026-08-07T23:46:00+09:00"
   }
 ]
