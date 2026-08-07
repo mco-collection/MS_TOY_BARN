@@ -3,7 +3,8 @@
   "short_name":"TOY BARN",
   "start_url":"./",
   "display":"standalone",
-  "background_color":"#3e2115",
-  "theme_color":"#6f351b",
-  "icons":[]
+  "background_color":"#f7f8fb",
+  "theme_color":"#ff5c6c",
+  "lang":"ja",
+  "orientation":"portrait"
 }

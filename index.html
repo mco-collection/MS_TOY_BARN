@@ -3,34 +3,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#6f351b">
+  <meta name="theme-color" content="#ff5c6c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <title>M's TOY BARN</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="app-shell">
-    <main id="app"></main>
+    <main id="app" aria-live="polite"></main>
     <nav class="bottom-nav" aria-label="メインメニュー">
-      <button class="nav-item active" data-view="home"><span>🏠</span><b>お店</b><small>HOME</small></button>
-      <button class="nav-item" data-view="inventory"><span>🗄️</span><b>棚</b><small>在庫</small></button>
-      <button class="nav-item" data-view="add"><span>🏪</span><b>レジ</b><small>仕入れ</small></button>
-      <button class="nav-item" data-view="sales"><span>🧾</span><b>レシート</b><small>売上</small></button>
-      <button class="nav-item" data-view="settings"><span>🏚️</span><b>倉庫</b><small>その他</small></button>
+      <button class="nav-item active" data-view="home"><span class="nav-icon">⌂</span><b>HOME</b></button>
+      <button class="nav-item" data-view="inventory"><span class="nav-icon">▣</span><b>商品</b></button>
+      <button class="nav-item nav-add" data-view="add"><span class="nav-icon">＋</span><b>登録</b></button>
+      <button class="nav-item" data-view="sales"><span class="nav-icon">↗</span><b>売上</b></button>
+      <button class="nav-item" data-view="settings"><span class="nav-icon">⚙</span><b>設定</b></button>
     </nav>
   </div>
 
   <dialog id="itemDialog">
     <form id="itemForm" class="dialog-card">
-      <header><h2>仕入れを登録</h2><button type="button" class="close" data-close>×</button></header>
+      <header class="dialog-head">
+        <div><small>STOCK ENTRY</small><h2>商品を登録</h2></div>
+        <button type="button" class="close" data-close aria-label="閉じる">×</button>
+      </header>
       <label>商品名<input id="name" required placeholder="例：Monkey D. Luffy #98"></label>
-      <div class="two"><label>仕入価格<input id="purchasePrice" type="number" min="0" required></label><label>出品価格<input id="listingPrice" type="number" min="0"></label></div>
+      <div class="two"><label>仕入価格<input id="purchasePrice" type="number" min="0" inputmode="numeric" required placeholder="2500"></label><label>出品価格<input id="listingPrice" type="number" min="0" inputmode="numeric" placeholder="4980"></label></div>
       <div class="two"><label>仕入先<select id="source"><option>メルカリ</option><option>Yahoo!フリマ</option><option>eBay</option><option>店舗</option><option>その他</option></select></label><label>状態<select id="status"><option>未出品</option><option>出品中</option><option>発送待ち</option><option>売却済み</option></select></label></div>
+      <label>発送費<input id="shippingFee" type="number" min="0" inputmode="numeric" value="750"></label>
       <label>メモ<textarea id="memo" rows="3" placeholder="箱の状態・保管場所など"></textarea></label>
-      <button class="primary" type="submit">段ボールに追加する</button>
+      <button class="primary" type="submit">＋ 商品を登録する</button>
     </form>
   </dialog>
-
   <div id="toast" role="status"></div>
   <script src="app.js"></script>
 </body>
