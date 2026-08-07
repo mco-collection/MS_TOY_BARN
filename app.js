@@ -9,7 +9,7 @@ const yen=n=>'¥'+Number(n).toLocaleString('ja-JP');
 
 async function loadProducts(){
   try{
-    const res=await fetch('./products.json',{cache:'no-store'});
+    const res=await fetch('./products.json?v=110',{cache:'no-store'});
     products=await res.json();
     const listed=products.filter(p=>p.status==='listing');
     document.getElementById('inventory').innerHTML=`${listed.length}<em>件</em>`;
@@ -35,4 +35,4 @@ navButtons.forEach(btn=>btn.addEventListener('click',()=>{
 }));
 document.querySelectorAll('.mini-btn').forEach(btn=>btn.addEventListener('click',()=>{}));
 loadProducts();
-if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
+if('serviceWorker' in navigator){window.addEventListener('load',async()=>{try{const reg=await navigator.serviceWorker.register('./sw.js?v=110'); await reg.update();}catch(e){console.warn('service worker update failed',e)}});}
