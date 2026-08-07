@@ -1,4 +1,4 @@
-const CACHE='ms-toy-barn-one-screen-v110';
+const CACHE='ms-toy-barn-one-screen-v200';
 const FILES=['./','./index.html','./styles.css?v=110','./app.js?v=110','./manifest.webmanifest'];
 self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)))});
 self.addEventListener('activate',e=>e.waitUntil(Promise.all([caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))),self.clients.claim()])));

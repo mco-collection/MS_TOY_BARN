@@ -8,7 +8,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <title>M's TOY BARN</title>
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="styles.css?v=110">
+  <link rel="stylesheet" href="styles.css?v=200">
 </head>
 <body>
   <main class="dashboard">
@@ -58,6 +58,9 @@
       <button><span>⚙︎</span><b>設定</b></button>
     </nav>
   </main>
-  <script src="app.js?v=110"></script>
+
+<div class="modal" id="editModal" hidden><div class="modal-card"><h2>商品を編集</h2><div class="form-grid"><label>商品名<input id="editTitle"></label><label>POP番号<input id="editPop"></label><label>シリーズ<input id="editSeries"></label><label>価格<input id="editPrice" type="number"></label><label>仕入れ値<input id="editPurchase" type="number"></label><label>メモ<textarea id="editMemo"></textarea></label><div id="soldFields"><label>販売月<select id="editSoldMonth"><option value="">未設定</option><option value="1">1月</option><option value="2">2月</option><option value="3">3月</option><option value="4">4月</option><option value="5">5月</option><option value="6">6月</option><option value="7">7月</option><option value="8">8月</option><option value="9">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option></select></label><label>送料<input id="editShipping" type="number"></label></div></div><div class="modal-actions"><button class="secondary" data-close>キャンセル</button><button class="secondary" id="soldAction" onclick="openSold()">販売済みにする</button><button class="primary" onclick="applyBasic()">保存</button></div></div></div>
+<div class="modal" id="soldModal" hidden><div class="modal-card"><h2>販売済みにする</h2><div class="form-grid"><label>販売価格<input id="soldPrice" type="number"></label><label>販売月<select id="soldMonth"><option value="">選択</option><option value="1">1月</option><option value="2">2月</option><option value="3">3月</option><option value="4">4月</option><option value="5">5月</option><option value="6">6月</option><option value="7">7月</option><option value="8">8月</option><option value="9">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option></select></label><label>送料<input id="soldShipping" type="number" placeholder="販売後の確定送料"></label><small>販売手数料10%は自動計算します。</small></div><div class="modal-actions"><button class="secondary" data-close>戻る</button><button class="primary" onclick="confirmSold()">販売済みにする</button></div></div></div>
+  <script src="app.js?v=200"></script>
 </body>
 </html>
