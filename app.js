@@ -1,9 +1,9 @@
 const navButtons=document.querySelectorAll('.bottom-nav button');
 const homeCard=document.getElementById('homeCard'), productPanel=document.getElementById('productPanel'), salesPanel=document.getElementById('salesPanel');
 const metrics=document.querySelector('.metrics'), hero=document.querySelector('.hero');
-let products=[], currentTab='listing', editingId=null, salesMonth=0, productQuery='';
-const productSearch=document.getElementById('productSearch'), clearSearch=document.getElementById('clearSearch');
-const DATA_VERSION=403;
+let products=[], currentTab='listing', editingId=null, salesMonth=0, productQuery='', productSort='default', chartStyle='mix';
+const productSearch=document.getElementById('productSearch'), clearSearch=document.getElementById('clearSearch'), productSortSelect=document.getElementById('productSort');
+const DATA_VERSION=404;
 const yen=n=>'¥'+Number(n||0).toLocaleString('ja-JP');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function calcProfit(p){if(p.status!=='sold'||p.purchasePrice==null||p.shipping==null)return null;return Math.round(p.price*(1-(p.feeRate??.1))-p.shipping-p.purchasePrice)}
@@ -25,7 +25,7 @@ function recordPriceChange(p,from,to,kind){if(from===to)return;p.priceHistory=p.
 function changePrice(p,delta,kind='manual'){const from=Number(p.price||0),to=Math.max(300,from+delta);recordPriceChange(p,from,to,kind);p.price=to;p.lastPriceUpdate=new Date().toISOString()}
 async function loadProducts(){
  try{
-  const res=await fetch('./products.json?v=403',{cache:'no-store'}), base=await res.json();
+  const res=await fetch('./products.json?v=404',{cache:'no-store'}), base=await res.json();
   const saved=JSON.parse(localStorage.getItem('mstb_products_v2')||'null'), ver=Number(localStorage.getItem('mstb_data_version')||0);
   if(saved&&ver===DATA_VERSION){products=saved}
   else if(saved){
@@ -54,7 +54,12 @@ function renderAll(){
 function renderProducts(){
  const all=products.filter(p=>p.status===currentTab);
  const q=productQuery.trim().toLowerCase();
- const list=!q?all:all.filter(p=>[p.name,p.series,p.pop,p.memo].some(v=>String(v??'').toLowerCase().includes(q)));
+ let list=!q?all.slice():all.filter(p=>[p.name,p.series,p.pop,p.memo].some(v=>String(v??'').toLowerCase().includes(q)));
+ const marginValue=p=>{if(p.purchasePrice==null)return null;const price=Number(p.price||0);if(price<=0)return null;const ship=p.status==='sold'&&p.shipping!=null?Number(p.shipping):estimatedShipping(p);return quoteProfit(p,price,ship).margin};
+ if(productSort==='price-desc')list.sort((a,b)=>Number(b.price||0)-Number(a.price||0));
+ else if(productSort==='price-asc')list.sort((a,b)=>Number(a.price||0)-Number(b.price||0));
+ else if(productSort==='margin-desc')list.sort((a,b)=>{const av=marginValue(a),bv=marginValue(b);if(av==null&&bv==null)return 0;if(av==null)return 1;if(bv==null)return -1;return bv-av});
+ else if(productSort==='margin-asc')list.sort((a,b)=>{const av=marginValue(a),bv=marginValue(b);if(av==null&&bv==null)return 0;if(av==null)return 1;if(bv==null)return -1;return av-bv});
  document.getElementById('productSummary').textContent=q?`${list.length}/${all.length}件`:`${all.length}件`;
  document.querySelector('.product-head b').textContent=currentTab==='listing'?'📦 出品中の商品':currentTab==='stopped'?'⏸ 出品停止中':'✅ 販売済み';
  document.getElementById('listingValue').textContent=yen(list.reduce((s,p)=>s+Number(p.price||0),0));
@@ -70,11 +75,25 @@ function monthlyData(){return Array.from({length:12},(_,i)=>{const month=i+1,xs=
 function renderSales(){
  const sold=products.filter(p=>p.status==='sold'&&p.soldYear===2026), profits=sold.map(calcProfit).filter(v=>v!=null), md=monthlyData();
  yearSales.textContent=yen(sold.reduce((s,p)=>s+Number(p.price||0),0));yearProfit.textContent=yen(profits.reduce((a,b)=>a+b,0));yearSoldCount.textContent=`${sold.length}件`;yearProfitKnown.textContent=`${profits.length}/${sold.length}件`;
- const max=Math.max(...md.flatMap(x=>[x.sales,x.profit]),1), W=600,H=180,left=28,bottom=28,top=18,plotH=H-bottom-top,step=(W-left-8)/12,barW=Math.max(12,step*.46);
- let bars='',linePts=[],points='';
- md.forEach((d,i)=>{const x=left+i*step+step/2, bh=d.sales/max*plotH, py=H-bottom-(d.profit/max*plotH);bars+=`<rect x="${x-barW/2}" y="${H-bottom-bh}" width="${barW}" height="${bh}" rx="7"/><text x="${x}" y="${H-9}">${i+1}月</text>`;linePts.push(`${x},${py}`);points+=`<circle cx="${x}" cy="${py}" r="3.8"/>`});
- const firstX=left+step/2,lastX=left+11*step+step/2,baseY=H-bottom,areaPath=`M ${firstX} ${baseY} L ${linePts.join(' L ')} L ${lastX} ${baseY} Z`;
- salesChart.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="2026年月別売上と利益"><defs><linearGradient id="salesBarGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff6678"/><stop offset="1" stop-color="#ffc3ca"/></linearGradient><linearGradient id="salesProfitArea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4c9ff5" stop-opacity=".22"/><stop offset="1" stop-color="#4c9ff5" stop-opacity="0"/></linearGradient></defs><g class="sales-grid"><line x1="${left}" y1="${top}" x2="${W}" y2="${top}"/><line x1="${left}" y1="${top+plotH/2}" x2="${W}" y2="${top+plotH/2}"/><line x1="${left}" y1="${baseY}" x2="${W}" y2="${baseY}"/></g><path class="sales-profit-area" d="${areaPath}"/><g class="sales-bars">${bars}</g><polyline class="sales-profit-line" points="${linePts.join(' ')}"/><g class="sales-profit-points">${points}</g></svg>`;
+ const max=Math.max(...md.flatMap(x=>[x.sales,x.profit]),1), W=600,H=180,left=28,bottom=28,top=18,plotH=H-bottom-top,step=(W-left-8)/12,barW=Math.max(12,step*.46),baseY=H-bottom;
+ let svg='';
+ if(chartStyle==='line'){
+  let salesPts=[],profitPts=[],salesPoints='',profitPoints='';
+  md.forEach((d,i)=>{const x=left+i*step+step/2,sy=baseY-d.sales/max*plotH,py=baseY-d.profit/max*plotH;salesPts.push(`${x},${sy}`);profitPts.push(`${x},${py}`);salesPoints+=`<circle cx="${x}" cy="${sy}" r="3.8"/><text x="${x}" y="${H-9}">${i+1}月</text>`;profitPoints+=`<circle cx="${x}" cy="${py}" r="3.8"/>`});
+  svg=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="2026年月別売上と利益"><g class="sales-grid"><line x1="${left}" y1="${top}" x2="${W}" y2="${top}"/><line x1="${left}" y1="${top+plotH/2}" x2="${W}" y2="${top+plotH/2}"/><line x1="${left}" y1="${baseY}" x2="${W}" y2="${baseY}"/></g><polyline class="sales-main-line" points="${salesPts.join(' ')}"/><polyline class="sales-profit-line" points="${profitPts.join(' ')}"/><g class="sales-main-points">${salesPoints}</g><g class="sales-profit-points">${profitPoints}</g></svg>`;
+ }else if(chartStyle==='block'){
+  let blocks='';
+  md.forEach((d,i)=>{const x=left+i*step+step/2,bh=d.sales/max*plotH,ph=d.profit/max*plotH;blocks+=`<g class="sales-block"><rect class="block-bg" x="${x-barW/2}" y="${top}" width="${barW}" height="${plotH}" rx="${barW/2}"/><rect class="block-sales" x="${x-barW/2}" y="${baseY-bh}" width="${barW}" height="${bh}" rx="${barW/2}"/><rect class="block-profit" x="${x-barW/2+barW*.23}" y="${baseY-ph}" width="${barW*.54}" height="${ph}" rx="${barW*.27}"/><text x="${x}" y="${H-9}">${i+1}月</text></g>`});
+  svg=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="2026年月別売上と利益">${blocks}</svg>`;
+ }else{
+  let bars='',linePts=[],points='';
+  md.forEach((d,i)=>{const x=left+i*step+step/2,bh=d.sales/max*plotH,py=baseY-d.profit/max*plotH;bars+=`<rect x="${x-barW/2}" y="${baseY-bh}" width="${barW}" height="${bh}" rx="7"/><text x="${x}" y="${H-9}">${i+1}月</text>`;linePts.push(`${x},${py}`);points+=`<circle cx="${x}" cy="${py}" r="3.8"/>`});
+  const firstX=left+step/2,lastX=left+11*step+step/2,areaPath=`M ${firstX} ${baseY} L ${linePts.join(' L ')} L ${lastX} ${baseY} Z`;
+  svg=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="2026年月別売上と利益"><defs><linearGradient id="salesBarGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff6678"/><stop offset="1" stop-color="#ffc3ca"/></linearGradient><linearGradient id="salesProfitArea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4c9ff5" stop-opacity=".22"/><stop offset="1" stop-color="#4c9ff5" stop-opacity="0"/></linearGradient></defs><g class="sales-grid"><line x1="${left}" y1="${top}" x2="${W}" y2="${top}"/><line x1="${left}" y1="${top+plotH/2}" x2="${W}" y2="${top+plotH/2}"/><line x1="${left}" y1="${baseY}" x2="${W}" y2="${baseY}"/></g><path class="sales-profit-area" d="${areaPath}"/><g class="sales-bars">${bars}</g><polyline class="sales-profit-line" points="${linePts.join(' ')}"/><g class="sales-profit-points">${points}</g></svg>`;
+ }
+ salesChart.innerHTML=svg;
+ const hint=document.getElementById('chartStyleHint');if(hint)hint.textContent=chartStyle==='mix'?'棒＝売上 / 線＝確定利益':chartStyle==='line'?'2本のラインで推移を比較':'カプセル棒で売上と利益を比較';
+ document.querySelectorAll('[data-chart-style]').forEach(b=>{b.classList.toggle('active',b.dataset.chartStyle===chartStyle);b.onclick=()=>{chartStyle=b.dataset.chartStyle;localStorage.setItem('mstb_chart_style',chartStyle);renderSales()}});
  monthFilter.innerHTML=`<button class="${salesMonth===0?'active':''}" data-month="0">全部</button>`+md.filter(d=>d.count).map(d=>`<button class="${salesMonth===d.month?'active':''}" data-month="${d.month}">${d.month}月 <b>${d.count}</b></button>`).join('');
  document.querySelectorAll('[data-month]').forEach(b=>b.onclick=()=>{salesMonth=Number(b.dataset.month);renderSales()});
  const list=sold.filter(p=>!salesMonth||p.soldMonth===salesMonth).sort((a,b)=>(b.soldMonth||0)-(a.soldMonth||0));
@@ -102,8 +121,10 @@ function updateProfitCalc(){const p=products.find(x=>x.id===editingId);if(!p)ret
 function closeProfit(){profitModal.hidden=true;editModal.hidden=false}
 
 if(productSearch){productSearch.addEventListener('input',()=>{productQuery=productSearch.value;clearSearch.hidden=!productQuery;renderProducts()});}
+if(productSortSelect){productSortSelect.addEventListener('change',()=>{productSort=productSortSelect.value;renderProducts()});}
 if(clearSearch){clearSearch.addEventListener('click',()=>{productQuery='';productSearch.value='';clearSearch.hidden=true;renderProducts();productSearch.focus()});}
 navButtons.forEach(btn=>btn.addEventListener('click',()=>{if(btn.dataset.view)showView(btn.dataset.view)}));
 document.addEventListener('click',e=>{if(e.target.matches('[data-close]'))closeModal()});
+chartStyle=localStorage.getItem('mstb_chart_style')||'mix';
 window.applyBasic=applyBasic;window.stopListing=stopListing;window.relistProduct=relistProduct;window.openSold=openSold;window.confirmSold=confirmSold;window.quickPrice=quickPrice;window.openProfitCalc=openProfitCalc;window.updateProfitCalc=updateProfitCalc;window.closeProfit=closeProfit;loadProducts();
-if('serviceWorker' in navigator){window.addEventListener('load',async()=>{try{const reg=await navigator.serviceWorker.register('./sw.js?v=403');await reg.update()}catch(e){}})}
+if('serviceWorker' in navigator){window.addEventListener('load',async()=>{try{const reg=await navigator.serviceWorker.register('./sw.js?v=404');await reg.update()}catch(e){}})}

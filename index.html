@@ -51,7 +51,7 @@
 
     <section class="product-panel" id="productPanel" hidden>
       <div class="product-head"><div><b>📦 出品中の商品</b><small id="productSummary">110件</small></div><strong id="listingValue">¥881,790</strong></div>
-      <div class="product-search"><span>⌕</span><input id="productSearch" type="search" inputmode="search" placeholder="商品名・シリーズ・POP番号で検索"><button id="clearSearch" type="button" aria-label="検索をクリア" hidden>×</button></div>
+      <div class="product-tools"><div class="product-search"><span>⌕</span><input id="productSearch" type="search" inputmode="search" placeholder="商品名・シリーズ・POP番号で検索"><button id="clearSearch" type="button" aria-label="検索をクリア" hidden>×</button></div><select id="productSort" class="product-sort" aria-label="商品の並べ替え"><option value="default">並べ替え</option><option value="price-desc">価格 高い順</option><option value="price-asc">価格 低い順</option><option value="margin-desc">利益率 高い順</option><option value="margin-asc">利益率 低い順</option></select></div>
       <div class="product-list" id="productList"></div>
     </section>
 
@@ -65,7 +65,7 @@
         <article><small>利益確定</small><strong id="yearProfitKnown">—</strong></article>
       </div>
       <div class="sales-chart-box">
-        <div class="sales-chart-title"><b>月別 売上・利益</b><small>棒＝売上 / 線＝確定利益</small></div>
+        <div class="sales-chart-title"><div><b>月別 売上・利益</b><small id="chartStyleHint">棒＝売上 / 線＝確定利益</small></div><div class="chart-style-switch" id="chartStyleSwitch"><button data-chart-style="mix" class="active">MIX</button><button data-chart-style="line">LINE</button><button data-chart-style="block">BLOCK</button></div></div>
         <div id="salesChart" class="sales-chart"></div>
       </div>
       <div class="month-filter" id="monthFilter"></div>

@@ -29,3 +29,8 @@
 .sales-bars rect{fill:url(#salesBarGrad);filter:drop-shadow(0 4px 5px rgba(255,92,111,.10))}.sales-profit-area{fill:url(#salesProfitArea)}
 .sales-chart-title small{background:#f4f8ff;border-radius:999px;padding:4px 7px;color:#6f89a6}
 @media(max-width:390px){.product-search{height:39px;margin-bottom:7px}.product-list{height:calc(100% - 90px)}}
+
+/* v404: sorting + chart design switcher */
+.product-tools{display:grid;grid-template-columns:minmax(0,1fr) 118px;gap:7px;margin-bottom:9px}.product-tools .product-search{margin:0}.product-sort{min-width:0;height:42px;border:1px solid #ece8eb;border-radius:14px;background:#faf8fa;color:#575158;font-size:10px;font-weight:850;padding:0 8px;outline:0}.product-list{height:calc(100% - 96px)}
+.sales-chart-title>div:first-child{min-width:0}.sales-chart-title small{display:block;margin-top:2px}.chart-style-switch{display:flex;gap:3px;padding:3px;border-radius:10px;background:#f3f0f2}.chart-style-switch button{border:0;border-radius:8px;background:transparent;color:#8c858b;padding:5px 7px;font-size:7px;font-weight:950}.chart-style-switch button.active{background:#fff;color:#e95166;box-shadow:0 1px 5px #0001}.sales-main-line{fill:none;stroke:#ff6678;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.sales-main-points circle{fill:#fff;stroke:#ff6678;stroke-width:2.2}.sales-main-points text,.sales-block text{font-size:8px;fill:#8c8992;text-anchor:middle}.sales-block .block-bg{fill:#f2eef0}.sales-block .block-sales{fill:#ff91a0}.sales-block .block-profit{fill:#57a6f4}
+@media(max-width:390px){.product-tools{grid-template-columns:minmax(0,1fr) 106px}.product-sort{height:39px;font-size:9px}.chart-style-switch button{padding:5px 6px;font-size:6.5px}}
