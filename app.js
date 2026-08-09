@@ -2,7 +2,7 @@ const navButtons=document.querySelectorAll('.bottom-nav button');
 const homeCard=document.getElementById('homeCard'), productPanel=document.getElementById('productPanel'), salesPanel=document.getElementById('salesPanel');
 const metrics=document.querySelector('.metrics'), hero=document.querySelector('.hero');
 let products=[], currentTab='listing', editingId=null, salesMonth=0;
-const DATA_VERSION=401;
+const DATA_VERSION=402;
 const yen=n=>'¥'+Number(n||0).toLocaleString('ja-JP');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function calcProfit(p){if(p.status!=='sold'||p.purchasePrice==null||p.shipping==null)return null;return Math.round(p.price*(1-(p.feeRate??.1))-p.shipping-p.purchasePrice)}
@@ -24,7 +24,7 @@ function recordPriceChange(p,from,to,kind){if(from===to)return;p.priceHistory=p.
 function changePrice(p,delta,kind='manual'){const from=Number(p.price||0),to=Math.max(300,from+delta);recordPriceChange(p,from,to,kind);p.price=to;p.lastPriceUpdate=new Date().toISOString()}
 async function loadProducts(){
  try{
-  const res=await fetch('./products.json?v=401',{cache:'no-store'}), base=await res.json();
+  const res=await fetch('./products.json?v=402',{cache:'no-store'}), base=await res.json();
   const saved=JSON.parse(localStorage.getItem('mstb_products_v2')||'null'), ver=Number(localStorage.getItem('mstb_data_version')||0);
   if(saved&&ver===DATA_VERSION){products=saved}
   else if(saved){
@@ -52,11 +52,11 @@ function renderAll(){
 }
 function renderProducts(){
  const list=products.filter(p=>p.status===currentTab); document.getElementById('productSummary').textContent=`${list.length}件`;
- document.querySelector('.product-head b').textContent=currentTab==='listing'?'📦 出品中の商品':'✅ 販売済み';
+ document.querySelector('.product-head b').textContent=currentTab==='listing'?'📦 出品中の商品':currentTab==='stopped'?'⏸ 出品停止中':'✅ 販売済み';
  document.getElementById('listingValue').textContent=yen(list.reduce((s,p)=>s+Number(p.price||0),0));
- const tabs=`<div class="tabs"><button class="tab-btn ${currentTab==='listing'?'active':''}" data-tab="listing">出品中</button><button class="tab-btn ${currentTab==='sold'?'active':''}" data-tab="sold">販売済み</button></div>`;
+ const tabs=`<div class="tabs"><button class="tab-btn ${currentTab==='listing'?'active':''}" data-tab="listing">出品中</button><button class="tab-btn ${currentTab==='stopped'?'active':''}" data-tab="stopped">停止中</button><button class="tab-btn ${currentTab==='sold'?'active':''}" data-tab="sold">販売済み</button></div>`;
  const bulk=currentTab==='listing'?`<div class="bulk-price"><b>一括価格更新</b><div><button data-bulk="300">全て +¥300</button><button data-bulk="-100">全て −¥100</button></div></div>`:'';
- productList.innerHTML=tabs+bulk+list.map(p=>{const pr=calcProfit(p), ship=estimatedShipping(p);return `<article class="product-row" data-id="${p.id}"><div><b>${esc(p.name)}${p.status==='sold'?'<span class="status-badge sold-badge">販売済</span>':''}</b><small>${esc(p.series||'')}${p.pop?` ・ #${esc(p.pop)}`:''}</small>${p.status==='listing'?`<div class="estimate-mini">予想送料 ${yen(ship)}${p.purchasePrice!=null?` ・ 現在の予想利益 ${yen(quoteProfit(p,p.price,ship).profit)}`:''}</div>`:''}${p.status==='sold'?`<div class="sold-info">${p.soldYear&&p.soldMonth?`${p.soldYear}年${p.soldMonth}月`:'販売日未確認'}${pr==null?' ・ 利益未確定':' ・ 利益 '+yen(pr)}</div>`:''}</div><strong>${yen(p.price)}</strong></article>`}).join('');
+ productList.innerHTML=tabs+bulk+list.map(p=>{const pr=calcProfit(p), ship=estimatedShipping(p);return `<article class="product-row" data-id="${p.id}"><div><b>${esc(p.name)}${p.status==='sold'?'<span class="status-badge sold-badge">販売済</span>':p.status==='stopped'?'<span class="status-badge stopped-badge">停止中</span>':''}</b><small>${esc(p.series||'')}${p.pop?` ・ #${esc(p.pop)}`:''}</small>${p.status==='listing'?`<div class="estimate-mini">予想送料 ${yen(ship)}${p.purchasePrice!=null?` ・ 現在の予想利益 ${yen(quoteProfit(p,p.price,ship).profit)}`:''}</div>`:''}${p.status==='sold'?`<div class="sold-info">${p.soldYear&&p.soldMonth?`${p.soldYear}年${p.soldMonth}月`:'販売日未確認'}${pr==null?' ・ 利益未確定':' ・ 利益 '+yen(pr)}</div>`:''}</div><strong>${yen(p.price)}</strong></article>`}).join('');
  document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{currentTab=b.dataset.tab;renderProducts()});
  document.querySelectorAll('.product-row[data-id]').forEach(r=>r.onclick=()=>openEdit(r.dataset.id));
  document.querySelectorAll('[data-bulk]').forEach(b=>b.onclick=()=>{const d=Number(b.dataset.bulk);products.filter(p=>p.status==='listing').forEach(p=>changePrice(p,d,'bulk'));save()});
@@ -82,9 +82,12 @@ function showView(view){
  document.querySelector('.dashboard').classList.toggle('products-view',isProducts);document.querySelector('.dashboard').classList.toggle('sales-view',isSales);
  if(isSales)renderSales();
 }
-function openEdit(id){editingId=id;const p=products.find(x=>x.id===id); editTitle.value=p.name||'';editPop.value=p.pop||'';editSeries.value=p.series||'';editPrice.value=p.price||'';editPurchase.value=p.purchasePrice??'';editMemo.value=p.memo||'';soldAction.hidden=p.status==='sold';soldFields.hidden=p.status!=='sold';priceTools.hidden=p.status!=='listing';editSoldMonth.value=p.soldMonth||'';editShipping.value=p.shipping??'';estimatedShip.textContent=yen(estimatedShipping(p));priceHistoryBox.innerHTML=(p.priceHistory||[]).slice(-5).reverse().map(h=>`<small>${new Date(h.at).toLocaleDateString('ja-JP')} ${yen(h.from)} → ${yen(h.to)}</small>`).join('')||'<small>価格変更履歴なし</small>';editModal.hidden=false}
+function openEdit(id){editingId=id;const p=products.find(x=>x.id===id); editTitle.value=p.name||'';editPop.value=p.pop||'';editSeries.value=p.series||'';editPrice.value=p.price||'';editPurchase.value=p.purchasePrice??'';editMemo.value=p.memo||'';soldAction.hidden=p.status!=='listing';stopAction.hidden=p.status!=='listing';relistAction.hidden=p.status!=='stopped';soldFields.hidden=p.status!=='sold';priceTools.hidden=p.status!=='listing';editSoldMonth.value=p.soldMonth||'';editShipping.value=p.shipping??'';estimatedShip.textContent=yen(estimatedShipping(p));priceHistoryBox.innerHTML=(p.priceHistory||[]).slice(-5).reverse().map(h=>`<small>${new Date(h.at).toLocaleDateString('ja-JP')} ${yen(h.from)} → ${yen(h.to)}</small>`).join('')||'<small>価格変更履歴なし</small>';editModal.hidden=false}
 function closeModal(){editModal.hidden=true;soldModal.hidden=true;profitModal.hidden=true}
 function applyBasic(){const p=products.find(x=>x.id===editingId);p.name=editTitle.value.trim();p.pop=editPop.value.trim();p.series=editSeries.value.trim();const np=Number(editPrice.value)||0;recordPriceChange(p,Number(p.price||0),np,'edit');p.price=np;p.purchasePrice=editPurchase.value===''?null:Number(editPurchase.value);p.memo=editMemo.value; if(p.status==='sold'){p.soldMonth=Number(editSoldMonth.value)||null;p.shipping=editShipping.value===''?null:Number(editShipping.value)}save();closeModal()}
+
+function stopListing(){const p=products.find(x=>x.id===editingId);if(!p)return;p.status='stopped';p.stoppedAt=new Date().toISOString();save();closeModal();currentTab='stopped';showView('products')}
+function relistProduct(){const p=products.find(x=>x.id===editingId);if(!p)return;p.status='listing';delete p.stoppedAt;save();closeModal();currentTab='listing';showView('products')}
 function openSold(){const p=products.find(x=>x.id===editingId);soldPrice.value=p.price||'';soldMonth.value='';soldShipping.value='';editModal.hidden=true;soldModal.hidden=false}
 function confirmSold(){const p=products.find(x=>x.id===editingId);p.status='sold';p.price=Number(soldPrice.value)||p.price;p.soldYear=2026;p.soldMonth=Number(soldMonth.value)||null;p.shipping=soldShipping.value===''?null:Number(soldShipping.value);p.feeRate=.1;save();closeModal();currentTab='sold';showView('sales')}
 function quickPrice(delta){const p=products.find(x=>x.id===editingId);changePrice(p,delta,'individual');save();openEdit(p.id)}
@@ -93,5 +96,5 @@ function updateProfitCalc(){const p=products.find(x=>x.id===editingId);if(!p)ret
 function closeProfit(){profitModal.hidden=true;editModal.hidden=false}
 navButtons.forEach(btn=>btn.addEventListener('click',()=>{if(btn.dataset.view)showView(btn.dataset.view)}));
 document.addEventListener('click',e=>{if(e.target.matches('[data-close]'))closeModal()});
-window.applyBasic=applyBasic;window.openSold=openSold;window.confirmSold=confirmSold;window.quickPrice=quickPrice;window.openProfitCalc=openProfitCalc;window.updateProfitCalc=updateProfitCalc;window.closeProfit=closeProfit;loadProducts();
-if('serviceWorker' in navigator){window.addEventListener('load',async()=>{try{const reg=await navigator.serviceWorker.register('./sw.js?v=401');await reg.update()}catch(e){}})}
+window.applyBasic=applyBasic;window.stopListing=stopListing;window.relistProduct=relistProduct;window.openSold=openSold;window.confirmSold=confirmSold;window.quickPrice=quickPrice;window.openProfitCalc=openProfitCalc;window.updateProfitCalc=updateProfitCalc;window.closeProfit=closeProfit;loadProducts();
+if('serviceWorker' in navigator){window.addEventListener('load',async()=>{try{const reg=await navigator.serviceWorker.register('./sw.js?v=402');await reg.update()}catch(e){}})}
