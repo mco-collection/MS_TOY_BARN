@@ -3,7 +3,7 @@ const homeCard=document.getElementById('homeCard'), productPanel=document.getEle
 const metrics=document.querySelector('.metrics'), hero=document.querySelector('.hero');
 let products=[], currentTab='listing', editingId=null, salesMonth=0, productQuery='', productSort='default', chartStyle='mix';
 const productSearch=document.getElementById('productSearch'), clearSearch=document.getElementById('clearSearch'), productSortSelect=document.getElementById('productSort');
-const DATA_VERSION=404;
+const DATA_VERSION=405;
 const yen=n=>'¥'+Number(n||0).toLocaleString('ja-JP');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function calcProfit(p){if(p.status!=='sold'||p.purchasePrice==null||p.shipping==null)return null;return Math.round(p.price*(1-(p.feeRate??.1))-p.shipping-p.purchasePrice)}
@@ -25,7 +25,7 @@ function recordPriceChange(p,from,to,kind){if(from===to)return;p.priceHistory=p.
 function changePrice(p,delta,kind='manual'){const from=Number(p.price||0),to=Math.max(300,from+delta);recordPriceChange(p,from,to,kind);p.price=to;p.lastPriceUpdate=new Date().toISOString()}
 async function loadProducts(){
  try{
-  const res=await fetch('./products.json?v=404',{cache:'no-store'}), base=await res.json();
+  const res=await fetch('./products.json?v=405',{cache:'no-store'}), base=await res.json();
   const saved=JSON.parse(localStorage.getItem('mstb_products_v2')||'null'), ver=Number(localStorage.getItem('mstb_data_version')||0);
   if(saved&&ver===DATA_VERSION){products=saved}
   else if(saved){
@@ -107,9 +107,9 @@ function showView(view){
  document.querySelector('.dashboard').classList.toggle('products-view',isProducts);document.querySelector('.dashboard').classList.toggle('sales-view',isSales);
  if(isSales)renderSales();
 }
-function openEdit(id){editingId=id;const p=products.find(x=>x.id===id); editTitle.value=p.name||'';editPop.value=p.pop||'';editSeries.value=p.series||'';editPrice.value=p.price||'';editPurchase.value=p.purchasePrice??'';editMemo.value=p.memo||'';soldAction.hidden=p.status!=='listing';stopAction.hidden=p.status!=='listing';relistAction.hidden=p.status!=='stopped';soldFields.hidden=p.status!=='sold';priceTools.hidden=p.status!=='listing';editSoldMonth.value=p.soldMonth||'';editShipping.value=p.shipping??'';estimatedShip.textContent=yen(estimatedShipping(p));priceHistoryBox.innerHTML=(p.priceHistory||[]).slice(-5).reverse().map(h=>`<small>${new Date(h.at).toLocaleDateString('ja-JP')} ${yen(h.from)} → ${yen(h.to)}</small>`).join('')||'<small>価格変更履歴なし</small>';editModal.hidden=false}
+function openEdit(id){editingId=id;const p=products.find(x=>x.id===id); editTitle.value=p.name||'';editPop.value=p.pop||'';editSeries.value=p.series||'';editPrice.value=p.price||'';editPurchase.value=p.purchasePrice??'';editMemo.value=p.memo||'';soldAction.hidden=p.status!=='listing';stopAction.hidden=p.status!=='listing';relistAction.hidden=p.status!=='stopped';soldFields.hidden=p.status!=='sold';priceTools.hidden=p.status!=='listing';editSoldMonth.value=p.soldMonth||'';editShipping.value=p.shipping??(p.status==='sold'?estimatedShipping(p):'');estimatedShip.textContent=yen(estimatedShipping(p));priceHistoryBox.innerHTML=(p.priceHistory||[]).slice(-5).reverse().map(h=>`<small>${new Date(h.at).toLocaleDateString('ja-JP')} ${yen(h.from)} → ${yen(h.to)}</small>`).join('')||'<small>価格変更履歴なし</small>';editModal.hidden=false}
 function closeModal(){editModal.hidden=true;soldModal.hidden=true;profitModal.hidden=true}
-function applyBasic(){const p=products.find(x=>x.id===editingId);p.name=editTitle.value.trim();p.pop=editPop.value.trim();p.series=editSeries.value.trim();const np=Number(editPrice.value)||0;recordPriceChange(p,Number(p.price||0),np,'edit');p.price=np;p.purchasePrice=editPurchase.value===''?null:Number(editPurchase.value);p.memo=editMemo.value; if(p.status==='sold'){p.soldMonth=Number(editSoldMonth.value)||null;p.shipping=editShipping.value===''?null:Number(editShipping.value)}save();closeModal()}
+function applyBasic(){const p=products.find(x=>x.id===editingId);p.name=editTitle.value.trim();p.pop=editPop.value.trim();p.series=editSeries.value.trim();const np=Number(editPrice.value)||0;recordPriceChange(p,Number(p.price||0),np,'edit');p.price=np;p.purchasePrice=editPurchase.value===''?null:Number(editPurchase.value);p.memo=editMemo.value; if(p.status==='sold'){p.soldMonth=Number(editSoldMonth.value)||null;p.shipping=editShipping.value===''?estimatedShipping(p):Number(editShipping.value)}save();closeModal()}
 
 function stopListing(){const p=products.find(x=>x.id===editingId);if(!p)return;p.status='stopped';p.stoppedAt=new Date().toISOString();save();closeModal();currentTab='stopped';showView('products')}
 function relistProduct(){const p=products.find(x=>x.id===editingId);if(!p)return;p.status='listing';delete p.stoppedAt;save();closeModal();currentTab='listing';showView('products')}
@@ -127,4 +127,4 @@ navButtons.forEach(btn=>btn.addEventListener('click',()=>{if(btn.dataset.view)sh
 document.addEventListener('click',e=>{if(e.target.matches('[data-close]'))closeModal()});
 chartStyle=localStorage.getItem('mstb_chart_style')||'mix';
 window.applyBasic=applyBasic;window.stopListing=stopListing;window.relistProduct=relistProduct;window.openSold=openSold;window.confirmSold=confirmSold;window.quickPrice=quickPrice;window.openProfitCalc=openProfitCalc;window.updateProfitCalc=updateProfitCalc;window.closeProfit=closeProfit;loadProducts();
-if('serviceWorker' in navigator){window.addEventListener('load',async()=>{try{const reg=await navigator.serviceWorker.register('./sw.js?v=404');await reg.update()}catch(e){}})}
+if('serviceWorker' in navigator){window.addEventListener('load',async()=>{try{const reg=await navigator.serviceWorker.register('./sw.js?v=405');await reg.update()}catch(e){}})}
