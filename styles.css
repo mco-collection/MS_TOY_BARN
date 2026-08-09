@@ -14,3 +14,18 @@
 .bulk-price{margin:0 0 8px;padding:9px 10px;border:1px solid #ffe0e5;background:#fff7f8;border-radius:14px;display:flex;align-items:center;justify-content:space-between;gap:8px}.bulk-price b{font-size:10px}.bulk-price div{display:flex;gap:5px}.bulk-price button,.price-tool-buttons button{border:0;border-radius:10px;padding:8px 10px;font-size:10px;font-weight:900;background:#f2eff1}.bulk-price button:first-child{background:#fff0d9;color:#9a6411}.bulk-price button:last-child{background:#ffe9ed;color:#d84458}.estimate-mini{font-size:7px;color:#2b8a57;margin-top:3px}.price-tools{padding:10px;border:1px solid #f0e8eb;background:#fff9fa;border-radius:14px}.estimate-line{display:flex;justify-content:space-between;font-size:11px;color:#777}.price-tool-buttons{display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:6px;margin-top:8px}.price-tool-buttons .profit-btn{background:#ff6376;color:#fff}.price-history{display:grid;gap:2px;margin-top:8px;color:#999}.price-history small{font-size:8px}.profit-result{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:14px}.profit-result>div{background:#faf7f8;border:1px solid #eee8ea;border-radius:12px;padding:9px}.profit-result small{display:block;font-size:8px;color:#888}.profit-result b{display:block;font-size:14px;margin-top:3px}.profit-result .profit-main{grid-column:1/-1;background:#eefaf2;border-color:#d9f0e1}.profit-result .profit-main b{font-size:24px;color:#23844a}.profit-result .profit-main em{font-style:normal;font-size:11px;font-weight:900;color:#23844a}
 
 .danger{background:#fff0f0;color:#d33b43}.stopped-badge{background:#fff4dc;color:#9a6715}.tabs{flex-wrap:wrap}
+
+/* v403: product search + softer MTB charts */
+.product-search{height:42px;margin:0 0 9px;display:flex;align-items:center;gap:8px;padding:0 11px;border:1px solid #ece8eb;border-radius:14px;background:#faf8fa;box-shadow:inset 0 1px 0 rgba(255,255,255,.8)}
+.product-search span{font-size:18px;color:#9c969c;transform:rotate(-15deg)}
+.product-search input{min-width:0;flex:1;border:0;outline:0;background:transparent;font-size:13px;color:var(--ink)}
+.product-search input::placeholder{color:#aaa4aa}
+.product-search button{width:25px;height:25px;border:0;border-radius:50%;background:#ebe7ea;color:#7f7980;font-size:15px;font-weight:900;line-height:1}
+.product-list{height:calc(100% - 96px)}
+.chart-card{border-color:#f0e8eb;background:linear-gradient(180deg,#fff 0%,#fffbfc 100%)}
+.chart-head b{letter-spacing:-.02em}.legend{background:#faf7f8;border:1px solid #f1eaed;border-radius:999px;padding:5px 7px}.grid line,.sales-grid line{stroke:#eee9ec;stroke-dasharray:2 6}.profit-area{fill:url(#profitArea)}
+.line,.sales-profit-line{stroke:#4c9ff5;stroke-width:2.7}.points circle,.sales-profit-points circle{fill:#fff;stroke:#4c9ff5;stroke-width:2.2}.bars rect{filter:drop-shadow(0 4px 5px rgba(255,92,111,.10))}
+.sales-chart-box{border-color:#f0e8eb;background:linear-gradient(180deg,#fff 0%,#fffbfc 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.9)}
+.sales-bars rect{fill:url(#salesBarGrad);filter:drop-shadow(0 4px 5px rgba(255,92,111,.10))}.sales-profit-area{fill:url(#salesProfitArea)}
+.sales-chart-title small{background:#f4f8ff;border-radius:999px;padding:4px 7px;color:#6f89a6}
+@media(max-width:390px){.product-search{height:39px;margin-bottom:7px}.product-list{height:calc(100% - 90px)}}
