@@ -71,7 +71,7 @@ function renderProducts(){
  productList.innerHTML=tabs+bulk+(rows||`<p class="empty">${q?'検索結果がありません':'商品はありません'}</p>`);
  document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{currentTab=b.dataset.tab;renderProducts()});
  document.querySelectorAll('.product-row[data-id]').forEach(r=>r.onclick=()=>openEdit(r.dataset.id));
- document.querySelectorAll('[data-bulk]').forEach(b=>b.onclick=()=>{const d=Number(b.dataset.bulk);products.filter(p=>p.status==='listing').forEach(p=>changePrice(p,d,'bulk'));save()});
+ document.querySelectorAll('[data-bulk]').forEach(b=>b.onclick=()=>{const d=Number(b.dataset.bulk);const targets=products.filter(p=>p.status==='listing');const action=d>0?'値上げ':'値下げ';const amount=yen(Math.abs(d));if(!targets.length)return;if(!confirm(`出品中の商品 ${targets.length}件を一括で${amount}${action}します。\n本当に${action}しますか？`))return;targets.forEach(p=>changePrice(p,d,'bulk'));save()});
 }
 function monthlyData(){return Array.from({length:12},(_,i)=>{const month=i+1,xs=products.filter(p=>p.status==='sold'&&p.soldYear===2026&&p.soldMonth===month),profits=xs.map(calcProfit).filter(v=>v!=null);return {month,count:xs.length,sales:xs.reduce((s,p)=>s+Number(p.price||0),0),profit:profits.reduce((a,b)=>a+b,0),known:profits.length}})}
 function renderSales(){
