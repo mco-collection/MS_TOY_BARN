@@ -3,7 +3,7 @@ const homeCard=document.getElementById('homeCard'), productPanel=document.getEle
 const metrics=document.querySelector('.metrics'), hero=document.querySelector('.hero');
 let products=[], currentTab='listing', editingId=null, salesMonth=0, productQuery='', productSort='default', chartStyle='mix';
 const productSearch=document.getElementById('productSearch'), clearSearch=document.getElementById('clearSearch'), productSortSelect=document.getElementById('productSort');
-const DATA_VERSION=405;
+const DATA_VERSION=406;
 const yen=n=>'¥'+Number(n||0).toLocaleString('ja-JP');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function calcProfit(p){if(p.status!=='sold'||p.purchasePrice==null||p.shipping==null)return null;return Math.round(p.price*(1-(p.feeRate??.1))-p.shipping-p.purchasePrice)}
@@ -21,11 +21,13 @@ function quoteProfit(p,price,shipping=estimatedShipping(p)){
  const margin=Number(price)>0?profit/Number(price)*100:0;
  return {fee,profit,margin,shipping,purchase};
 }
-function recordPriceChange(p,from,to,kind){if(from===to)return;p.priceHistory=p.priceHistory||[];p.priceHistory.push({at:new Date().toISOString(),from,to,kind});if(p.priceHistory.length>50)p.priceHistory=p.priceHistory.slice(-50)}
-function changePrice(p,delta,kind='manual'){const from=Number(p.price||0),to=Math.max(300,from+delta);recordPriceChange(p,from,to,kind);p.price=to;p.lastPriceUpdate=new Date().toISOString()}
+function recordPriceChange(p,from,to,kind='manual'){from=Number(from||0);to=Number(to||0);if(from===to)return;p.priceHistory=p.priceHistory||[];p.priceHistory.push({at:new Date().toISOString(),from,to,delta:to-from,kind});if(p.priceHistory.length>100)p.priceHistory=p.priceHistory.slice(-100);p.lastPriceUpdate=new Date().toISOString()}
+function priceHistoryLabel(kind){return ({edit:'手動変更',individual:'クイック変更',bulk:'一括更新',sold:'販売確定'}[kind]||'価格変更')}
+function renderPriceHistory(p){const hs=(p.priceHistory||[]).slice().reverse();if(!hs.length)return '<small class="history-empty">価格変更履歴なし（次回の価格変更から自動記録）</small>';return hs.map(h=>{const d=Number(h.delta??(Number(h.to||0)-Number(h.from||0))),dir=d>0?'up':d<0?'down':'same',sign=d>0?'+':'';return `<div class="price-history-row ${dir}"><span><b>${new Date(h.at).toLocaleString('ja-JP',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})}</b><em>${priceHistoryLabel(h.kind)}</em></span><span>${yen(h.from)} → <strong>${yen(h.to)}</strong><i>${sign}${yen(d).replace('¥','¥')}</i></span></div>`}).join('')}
+function changePrice(p,delta,kind='manual'){const from=Number(p.price||0),to=Math.max(300,from+delta);recordPriceChange(p,from,to,kind);p.price=to}
 async function loadProducts(){
  try{
-  const res=await fetch('./products.json?v=405',{cache:'no-store'}), base=await res.json();
+  const res=await fetch('./products.json?v=406',{cache:'no-store'}), base=await res.json();
   const saved=JSON.parse(localStorage.getItem('mstb_products_v2')||'null'), ver=Number(localStorage.getItem('mstb_data_version')||0);
   if(saved&&ver===DATA_VERSION){products=saved}
   else if(saved){
@@ -107,14 +109,14 @@ function showView(view){
  document.querySelector('.dashboard').classList.toggle('products-view',isProducts);document.querySelector('.dashboard').classList.toggle('sales-view',isSales);
  if(isSales)renderSales();
 }
-function openEdit(id){editingId=id;const p=products.find(x=>x.id===id); editTitle.value=p.name||'';editPop.value=p.pop||'';editSeries.value=p.series||'';editPrice.value=p.price||'';editPurchase.value=p.purchasePrice??'';editMemo.value=p.memo||'';soldAction.hidden=p.status!=='listing';stopAction.hidden=p.status!=='listing';relistAction.hidden=p.status!=='stopped';soldFields.hidden=p.status!=='sold';priceTools.hidden=p.status!=='listing';editSoldMonth.value=p.soldMonth||'';editShipping.value=p.shipping??(p.status==='sold'?estimatedShipping(p):'');estimatedShip.textContent=yen(estimatedShipping(p));priceHistoryBox.innerHTML=(p.priceHistory||[]).slice(-5).reverse().map(h=>`<small>${new Date(h.at).toLocaleDateString('ja-JP')} ${yen(h.from)} → ${yen(h.to)}</small>`).join('')||'<small>価格変更履歴なし</small>';editModal.hidden=false}
+function openEdit(id){editingId=id;const p=products.find(x=>x.id===id); editTitle.value=p.name||'';editPop.value=p.pop||'';editSeries.value=p.series||'';editPrice.value=p.price||'';editPurchase.value=p.purchasePrice??'';editMemo.value=p.memo||'';soldAction.hidden=p.status!=='listing';stopAction.hidden=p.status!=='listing';relistAction.hidden=p.status!=='stopped';soldFields.hidden=p.status!=='sold';priceTools.hidden=p.status!=='listing';editSoldMonth.value=p.soldMonth||'';editShipping.value=p.shipping??(p.status==='sold'?estimatedShipping(p):'');estimatedShip.textContent=yen(estimatedShipping(p));priceHistoryBox.innerHTML=renderPriceHistory(p);editModal.hidden=false}
 function closeModal(){editModal.hidden=true;soldModal.hidden=true;profitModal.hidden=true}
 function applyBasic(){const p=products.find(x=>x.id===editingId);p.name=editTitle.value.trim();p.pop=editPop.value.trim();p.series=editSeries.value.trim();const np=Number(editPrice.value)||0;recordPriceChange(p,Number(p.price||0),np,'edit');p.price=np;p.purchasePrice=editPurchase.value===''?null:Number(editPurchase.value);p.memo=editMemo.value; if(p.status==='sold'){p.soldMonth=Number(editSoldMonth.value)||null;p.shipping=editShipping.value===''?estimatedShipping(p):Number(editShipping.value)}save();closeModal()}
 
 function stopListing(){const p=products.find(x=>x.id===editingId);if(!p)return;p.status='stopped';p.stoppedAt=new Date().toISOString();save();closeModal();currentTab='stopped';showView('products')}
 function relistProduct(){const p=products.find(x=>x.id===editingId);if(!p)return;p.status='listing';delete p.stoppedAt;save();closeModal();currentTab='listing';showView('products')}
 function openSold(){const p=products.find(x=>x.id===editingId);soldPrice.value=p.price||'';soldMonth.value='';soldShipping.value='';editModal.hidden=true;soldModal.hidden=false}
-function confirmSold(){const p=products.find(x=>x.id===editingId);p.status='sold';p.price=Number(soldPrice.value)||p.price;p.soldYear=2026;p.soldMonth=Number(soldMonth.value)||null;p.shipping=soldShipping.value===''?null:Number(soldShipping.value);p.feeRate=.1;save();closeModal();currentTab='sold';showView('sales')}
+function confirmSold(){const p=products.find(x=>x.id===editingId);const soldFinal=Number(soldPrice.value)||Number(p.price||0);recordPriceChange(p,Number(p.price||0),soldFinal,'sold');p.status='sold';p.price=soldFinal;p.soldYear=new Date().getFullYear();p.soldMonth=Number(soldMonth.value)||null;p.shipping=soldShipping.value===''?null:Number(soldShipping.value);p.feeRate=.1;save();closeModal();currentTab='sold';showView('sales')}
 function quickPrice(delta){const p=products.find(x=>x.id===editingId);changePrice(p,delta,'individual');save();openEdit(p.id)}
 function openProfitCalc(){const p=products.find(x=>x.id===editingId);profitAskPrice.value=p.price||'';profitShip.value=estimatedShipping(p);editModal.hidden=true;profitModal.hidden=false;updateProfitCalc()}
 function updateProfitCalc(){const p=products.find(x=>x.id===editingId);if(!p)return;const q=quoteProfit(p,Number(profitAskPrice.value),Number(profitShip.value));profitResult.innerHTML=`<div><small>販売価格</small><b>${yen(profitAskPrice.value)}</b></div><div><small>手数料 10%</small><b>−${yen(q.fee)}</b></div><div><small>予想送料</small><b>−${yen(q.shipping)}</b></div><div><small>仕入れ</small><b>−${yen(q.purchase)}</b></div><div class="profit-main"><small>予想実利益</small><b>${yen(q.profit)}</b><em>利益率 ${q.margin.toFixed(1)}%</em></div>`}
@@ -127,4 +129,4 @@ navButtons.forEach(btn=>btn.addEventListener('click',()=>{if(btn.dataset.view)sh
 document.addEventListener('click',e=>{if(e.target.matches('[data-close]'))closeModal()});
 chartStyle=localStorage.getItem('mstb_chart_style')||'mix';
 window.applyBasic=applyBasic;window.stopListing=stopListing;window.relistProduct=relistProduct;window.openSold=openSold;window.confirmSold=confirmSold;window.quickPrice=quickPrice;window.openProfitCalc=openProfitCalc;window.updateProfitCalc=updateProfitCalc;window.closeProfit=closeProfit;loadProducts();
-if('serviceWorker' in navigator){window.addEventListener('load',async()=>{try{const reg=await navigator.serviceWorker.register('./sw.js?v=405');await reg.update()}catch(e){}})}
+if('serviceWorker' in navigator){window.addEventListener('load',async()=>{try{const reg=await navigator.serviceWorker.register('./sw.js?v=406');await reg.update()}catch(e){}})}
