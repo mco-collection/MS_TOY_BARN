@@ -46,9 +46,9 @@ async function loadProducts(){
 function persist(){localStorage.setItem(STORAGE_KEY,JSON.stringify(products));localStorage.setItem('mstb_data_version',String(DATA_VERSION))}
 function save(){persist();renderAll()}
 function renderAll(){
- const listed=products.filter(p=>p.status==='listing'), sold=products.filter(p=>p.status==='sold');
+ const listed=products.filter(p=>p.status==='listing'), sold=products.filter(p=>p.status==='sold'), shipping=products.filter(p=>p.status==='shipping');
  inventory.innerHTML=`${listed.length}<em>件</em>`;document.getElementById('listed').innerHTML=`${listed.length}<em>件</em>`;
- document.getElementById('shipping').innerHTML=`0<em>件</em>`;
+ document.getElementById('shipping').innerHTML=`${shipping.length}<em>件</em>`;
  const now=new Date(), month=now.getMonth()+1, year=now.getFullYear(); const ms=sold.filter(p=>p.soldYear===year&&p.soldMonth===month);
  const profits=ms.map(calcProfit).filter(v=>v!=null);document.getElementById('profit').textContent=profits.length?yen(profits.reduce((a,b)=>a+b,0)):'—';
  renderProducts();renderSales();
@@ -63,11 +63,11 @@ function renderProducts(){
  else if(productSort==='margin-desc')list.sort((a,b)=>{const av=marginValue(a),bv=marginValue(b);if(av==null&&bv==null)return 0;if(av==null)return 1;if(bv==null)return -1;return bv-av});
  else if(productSort==='margin-asc')list.sort((a,b)=>{const av=marginValue(a),bv=marginValue(b);if(av==null&&bv==null)return 0;if(av==null)return 1;if(bv==null)return -1;return av-bv});
  document.getElementById('productSummary').textContent=q?`${list.length}/${all.length}件`:`${all.length}件`;
- document.querySelector('.product-head b').textContent=currentTab==='listing'?'📦 出品中の商品':currentTab==='stopped'?'⏸ 出品停止中':'✅ 販売済み';
+ document.querySelector('.product-head b').textContent=currentTab==='listing'?'📦 出品中の商品':currentTab==='shipping'?'🚚 発送待ちの商品':currentTab==='stopped'?'⏸ 出品停止中':'✅ 販売済み';
  document.getElementById('listingValue').textContent=yen(list.reduce((s,p)=>s+Number(p.price||0),0));
- const tabs=`<div class="tabs"><button class="tab-btn ${currentTab==='listing'?'active':''}" data-tab="listing">出品中</button><button class="tab-btn ${currentTab==='stopped'?'active':''}" data-tab="stopped">停止中</button><button class="tab-btn ${currentTab==='sold'?'active':''}" data-tab="sold">販売済み</button></div>`;
+ const tabs=`<div class="tabs"><button class="tab-btn ${currentTab==='listing'?'active':''}" data-tab="listing">出品中</button><button class="tab-btn ${currentTab==='shipping'?'active':''}" data-tab="shipping">発送待ち</button><button class="tab-btn ${currentTab==='stopped'?'active':''}" data-tab="stopped">停止中</button><button class="tab-btn ${currentTab==='sold'?'active':''}" data-tab="sold">販売済み</button></div>`;
  const bulk=currentTab==='listing'?`<div class="bulk-price"><b>一括価格更新</b><div><button data-bulk="300">全て +¥300</button><button data-bulk="-100">全て −¥100</button></div></div>`:'';
- const rows=list.map(p=>{const pr=calcProfit(p), ship=estimatedShipping(p);return `<article class="product-row" data-id="${p.id}"><div><b>${esc(p.name)}${p.status==='sold'?'<span class="status-badge sold-badge">販売済</span>':p.status==='stopped'?'<span class="status-badge stopped-badge">停止中</span>':''}</b><small>${esc(p.series||'')}${p.pop?` ・ #${esc(p.pop)}`:''}</small>${p.status==='listing'?`<div class="estimate-mini">予想送料 ${yen(ship)}${p.purchasePrice!=null?` ・ 現在の予想利益 ${yen(quoteProfit(p,p.price,ship).profit)}`:''}</div>`:''}${p.status==='sold'?`<div class="sold-info">${p.soldYear&&p.soldMonth?`${p.soldYear}年${p.soldMonth}月`:'販売日未確認'}${pr==null?' ・ 利益未確定':' ・ 利益 '+yen(pr)}</div>`:''}</div><strong>${yen(p.price)}</strong></article>`}).join('');
+ const rows=list.map(p=>{const pr=calcProfit(p), ship=estimatedShipping(p);return `<article class="product-row" data-id="${p.id}"><div><b>${esc(p.name)}${p.status==='sold'?'<span class="status-badge sold-badge">販売済</span>':p.status==='shipping'?'<span class="status-badge shipping-badge">発送待ち</span>':p.status==='stopped'?'<span class="status-badge stopped-badge">停止中</span>':''}</b><small>${esc(p.series||'')}${p.pop?` ・ #${esc(p.pop)}`:''}</small>${p.status==='listing'?`<div class="estimate-mini">予想送料 ${yen(ship)}${p.purchasePrice!=null?` ・ 現在の予想利益 ${yen(quoteProfit(p,p.price,ship).profit)}`:''}</div>`:''}${p.status==='shipping'?`<div class="shipping-actions"><button type="button" onclick="event.stopPropagation();openSoldFor('${p.id}')">販売済みにする</button></div>`:''}${p.status==='sold'?`<div class="sold-info">${p.soldYear&&p.soldMonth?`${p.soldYear}年${p.soldMonth}月`:'販売日未確認'}${pr==null?' ・ 利益未確定':' ・ 利益 '+yen(pr)}</div>`:''}</div><strong>${yen(p.price)}</strong></article>`}).join('');
  productList.innerHTML=tabs+bulk+(rows||`<p class="empty">${q?'検索結果がありません':'商品はありません'}</p>`);
  document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{currentTab=b.dataset.tab;renderProducts()});
  document.querySelectorAll('.product-row[data-id]').forEach(r=>r.onclick=()=>openEdit(r.dataset.id));
@@ -109,13 +109,14 @@ function showView(view){
  document.querySelector('.dashboard').classList.toggle('products-view',isProducts);document.querySelector('.dashboard').classList.toggle('sales-view',isSales);
  if(isSales)renderSales();
 }
-function openEdit(id){editingId=id;const p=products.find(x=>x.id===id); editTitle.value=p.name||'';editPop.value=p.pop||'';editSeries.value=p.series||'';editPrice.value=p.price||'';editPurchase.value=p.purchasePrice??'';editMemo.value=p.memo||'';soldAction.hidden=p.status!=='listing';stopAction.hidden=p.status!=='listing';relistAction.hidden=p.status!=='stopped';soldFields.hidden=p.status!=='sold';priceTools.hidden=p.status!=='listing';editSoldMonth.value=p.soldMonth||'';editShipping.value=p.shipping??(p.status==='sold'?estimatedShipping(p):'');estimatedShip.textContent=yen(estimatedShipping(p));priceHistoryBox.innerHTML=renderPriceHistory(p);editModal.hidden=false}
+function openEdit(id){editingId=id;const p=products.find(x=>x.id===id); editTitle.value=p.name||'';editPop.value=p.pop||'';editSeries.value=p.series||'';editPrice.value=p.price||'';editPurchase.value=p.purchasePrice??'';editMemo.value=p.memo||'';soldAction.hidden=!['listing','shipping'].includes(p.status);stopAction.hidden=p.status!=='listing';relistAction.hidden=p.status!=='stopped';soldFields.hidden=p.status!=='sold';priceTools.hidden=p.status!=='listing';editSoldMonth.value=p.soldMonth||'';editShipping.value=p.shipping??(p.status==='sold'?estimatedShipping(p):'');estimatedShip.textContent=yen(estimatedShipping(p));priceHistoryBox.innerHTML=renderPriceHistory(p);editModal.hidden=false}
 function closeModal(){editModal.hidden=true;soldModal.hidden=true;profitModal.hidden=true}
 function applyBasic(){const p=products.find(x=>x.id===editingId);p.name=editTitle.value.trim();p.pop=editPop.value.trim();p.series=editSeries.value.trim();const np=Number(editPrice.value)||0;recordPriceChange(p,Number(p.price||0),np,'edit');p.price=np;p.purchasePrice=editPurchase.value===''?null:Number(editPurchase.value);p.memo=editMemo.value; if(p.status==='sold'){p.soldMonth=Number(editSoldMonth.value)||null;p.shipping=editShipping.value===''?estimatedShipping(p):Number(editShipping.value)}save();closeModal()}
 
 function stopListing(){const p=products.find(x=>x.id===editingId);if(!p)return;p.status='stopped';p.stoppedAt=new Date().toISOString();save();closeModal();currentTab='stopped';showView('products')}
 function relistProduct(){const p=products.find(x=>x.id===editingId);if(!p)return;p.status='listing';delete p.stoppedAt;save();closeModal();currentTab='listing';showView('products')}
-function openSold(){const p=products.find(x=>x.id===editingId);soldPrice.value=p.price||'';soldMonth.value='';soldShipping.value='';editModal.hidden=true;soldModal.hidden=false}
+function openSold(){const p=products.find(x=>x.id===editingId);soldPrice.value=p.price||'';soldMonth.value=String(new Date().getMonth()+1);soldShipping.value=p.shipping??'';editModal.hidden=true;soldModal.hidden=false}
+function openSoldFor(id){editingId=id;openSold()}
 function confirmSold(){const p=products.find(x=>x.id===editingId);const soldFinal=Number(soldPrice.value)||Number(p.price||0);recordPriceChange(p,Number(p.price||0),soldFinal,'sold');p.status='sold';p.price=soldFinal;p.soldYear=new Date().getFullYear();p.soldMonth=Number(soldMonth.value)||null;p.shipping=soldShipping.value===''?null:Number(soldShipping.value);p.feeRate=.1;save();closeModal();currentTab='sold';showView('sales')}
 function quickPrice(delta){const p=products.find(x=>x.id===editingId);changePrice(p,delta,'individual');save();openEdit(p.id)}
 function openProfitCalc(){const p=products.find(x=>x.id===editingId);profitAskPrice.value=p.price||'';profitShip.value=estimatedShipping(p);editModal.hidden=true;profitModal.hidden=false;updateProfitCalc()}
@@ -130,3 +131,7 @@ document.addEventListener('click',e=>{if(e.target.matches('[data-close]'))closeM
 chartStyle=localStorage.getItem('mstb_chart_style')||'mix';
 window.applyBasic=applyBasic;window.stopListing=stopListing;window.relistProduct=relistProduct;window.openSold=openSold;window.confirmSold=confirmSold;window.quickPrice=quickPrice;window.openProfitCalc=openProfitCalc;window.updateProfitCalc=updateProfitCalc;window.closeProfit=closeProfit;loadProducts();
 if('serviceWorker' in navigator){window.addEventListener('load',async()=>{try{const reg=await navigator.serviceWorker.register('./sw.js?v=406');await reg.update()}catch(e){}})}
+
+// v408: home shipping card opens shipping queue
+const shippingMetric=document.getElementById('shippingMetric');
+if(shippingMetric){const openShipping=()=>{currentTab='shipping';showView('products');renderProducts()};shippingMetric.onclick=openShipping;shippingMetric.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openShipping()}}}

@@ -8,7 +8,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <title>M's TOY BARN</title>
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="styles.css?v=403">
+  <link rel="stylesheet" href="styles.css?v=408">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
 </head>
 <body>
@@ -28,7 +28,7 @@
       <article class="metric pink"><div class="label"><span>📦</span>在庫数</div><strong id="inventory">110<em>件</em></strong><small>登録済み出品</small></article>
       <article class="metric yellow"><div class="label"><span>🏷️</span>出品中</div><strong id="listed">110<em>件</em></strong><small>販売中の商品</small></article>
       <article class="metric green"><div class="label"><span>¥</span>今月の利益</div><strong class="money" id="profit">¥128,450</strong><small>今月の確定利益</small></article>
-      <article class="metric blue"><div class="label"><span>🚚</span>発送待ち</div><strong id="shipping">7<em>件</em></strong><small>発送が必要</small></article>
+      <article class="metric blue shipping-metric" id="shippingMetric" role="button" tabindex="0"><div class="label"><span>🚚</span>発送待ち</div><strong id="shipping">7<em>件</em></strong><small>発送が必要</small></article>
     </section>
 
     <section class="chart-card" id="homeCard">
@@ -86,6 +86,6 @@
 <div class="modal" id="soldModal" hidden><div class="modal-card"><h2>販売済みにする</h2><div class="form-grid"><label>販売価格<input id="soldPrice" type="number"></label><label>販売月<select id="soldMonth"><option value="">選択</option><option value="1">1月</option><option value="2">2月</option><option value="3">3月</option><option value="4">4月</option><option value="5">5月</option><option value="6">6月</option><option value="7">7月</option><option value="8">8月</option><option value="9">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option></select></label><label>送料<input id="soldShipping" type="number" placeholder="販売後の確定送料"></label><small>販売手数料10%は自動計算します。</small></div><div class="modal-actions"><button class="secondary" data-close>戻る</button><button class="primary" onclick="confirmSold()">販売済みにする</button></div></div></div>
 
 <div class="modal" id="profitModal" hidden><div class="modal-card"><h2>値下げ・利益計算</h2><div class="form-grid"><label>提示された販売価格<input id="profitAskPrice" type="number" oninput="updateProfitCalc()"></label><label>予想送料<input id="profitShip" type="number" oninput="updateProfitCalc()"></label><small>予想送料は過去の販売実績をもとに初期入力。必要なら変更できます。</small></div><div id="profitResult" class="profit-result"></div><div class="modal-actions"><button class="secondary" onclick="closeProfit()">戻る</button></div></div></div>
-  <script src="app.js?v=403"></script>
+  <script src="app.js?v=408"></script>
 </body>
 </html>

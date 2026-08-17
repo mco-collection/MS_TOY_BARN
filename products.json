@@ -1722,5 +1722,27 @@
     "shipping": null,
     "feeRate": 0.1,
     "memo": ""
+  },
+  {
+    "id": "mercari-m40680286611",
+    "name": "FUNKO POP! ブラックパンサー #1187 ファセット",
+    "pop": "1187",
+    "series": "MARVEL",
+    "price": 3999,
+    "purchasePrice": 1500,
+    "status": "shipping",
+    "mercariId": "m40680286611",
+    "memo": "メルカリ売却済み・取引完了待ち"
+  },
+  {
+    "id": "mercari-m30917237525",
+    "name": "Funko POP! フリーレン ミミック #1990",
+    "pop": "1990",
+    "series": "葬送のフリーレン",
+    "price": 5399,
+    "purchasePrice": 3382,
+    "status": "shipping",
+    "mercariId": "m30917237525",
+    "memo": "メルカリ売却済み・取引完了待ち"
   }
 ]
