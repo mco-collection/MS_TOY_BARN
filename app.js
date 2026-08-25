@@ -3,7 +3,7 @@ const homeCard=document.getElementById('homeCard'), productPanel=document.getEle
 const metrics=document.querySelector('.metrics'), hero=document.querySelector('.hero');
 let products=[], currentTab='listing', editingId=null, salesMonth=0, productQuery='', productSort='default', chartStyle='mix';
 const productSearch=document.getElementById('productSearch'), clearSearch=document.getElementById('clearSearch'), productSortSelect=document.getElementById('productSort');
-const DATA_VERSION=407;
+const DATA_VERSION=408;
 const STORAGE_KEY='mstb_products_v3';
 const yen=n=>'¥'+Number(n||0).toLocaleString('ja-JP');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -28,15 +28,15 @@ function renderPriceHistory(p){const hs=(p.priceHistory||[]).slice().reverse();i
 function changePrice(p,delta,kind='manual'){const from=Number(p.price||0),to=Math.max(300,from+delta);recordPriceChange(p,from,to,kind);p.price=to}
 async function loadProducts(){
  try{
-  const res=await fetch('./products.json?v=407',{cache:'no-store'}), base=await res.json();
+  const res=await fetch('./products.json?v=408',{cache:'no-store'}), base=await res.json();
   const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');
-  if(saved){
+  const savedVersion=localStorage.getItem('mstb_data_version');
+  if(saved&&savedVersion===String(DATA_VERSION)){
    const byId=new Map(saved.map(x=>[x.id,x]));
    products=base.map(b=>{const old=byId.get(b.id);return old?{...b,...old}:b});
    const ids=new Set(products.map(x=>x.id)); saved.forEach(x=>{if(!ids.has(x.id))products.push(x)});
   }else{
-   // v3初回のみ旧保存値を引き継がず、products.jsonの初期状態から開始する。
-   // 以後の価格・仕入れ値・履歴などはSTORAGE_KEY側を優先して保持する。
+   // データ更新版ではproducts.jsonを正として再同期し、古い発送待ち/販売済み状態を残さない。
    products=base;
   }
   persist()
@@ -130,7 +130,7 @@ navButtons.forEach(btn=>btn.addEventListener('click',()=>{if(btn.dataset.view)sh
 document.addEventListener('click',e=>{if(e.target.matches('[data-close]'))closeModal()});
 chartStyle=localStorage.getItem('mstb_chart_style')||'mix';
 window.applyBasic=applyBasic;window.stopListing=stopListing;window.relistProduct=relistProduct;window.openSold=openSold;window.confirmSold=confirmSold;window.quickPrice=quickPrice;window.openProfitCalc=openProfitCalc;window.updateProfitCalc=updateProfitCalc;window.closeProfit=closeProfit;loadProducts();
-if('serviceWorker' in navigator){window.addEventListener('load',async()=>{try{const reg=await navigator.serviceWorker.register('./sw.js?v=406');await reg.update()}catch(e){}})}
+if('serviceWorker' in navigator){window.addEventListener('load',async()=>{try{const reg=await navigator.serviceWorker.register('./sw.js?v=408');await reg.update()}catch(e){}})}
 
 // v408: home shipping card opens shipping queue
 const shippingMetric=document.getElementById('shippingMetric');
