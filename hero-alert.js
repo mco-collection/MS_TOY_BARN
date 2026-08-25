@@ -49,7 +49,7 @@
 
     const details=[ship?`送料 ${ship}件`:null,purchase?`仕入れ値 ${purchase}件`:null].filter(Boolean).join(' ・ ');
     hero.classList.add('hero-alert');
-    hero.innerHTML=`<div class="hero-alert-copy"><small>⚠️ CHECK</small><h1>未入力が${list.length}件あるで</h1><p>${details}</p></div><button type="button" class="hero-alert-btn">今すぐ入力</button>`;
+    hero.innerHTML=`<div class="hero-alert-copy"><small>⚠️ CHECK</small><h1>未入力リスト</h1><p>${details}</p></div><button type="button" class="hero-alert-btn">今すぐ入力</button>`;
     hero.querySelector('.hero-alert-btn').addEventListener('click',e=>{e.stopPropagation();openNext();});
   }
 
