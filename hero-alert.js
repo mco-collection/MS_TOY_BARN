@@ -4,6 +4,51 @@
   const original=hero.innerHTML;
   let last='';
 
+  const STORAGE_KEY='mstb_products_v3';
+  const SYNC_FIELDS=['status','price','mercariId','memo','soldYear','soldMonth'];
+
+  async function syncFromGitHub(){
+    try{
+      const res=await fetch(`./products.json?sync=${Date.now()}`,{cache:'no-store'});
+      if(!res.ok)return;
+      const remote=await res.json();
+      if(!Array.isArray(remote))return;
+
+      let local=[];
+      try{local=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');}catch(e){local=[];}
+      if(!Array.isArray(local))local=[];
+
+      const byId=new Map(local.map(p=>[p.id,p]));
+      let changed=false;
+
+      for(const r of remote){
+        const l=byId.get(r.id);
+        if(!l){
+          local.push(r);
+          byId.set(r.id,r);
+          changed=true;
+          continue;
+        }
+        for(const k of SYNC_FIELDS){
+          if(Object.prototype.hasOwnProperty.call(r,k)&&JSON.stringify(l[k])!==JSON.stringify(r[k])){
+            l[k]=r[k];
+            changed=true;
+          }
+        }
+      }
+
+      if(changed){
+        localStorage.setItem(STORAGE_KEY,JSON.stringify(local));
+        if(!sessionStorage.getItem('mstb_github_sync_reload')){
+          sessionStorage.setItem('mstb_github_sync_reload','1');
+          location.reload();
+          return;
+        }
+      }
+      sessionStorage.removeItem('mstb_github_sync_reload');
+    }catch(e){/* keep app usable offline */}
+  }
+
   const style=document.createElement('style');
   style.textContent=`
     .hero.hero-alert{align-items:center;gap:12px;cursor:default}
@@ -53,6 +98,8 @@
     hero.querySelector('.hero-alert-btn').addEventListener('click',e=>{e.stopPropagation();openNext();});
   }
 
+  syncFromGitHub();
+  setInterval(syncFromGitHub,60000);
   setInterval(render,400);
   render();
 })();
