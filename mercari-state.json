@@ -1,0 +1,68 @@
+{
+  "lastMercariSync": "2026-08-29T19:53:59+09:00",
+  "source": "Gmail + GitHub verification",
+  "items": [
+    {
+      "id": "p115",
+      "name": "オールマイト",
+      "pop": "248",
+      "price": 3199,
+      "status": "shipping",
+      "mercariId": "m40638286159",
+      "memo": "メルカリ売却済み・発送待ち",
+      "mercariSyncedAt": "2026-08-29T19:53:59+09:00"
+    },
+    {
+      "id": "p137",
+      "name": "ペルソナ5 ジョーカー",
+      "pop": "468",
+      "price": 4899,
+      "status": "shipping",
+      "mercariId": "m36404144934",
+      "memo": "メルカリ売却済み・発送待ち",
+      "mercariSyncedAt": "2026-08-29T19:53:59+09:00"
+    },
+    {
+      "id": "mercari-m20698579016",
+      "name": "FUNKOPOP！初期ポートガス・D・エース",
+      "pop": "",
+      "series": "ONE PIECE",
+      "price": 2999,
+      "purchasePrice": null,
+      "shipping": null,
+      "feeRate": 0.1,
+      "status": "shipping",
+      "mercariId": "m20698579016",
+      "memo": "メルカリ売却済み・発送待ち（仕入れ値・送料未入力）",
+      "mercariSyncedAt": "2026-08-29T19:53:59+09:00"
+    },
+    {
+      "id": "mercari-m40680286611",
+      "name": "FUNKO POP! ブラックパンサー #1187 ファセット",
+      "pop": "1187",
+      "series": "MARVEL",
+      "price": 3999,
+      "purchasePrice": 1500,
+      "status": "sold",
+      "mercariId": "m40680286611",
+      "memo": "メルカリ取引完了・売上反映済み",
+      "soldYear": 2026,
+      "soldMonth": 8,
+      "mercariSyncedAt": "2026-08-29T19:53:59+09:00"
+    },
+    {
+      "id": "mercari-m30917237525",
+      "name": "Funko POP! フリーレン ミミック #1990",
+      "pop": "1990",
+      "series": "葬送のフリーレン",
+      "price": 5399,
+      "purchasePrice": 3382,
+      "status": "sold",
+      "mercariId": "m30917237525",
+      "memo": "メルカリ取引完了・売上反映済み",
+      "soldYear": 2026,
+      "soldMonth": 8,
+      "mercariSyncedAt": "2026-08-29T19:53:59+09:00"
+    }
+  ]
+}
