@@ -5,14 +5,23 @@
   let last='';
 
   const STORAGE_KEY='mstb_products_v3';
-  const SYNC_FIELDS=['status','price','mercariId','memo','soldYear','soldMonth'];
+  const SYNC_FIELDS=['status','price','purchasePrice','shipping','feeRate','series','pop','mercariId','memo','soldYear','soldMonth','mercariSyncedAt'];
+
+  async function fetchJson(url){
+    const res=await fetch(`${url}?sync=${Date.now()}`,{cache:'no-store'});
+    if(!res.ok)return null;
+    return res.json();
+  }
 
   async function syncFromGitHub(){
     try{
-      const res=await fetch(`./products.json?sync=${Date.now()}`,{cache:'no-store'});
-      if(!res.ok)return;
-      const remote=await res.json();
-      if(!Array.isArray(remote))return;
+      const [base,state]=await Promise.all([
+        fetchJson('./products.json'),
+        fetchJson('./mercari-state.json')
+      ]);
+      const remote=Array.isArray(base)?base:[];
+      const overrides=state&&Array.isArray(state.items)?state.items:[];
+      if(!remote.length&&!overrides.length)return;
 
       let local=[];
       try{local=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');}catch(e){local=[];}
@@ -21,11 +30,12 @@
       const byId=new Map(local.map(p=>[p.id,p]));
       let changed=false;
 
-      for(const r of remote){
+      // Base inventory first, then Mercari state as the authoritative override.
+      for(const r of [...remote,...overrides]){
         const l=byId.get(r.id);
         if(!l){
-          local.push(r);
-          byId.set(r.id,r);
+          local.push({...r});
+          byId.set(r.id,local[local.length-1]);
           changed=true;
           continue;
         }
