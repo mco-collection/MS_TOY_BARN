@@ -116,4 +116,11 @@
   setInterval(syncFromGitHub,60000);
   setInterval(render,400);
   render();
+
+  if(!document.querySelector('script[data-sales-detail]')){
+    const detailScript=document.createElement('script');
+    detailScript.src='./sales-detail.js?v=411';
+    detailScript.dataset.salesDetail='1';
+    document.body.appendChild(detailScript);
+  }
 })();
