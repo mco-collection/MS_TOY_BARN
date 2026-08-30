@@ -10,6 +10,7 @@
     #homeCard{overflow:hidden}
     #homeCard .chart-wrap{cursor:pointer;padding:2px 0 0}
     #homeCard .home-grid line{stroke:#f1eef1;stroke-width:1;stroke-dasharray:3 5}
+    #homeCard .home-grid,#homeCard .home-profit-area,#homeCard .home-profit-line{pointer-events:none}
     #homeCard .home-track{fill:#f7f4f6}
     #homeCard .home-bar{fill:url(#homeSalesGrad)}
     #homeCard .home-profit-area{fill:url(#homeProfitArea)}
@@ -77,16 +78,15 @@
 
     const W=340,H=120,left=18,right=8,top=12,bottom=22,baseY=H-bottom,plotH=baseY-top,step=(W-left-right)/5,barW=22;
     const max=Math.max(...md.flatMap(d=>[d.sales,d.profit]),1);
-    let groups='',linePts=[],areaPts='';
+    let groups='',linePts=[];
     const currentMonth=new Date().getFullYear()===YEAR?new Date().getMonth()+1:-1;
     md.forEach((d,i)=>{
       const x=left+i*step+step/2,bh=d.sales/max*plotH,py=baseY-d.profit/max*plotH;
       const cls=d.month===currentMonth?'home-month current':'home-month';
       groups+=`<g class="${cls}" data-month="${d.month}"><rect class="home-hit" x="${left+i*step}" y="0" width="${step}" height="${H}"/><rect class="home-track" x="${x-barW/2}" y="${top}" width="${barW}" height="${plotH}" rx="11"/><rect class="home-bar" x="${x-barW/2}" y="${baseY-bh}" width="${barW}" height="${bh}" rx="11"/>${d.sales?`<text class="home-value" x="${x}" y="${Math.max(9,baseY-bh-4)}">${Math.round(d.sales/1000)}k</text>`:''}<text x="${x}" y="${H-7}">${d.month}月</text></g>`;
-      linePts.push(`${x},${py}`);areaPts+=`${i?' L':'M'} ${x} ${py}`;
+      linePts.push(`${x},${py}`);
     });
     const firstX=left+step/2,lastX=left+4*step+step/2;
-    const area=`M ${firstX} ${baseY}${areaPts.replace(/^M[^L]*/, '')} L ${lastX} ${baseY} Z`;
     const points=md.map((d,i)=>{const x=left+i*step+step/2,py=baseY-d.profit/max*plotH;return `<circle class="home-profit-point" cx="${x}" cy="${py}" r="3.2" data-month="${d.month}"/>`}).join('');
     const svg=`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="直近5か月の売上と利益"><defs><linearGradient id="homeSalesGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff5b70"/><stop offset="1" stop-color="#ffb4bf"/></linearGradient><linearGradient id="homeProfitArea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4c9ff5" stop-opacity=".20"/><stop offset="1" stop-color="#4c9ff5" stop-opacity="0"/></linearGradient></defs><g class="home-grid"><line x1="${left}" y1="${top+plotH*.33}" x2="${W-right}" y2="${top+plotH*.33}"/><line x1="${left}" y1="${top+plotH*.66}" x2="${W-right}" y2="${top+plotH*.66}"/></g>${groups}<path class="home-profit-area" d="M ${firstX} ${baseY} L ${linePts.join(' L ')} L ${lastX} ${baseY} Z"/><polyline class="home-profit-line" points="${linePts.join(' ')}"/><g>${points}</g></svg>`;
     const wrap=card.querySelector('.chart-wrap');
