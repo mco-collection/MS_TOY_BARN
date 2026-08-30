@@ -1,26 +1,32 @@
 {
-  "lastMercariSync": "2026-08-29T19:53:59+09:00",
-  "source": "Gmail + GitHub verification",
+  "lastMercariSync": "2026-08-30T17:53:00+09:00",
+  "source": "User shipment completion + GitHub verification",
   "items": [
     {
       "id": "p115",
       "name": "オールマイト",
       "pop": "248",
       "price": 3199,
-      "status": "shipping",
+      "shipping": 450,
+      "status": "sold",
       "mercariId": "m40638286159",
-      "memo": "メルカリ売却済み・発送待ち",
-      "mercariSyncedAt": "2026-08-29T19:53:59+09:00"
+      "memo": "メルカリ取引完了・発送費450円・売上反映済み",
+      "soldYear": 2026,
+      "soldMonth": 8,
+      "mercariSyncedAt": "2026-08-30T17:53:00+09:00"
     },
     {
       "id": "p137",
       "name": "ペルソナ5 ジョーカー",
       "pop": "468",
       "price": 4899,
-      "status": "shipping",
+      "shipping": 450,
+      "status": "sold",
       "mercariId": "m36404144934",
-      "memo": "メルカリ売却済み・発送待ち",
-      "mercariSyncedAt": "2026-08-29T19:53:59+09:00"
+      "memo": "メルカリ取引完了・発送費450円・売上反映済み",
+      "soldYear": 2026,
+      "soldMonth": 8,
+      "mercariSyncedAt": "2026-08-30T17:53:00+09:00"
     },
     {
       "id": "mercari-m20698579016",
@@ -29,12 +35,14 @@
       "series": "ONE PIECE",
       "price": 2999,
       "purchasePrice": null,
-      "shipping": null,
+      "shipping": 450,
       "feeRate": 0.1,
-      "status": "shipping",
+      "status": "sold",
       "mercariId": "m20698579016",
-      "memo": "メルカリ売却済み・発送待ち（仕入れ値・送料未入力）",
-      "mercariSyncedAt": "2026-08-29T19:53:59+09:00"
+      "memo": "メルカリ取引完了・発送費450円（仕入れ値未入力）",
+      "soldYear": 2026,
+      "soldMonth": 8,
+      "mercariSyncedAt": "2026-08-30T17:53:00+09:00"
     },
     {
       "id": "mercari-m40680286611",
