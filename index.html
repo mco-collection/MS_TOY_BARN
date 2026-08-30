@@ -9,82 +9,21 @@
   <title>M's TOY BARN</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles.css?v=408">
+  <link rel="stylesheet" href="sales-mercari.css?v=410">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
 </head>
 <body>
   <main class="dashboard">
-    <header class="topbar">
-      <div class="brandmark">m<span></span></div>
-      <div class="brandcopy"><b>M's TOY BARN</b><small>MERCARI MANAGER</small></div>
-      <button class="mini-btn" aria-label="設定">⚙︎</button>
-    </header>
-
-    <section class="hero">
-      <div><small>GOOD EVENING</small><h1>今日もええ感じでいこか！</h1></div>
-      <span class="hero-emoji">✨</span>
-    </section>
-
-    <section class="metrics" aria-label="サマリー">
-      <article class="metric pink"><div class="label"><span>📦</span>在庫数</div><strong id="inventory">110<em>件</em></strong><small>登録済み出品</small></article>
-      <article class="metric yellow"><div class="label"><span>🏷️</span>出品中</div><strong id="listed">110<em>件</em></strong><small>販売中の商品</small></article>
-      <article class="metric green"><div class="label"><span>¥</span>今月の利益</div><strong class="money" id="profit">¥128,450</strong><small>今月の確定利益</small></article>
-      <article class="metric blue shipping-metric" id="shippingMetric" role="button" tabindex="0"><div class="label"><span>🚚</span>発送待ち</div><strong id="shipping">7<em>件</em></strong><small>発送が必要</small></article>
-    </section>
-
-    <section class="chart-card" id="homeCard">
-      <div class="chart-head"><div><b>📈 売上推移</b><small>今月</small></div><div class="legend"><span class="sale-dot"></span>売上 <span class="profit-dot"></span>利益</div></div>
-      <div class="chart-wrap">
-        <svg viewBox="0 0 340 120" preserveAspectRatio="none" role="img" aria-label="週間売上と利益の推移">
-          <defs>
-            <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff6476"/><stop offset="1" stop-color="#ffc3ca"/></linearGradient>
-            <linearGradient id="profitArea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4c9ff5" stop-opacity=".24"/><stop offset="1" stop-color="#4c9ff5" stop-opacity="0"/></linearGradient>
-          </defs>
-          <g class="grid"><line x1="22" y1="26" x2="326" y2="26"/><line x1="22" y1="58" x2="326" y2="58"/><line x1="22" y1="90" x2="326" y2="90"/></g>
-          <path class="profit-area" d="M52 78 L112 65 L172 59 L232 67 L292 82 L292 96 L52 96 Z"/>
-          <g class="bars"><rect x="39" y="57" width="26" height="39" rx="8"/><rect x="99" y="39" width="26" height="57" rx="8"/><rect x="159" y="25" width="26" height="71" rx="8"/><rect x="219" y="43" width="26" height="53" rx="8"/><rect x="279" y="67" width="26" height="29" rx="8"/></g>
-          <polyline class="line" points="52,78 112,65 172,59 232,67 292,82"/>
-          <g class="points"><circle cx="52" cy="78" r="4"/><circle cx="112" cy="65" r="4"/><circle cx="172" cy="59" r="4"/><circle cx="232" cy="67" r="4"/><circle cx="292" cy="82" r="4"/></g>
-          <g class="weeks"><text x="52" y="114">W1</text><text x="112" y="114">W2</text><text x="172" y="114">W3</text><text x="232" y="114">W4</text><text x="292" y="114">W5</text></g>
-        </svg>
-      </div>
-      <div class="totals"><div><small>売上合計</small><b>¥289,540</b></div><div><small>利益合計</small><b>¥118,450</b></div></div>
-    </section>
-
-    <section class="product-panel" id="productPanel" hidden>
-      <div class="product-head"><div><b>📦 出品中の商品</b><small id="productSummary">110件</small></div><strong id="listingValue">¥881,790</strong></div>
-      <div class="product-tools"><div class="product-search"><span>⌕</span><input id="productSearch" type="search" inputmode="search" placeholder="商品名・シリーズ・POP番号で検索"><button id="clearSearch" type="button" aria-label="検索をクリア" hidden>×</button></div><select id="productSort" class="product-sort" aria-label="商品の並べ替え"><option value="default">並べ替え</option><option value="price-desc">価格 高い順</option><option value="price-asc">価格 低い順</option><option value="margin-desc">利益率 高い順</option><option value="margin-asc">利益率 低い順</option></select></div>
-      <div class="product-list" id="productList"></div>
-    </section>
-
-
-    <section class="sales-panel" id="salesPanel" hidden>
-      <div class="sales-head"><div><b>📊 2026年 売上</b><small>1月〜7月の販売実績</small></div><button id="salesYearBtn">2026</button></div>
-      <div class="sales-metrics">
-        <article><small>売上</small><strong id="yearSales">—</strong></article>
-        <article><small>確定利益</small><strong id="yearProfit">—</strong></article>
-        <article><small>販売件数</small><strong id="yearSoldCount">—</strong></article>
-        <article><small>利益確定</small><strong id="yearProfitKnown">—</strong></article>
-      </div>
-      <div class="sales-chart-box">
-        <div class="sales-chart-title"><div><b>月別 売上・利益</b><small id="chartStyleHint">棒＝売上 / 線＝確定利益</small></div><div class="chart-style-switch" id="chartStyleSwitch"><button data-chart-style="mix" class="active">MIX</button><button data-chart-style="line">LINE</button><button data-chart-style="block">BLOCK</button></div></div>
-        <div id="salesChart" class="sales-chart"></div>
-      </div>
-      <div class="month-filter" id="monthFilter"></div>
-      <div class="sales-list" id="salesList"></div>
-    </section>
-
-    <nav class="bottom-nav" aria-label="メインメニュー">
-      <button class="active" data-view="home"><span>⌂</span><b>HOME</b></button>
-      <button data-view="products"><span>📦</span><b>商品</b></button>
-      <button class="add"><span>＋</span><b>登録</b></button>
-      <button data-view="sales"><span>↗</span><b>売上</b></button>
-      <button><span>⚙︎</span><b>設定</b></button>
-    </nav>
+    <header class="topbar"><div class="brandmark">m<span></span></div><div class="brandcopy"><b>M's TOY BARN</b><small>MERCARI MANAGER</small></div><button class="mini-btn" aria-label="設定">⚙︎</button></header>
+    <section class="hero"><div><small>GOOD EVENING</small><h1>今日もええ感じでいこか！</h1></div><span class="hero-emoji">✨</span></section>
+    <section class="metrics" aria-label="サマリー"><article class="metric pink"><div class="label"><span>📦</span>在庫数</div><strong id="inventory">110<em>件</em></strong><small>登録済み出品</small></article><article class="metric yellow"><div class="label"><span>🏷️</span>出品中</div><strong id="listed">110<em>件</em></strong><small>販売中の商品</small></article><article class="metric green"><div class="label"><span>¥</span>今月の利益</div><strong class="money" id="profit">¥128,450</strong><small>今月の確定利益</small></article><article class="metric blue shipping-metric" id="shippingMetric" role="button" tabindex="0"><div class="label"><span>🚚</span>発送待ち</div><strong id="shipping">7<em>件</em></strong><small>発送が必要</small></article></section>
+    <section class="chart-card" id="homeCard"><div class="chart-head"><div><b>📈 売上推移</b><small>今月</small></div><div class="legend"><span class="sale-dot"></span>売上 <span class="profit-dot"></span>利益</div></div><div class="chart-wrap"><svg viewBox="0 0 340 120" preserveAspectRatio="none" role="img" aria-label="週間売上と利益の推移"><defs><linearGradient id="bar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff6476"/><stop offset="1" stop-color="#ffc3ca"/></linearGradient><linearGradient id="profitArea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4c9ff5" stop-opacity=".24"/><stop offset="1" stop-color="#4c9ff5" stop-opacity="0"/></linearGradient></defs><g class="grid"><line x1="22" y1="26" x2="326" y2="26"/><line x1="22" y1="58" x2="326" y2="58"/><line x1="22" y1="90" x2="326" y2="90"/></g><path class="profit-area" d="M52 78 L112 65 L172 59 L232 67 L292 82 L292 96 L52 96 Z"/><g class="bars"><rect x="39" y="57" width="26" height="39" rx="8"/><rect x="99" y="39" width="26" height="57" rx="8"/><rect x="159" y="25" width="26" height="71" rx="8"/><rect x="219" y="43" width="26" height="53" rx="8"/><rect x="279" y="67" width="26" height="29" rx="8"/></g><polyline class="line" points="52,78 112,65 172,59 232,67 292,82"/><g class="points"><circle cx="52" cy="78" r="4"/><circle cx="112" cy="65" r="4"/><circle cx="172" cy="59" r="4"/><circle cx="232" cy="67" r="4"/><circle cx="292" cy="82" r="4"/></g><g class="weeks"><text x="52" y="114">W1</text><text x="112" y="114">W2</text><text x="172" y="114">W3</text><text x="232" y="114">W4</text><text x="292" y="114">W5</text></g></svg></div><div class="totals"><div><small>売上合計</small><b>¥289,540</b></div><div><small>利益合計</small><b>¥118,450</b></div></div></section>
+    <section class="product-panel" id="productPanel" hidden><div class="product-head"><div><b>📦 出品中の商品</b><small id="productSummary">110件</small></div><strong id="listingValue">¥881,790</strong></div><div class="product-tools"><div class="product-search"><span>⌕</span><input id="productSearch" type="search" inputmode="search" placeholder="商品名・シリーズ・POP番号で検索"><button id="clearSearch" type="button" aria-label="検索をクリア" hidden>×</button></div><select id="productSort" class="product-sort" aria-label="商品の並べ替え"><option value="default">並べ替え</option><option value="price-desc">価格 高い順</option><option value="price-asc">価格 低い順</option><option value="margin-desc">利益率 高い順</option><option value="margin-asc">利益率 低い順</option></select></div><div class="product-list" id="productList"></div></section>
+    <section class="sales-panel" id="salesPanel" hidden><div class="sales-head"><div><b>📊 2026年 売上</b><small>1月〜12月の販売実績</small></div><button id="salesYearBtn">2026</button></div><div class="sales-metrics"><article><small>売上</small><strong id="yearSales">—</strong></article><article><small>確定利益</small><strong id="yearProfit">—</strong></article><article><small>販売件数</small><strong id="yearSoldCount">—</strong></article><article><small>利益確定</small><strong id="yearProfitKnown">—</strong></article></div><div class="sales-chart-box"><div class="sales-chart-title"><div><b>売上・利益の推移</b><small id="chartStyleHint">棒＝売上 / 線＝確定利益</small></div><div class="chart-style-switch" id="chartStyleSwitch"><button data-chart-style="mix" class="active">MIX</button><button data-chart-style="line">LINE</button><button data-chart-style="block">BLOCK</button></div></div><div id="salesChart" class="sales-chart"></div></div><div class="month-filter" id="monthFilter"></div><div class="sales-list" id="salesList"></div></section>
+    <nav class="bottom-nav" aria-label="メインメニュー"><button class="active" data-view="home"><span>⌂</span><b>HOME</b></button><button data-view="products"><span>📦</span><b>商品</b></button><button class="add"><span>＋</span><b>登録</b></button><button data-view="sales"><span>↗</span><b>売上</b></button><button><span>⚙︎</span><b>設定</b></button></nav>
   </main>
-
 <div class="modal" id="editModal" hidden><div class="modal-card"><h2>商品を編集</h2><div class="form-grid"><label>商品名<input id="editTitle"></label><label>POP番号<input id="editPop"></label><label>シリーズ<input id="editSeries"></label><label>価格<input id="editPrice" type="number"></label><label>仕入れ値<input id="editPurchase" type="number"></label><label>メモ<textarea id="editMemo"></textarea></label><div id="priceTools" class="price-tools"><div class="estimate-line">予想送料 <b id="estimatedShip">—</b></div><div class="price-tool-buttons"><button type="button" onclick="quickPrice(300)">＋¥300</button><button type="button" onclick="quickPrice(-100)">−¥100</button><button type="button" class="profit-btn" onclick="openProfitCalc()">利益計算</button></div><div id="priceHistoryBox" class="price-history"></div></div><div id="soldFields"><label>販売月<select id="editSoldMonth"><option value="">未設定</option><option value="1">1月</option><option value="2">2月</option><option value="3">3月</option><option value="4">4月</option><option value="5">5月</option><option value="6">6月</option><option value="7">7月</option><option value="8">8月</option><option value="9">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option></select></label><label>送料<input id="editShipping" type="number"></label></div></div><div class="modal-actions"><button class="secondary" data-close>キャンセル</button><button class="danger" id="stopAction" onclick="stopListing()">出品停止</button><button class="secondary" id="relistAction" onclick="relistProduct()" hidden>再出品</button><button class="secondary" id="soldAction" onclick="openSold()">販売済みにする</button><button class="primary" onclick="applyBasic()">保存</button></div></div></div>
 <div class="modal" id="soldModal" hidden><div class="modal-card"><h2>販売済みにする</h2><div class="form-grid"><label>販売価格<input id="soldPrice" type="number"></label><label>販売月<select id="soldMonth"><option value="">選択</option><option value="1">1月</option><option value="2">2月</option><option value="3">3月</option><option value="4">4月</option><option value="5">5月</option><option value="6">6月</option><option value="7">7月</option><option value="8">8月</option><option value="9">9月</option><option value="10">10月</option><option value="11">11月</option><option value="12">12月</option></select></label><label>送料<input id="soldShipping" type="number" placeholder="販売後の確定送料"></label><small>販売手数料10%は自動計算します。</small></div><div class="modal-actions"><button class="secondary" data-close>戻る</button><button class="primary" onclick="confirmSold()">販売済みにする</button></div></div></div>
-
 <div class="modal" id="profitModal" hidden><div class="modal-card"><h2>値下げ・利益計算</h2><div class="form-grid"><label>提示された販売価格<input id="profitAskPrice" type="number" oninput="updateProfitCalc()"></label><label>予想送料<input id="profitShip" type="number" oninput="updateProfitCalc()"></label><small>予想送料は過去の販売実績をもとに初期入力。必要なら変更できます。</small></div><div id="profitResult" class="profit-result"></div><div class="modal-actions"><button class="secondary" onclick="closeProfit()">戻る</button></div></div></div>
   <script src="app.js?v=408"></script>
   <script src="hero-alert.js?v=409"></script>
