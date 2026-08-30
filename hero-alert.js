@@ -119,8 +119,21 @@
 
   if(!document.querySelector('script[data-sales-detail]')){
     const detailScript=document.createElement('script');
-    detailScript.src='./sales-detail.js?v=411';
+    detailScript.src='./sales-detail.js?v=412';
     detailScript.dataset.salesDetail='1';
+    detailScript.onload=()=>{
+      if(!document.querySelector('script[data-home-chart]')){
+        const homeScript=document.createElement('script');
+        homeScript.src='./home-chart.js?v=412';
+        homeScript.dataset.homeChart='1';
+        document.body.appendChild(homeScript);
+      }
+    };
     document.body.appendChild(detailScript);
+  }else if(!document.querySelector('script[data-home-chart]')){
+    const homeScript=document.createElement('script');
+    homeScript.src='./home-chart.js?v=412';
+    homeScript.dataset.homeChart='1';
+    document.body.appendChild(homeScript);
   }
 })();
