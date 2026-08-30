@@ -6,6 +6,7 @@
 
   const STORAGE_KEY='mstb_products_v3';
   const SYNC_FIELDS=['status','price','purchasePrice','shipping','feeRate','series','pop','mercariId','memo','soldYear','soldMonth','mercariSyncedAt'];
+  const NULL_PROTECTED_FIELDS=new Set(['purchasePrice','shipping']);
 
   async function fetchJson(url){
     const res=await fetch(`${url}?sync=${Date.now()}`,{cache:'no-store'});
@@ -31,6 +32,7 @@
       let changed=false;
 
       // Base inventory first, then Mercari state as the authoritative override.
+      // Never erase a manually entered purchase price or shipping cost with a remote null.
       for(const r of [...remote,...overrides]){
         const l=byId.get(r.id);
         if(!l){
@@ -40,7 +42,9 @@
           continue;
         }
         for(const k of SYNC_FIELDS){
-          if(Object.prototype.hasOwnProperty.call(r,k)&&JSON.stringify(l[k])!==JSON.stringify(r[k])){
+          if(!Object.prototype.hasOwnProperty.call(r,k))continue;
+          if(NULL_PROTECTED_FIELDS.has(k)&&r[k]==null&&l[k]!=null)continue;
+          if(JSON.stringify(l[k])!==JSON.stringify(r[k])){
             l[k]=r[k];
             changed=true;
           }
