@@ -1,6 +1,6 @@
 {
-  "lastMercariSync": "2026-08-30T17:53:00+09:00",
-  "source": "User shipment completion + GitHub verification",
+  "lastMercariSync": "2026-09-04T22:43:17+09:00",
+  "source": "Mercari product details + comments check",
   "items": [
     {
       "id": "p115",
@@ -71,6 +71,66 @@
       "soldYear": 2026,
       "soldMonth": 8,
       "mercariSyncedAt": "2026-08-29T19:53:59+09:00"
+    },
+    {
+      "id": "m001",
+      "name": "宍田獣郎太",
+      "pop": "",
+      "series": "My Hero Academia",
+      "price": 3299,
+      "status": "listing",
+      "mercariId": "m47713251532",
+      "memo": "メルカリ価格同期済み",
+      "mercariSyncedAt": "2026-09-04T22:43:17+09:00",
+      "mercariCommentsCheckedAt": "2026-09-04T22:43:17+09:00"
+    },
+    {
+      "id": "m002",
+      "name": "ココポップス ココくん",
+      "pop": "",
+      "series": "Coco Pops",
+      "price": 4199,
+      "status": "listing",
+      "mercariId": "m31169645572",
+      "memo": "メルカリ価格同期済み",
+      "mercariSyncedAt": "2026-09-04T22:43:17+09:00",
+      "mercariCommentsCheckedAt": "2026-09-04T22:43:17+09:00"
+    },
+    {
+      "id": "m003",
+      "name": "ミッキーのジャックと豆の木",
+      "pop": "",
+      "series": "Disney",
+      "price": 2999,
+      "status": "listing",
+      "mercariId": "m14880277411",
+      "memo": "メルカリ価格同期済み",
+      "mercariSyncedAt": "2026-09-04T22:43:17+09:00",
+      "mercariCommentsCheckedAt": "2026-09-04T22:43:17+09:00"
+    },
+    {
+      "id": "m004",
+      "name": "うずまきナルト",
+      "pop": "",
+      "series": "Naruto",
+      "price": 4899,
+      "status": "listing",
+      "mercariId": "m18854496560",
+      "memo": "メルカリ価格同期済み",
+      "mercariSyncedAt": "2026-09-04T22:43:17+09:00",
+      "mercariCommentsCheckedAt": "2026-09-04T22:43:17+09:00"
+    },
+    {
+      "id": "m005",
+      "name": "ハローキティ 2体セット",
+      "pop": "",
+      "series": "Hello Kitty / Sanrio",
+      "price": 7799,
+      "status": "listing",
+      "mercariId": "m31724542735",
+      "memo": "メルカリ価格同期済み",
+      "mercariSyncedAt": "2026-09-04T22:43:17+09:00",
+      "mercariCommentsCheckedAt": "2026-09-04T22:43:17+09:00"
     }
   ]
 }
