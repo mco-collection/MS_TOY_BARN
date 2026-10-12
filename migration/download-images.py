@@ -28,8 +28,9 @@ for batch in ("001","002","003","004","005","006","007","008","009","010"):
                     raise ValueError(f"Invalid JPEG for {entry['sourceMercariId']} photo {idx}")
                 target.write_bytes(content)
             paths.append(str(target.relative_to(ROOT)).replace("\\\\","/"))
-        entry["photoPaths"]=paths
-        entry["photosBackedUp"]=True
-        entry["migrationStatus"]="photos_backed_up"
-        changed=True
+        if entry.get("photoPaths") != paths or entry.get("photosBackedUp") is not True or entry.get("migrationStatus") != "photos_backed_up":
+            entry["photoPaths"]=paths
+            entry["photosBackedUp"]=True
+            entry["migrationStatus"]="photos_backed_up"
+            changed=True
     if changed: manifest.write_text(json.dumps(doc,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
