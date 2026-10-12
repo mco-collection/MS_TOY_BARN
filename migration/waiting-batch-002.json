@@ -18,11 +18,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m21835794409_1.jpg?1723734402",
         "https://static.mercdn.net/item/detail/webp/photos/m21835794409_2.jpg?1723734402"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Existing MTB candidate; review variant, price and current listing status before merging."
+      "notes": "Existing MTB candidate; review variant, price and current listing status before merging.",
+      "photoPaths": [
+        "migration/images/m21835794409_1.jpg",
+        "migration/images/m21835794409_2.jpg"
+      ]
     },
     {
       "id": "waiting-m49540748907",
@@ -39,11 +43,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m49540748907_1.jpg?1786897351",
         "https://static.mercdn.net/item/detail/webp/photos/m49540748907_2.jpg?1786897351"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Existing MTB candidate; review variant, price and current listing status before merging."
+      "notes": "Existing MTB candidate; review variant, price and current listing status before merging.",
+      "photoPaths": [
+        "migration/images/m49540748907_1.jpg",
+        "migration/images/m49540748907_2.jpg"
+      ]
     },
     {
       "id": "waiting-m14632806316",
@@ -60,11 +68,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m14632806316_1.jpg?1786897370",
         "https://static.mercdn.net/item/detail/webp/photos/m14632806316_2.jpg?1786897370"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Existing MTB candidate; review variant, price and current listing status before merging."
+      "notes": "Existing MTB candidate; review variant, price and current listing status before merging.",
+      "photoPaths": [
+        "migration/images/m14632806316_1.jpg",
+        "migration/images/m14632806316_2.jpg"
+      ]
     },
     {
       "id": "waiting-m68879806921",
@@ -82,11 +94,16 @@
         "https://static.mercdn.net/item/detail/webp/photos/m68879806921_2.jpg?1786897378",
         "https://static.mercdn.net/item/detail/webp/photos/m68879806921_3.jpg?1786897378"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Existing MTB candidate; review variant, price and current listing status before merging."
+      "notes": "Existing MTB candidate; review variant, price and current listing status before merging.",
+      "photoPaths": [
+        "migration/images/m68879806921_1.jpg",
+        "migration/images/m68879806921_2.jpg",
+        "migration/images/m68879806921_3.jpg"
+      ]
     },
     {
       "id": "waiting-m80967812190",
@@ -103,11 +120,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m80967812190_1.jpg?1786897385",
         "https://static.mercdn.net/item/detail/webp/photos/m80967812190_2.jpg?1786897385"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Existing MTB candidate; review variant, price and current listing status before merging."
+      "notes": "Existing MTB candidate; review variant, price and current listing status before merging.",
+      "photoPaths": [
+        "migration/images/m80967812190_1.jpg",
+        "migration/images/m80967812190_2.jpg"
+      ]
     }
   ]
 }

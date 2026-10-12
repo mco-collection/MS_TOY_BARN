@@ -16,11 +16,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m31882910473_1.jpg?1768831337",
         "https://static.mercdn.net/item/detail/webp/photos/m31882910473_2.jpg?1768831337"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old-account source. Do not merge into existing MTB record before variant verification."
+      "notes": "Old-account source. Do not merge into existing MTB record before variant verification.",
+      "photoPaths": [
+        "migration/images/m31882910473_1.jpg",
+        "migration/images/m31882910473_2.jpg"
+      ]
     },
     {
       "id": "waiting-m19951188924",
@@ -37,11 +41,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m19951188924_1.jpg?1768831341",
         "https://static.mercdn.net/item/detail/webp/photos/m19951188924_2.jpg?1768831341"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old-account source. Do not merge into existing MTB record before variant verification."
+      "notes": "Old-account source. Do not merge into existing MTB record before variant verification.",
+      "photoPaths": [
+        "migration/images/m19951188924_1.jpg",
+        "migration/images/m19951188924_2.jpg"
+      ]
     },
     {
       "id": "waiting-m42309067444",
@@ -58,11 +66,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m42309067444_1.jpg?1768831357",
         "https://static.mercdn.net/item/detail/webp/photos/m42309067444_2.jpg?1768831357"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old-account source. Do not merge into existing MTB record before variant verification."
+      "notes": "Old-account source. Do not merge into existing MTB record before variant verification.",
+      "photoPaths": [
+        "migration/images/m42309067444_1.jpg",
+        "migration/images/m42309067444_2.jpg"
+      ]
     },
     {
       "id": "waiting-m57552799828",
@@ -79,11 +91,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m57552799828_1.jpg?1768831361",
         "https://static.mercdn.net/item/detail/webp/photos/m57552799828_2.jpg?1768831361"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old-account source. Do not merge into existing MTB record before variant verification."
+      "notes": "Old-account source. Do not merge into existing MTB record before variant verification.",
+      "photoPaths": [
+        "migration/images/m57552799828_1.jpg",
+        "migration/images/m57552799828_2.jpg"
+      ]
     },
     {
       "id": "waiting-m24633374658",
@@ -100,11 +116,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m24633374658_1.jpg?1676205749",
         "https://static.mercdn.net/item/detail/webp/photos/m24633374658_2.jpg?1676205749"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old-account source. Do not merge into existing MTB record before variant verification."
+      "notes": "Old-account source. Do not merge into existing MTB record before variant verification.",
+      "photoPaths": [
+        "migration/images/m24633374658_1.jpg",
+        "migration/images/m24633374658_2.jpg"
+      ]
     }
   ],
   "recordCount": 5,
