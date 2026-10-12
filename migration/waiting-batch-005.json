@@ -19,11 +19,16 @@
         "https://static.mercdn.net/item/detail/webp/photos/m84587357436_2.jpg?1786897487",
         "https://static.mercdn.net/item/detail/webp/photos/m84587357436_3.jpg?1786897487"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Verified by same seller, exact title and price; existing MTB candidate requires review."
+      "notes": "Verified by same seller, exact title and price; existing MTB candidate requires review.",
+      "photoPaths": [
+        "migration/images/m84587357436_1.jpg",
+        "migration/images/m84587357436_2.jpg",
+        "migration/images/m84587357436_3.jpg"
+      ]
     },
     {
       "id": "waiting-m16223470470",
@@ -40,11 +45,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m16223470470_1.jpg?1786897494",
         "https://static.mercdn.net/item/detail/webp/photos/m16223470470_2.jpg?1786897494"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Verified by same seller, exact title and price; existing MTB candidate requires review."
+      "notes": "Verified by same seller, exact title and price; existing MTB candidate requires review.",
+      "photoPaths": [
+        "migration/images/m16223470470_1.jpg",
+        "migration/images/m16223470470_2.jpg"
+      ]
     },
     {
       "id": "waiting-m24644868395",
@@ -61,11 +70,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m24644868395_1.jpg?1786897501",
         "https://static.mercdn.net/item/detail/webp/photos/m24644868395_2.jpg?1786897501"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Verified by same seller, exact title and price; existing MTB candidate requires review."
+      "notes": "Verified by same seller, exact title and price; existing MTB candidate requires review.",
+      "photoPaths": [
+        "migration/images/m24644868395_1.jpg",
+        "migration/images/m24644868395_2.jpg"
+      ]
     },
     {
       "id": "waiting-m84940607474",
@@ -83,11 +96,16 @@
         "https://static.mercdn.net/item/detail/webp/photos/m84940607474_2.jpg?1786897510",
         "https://static.mercdn.net/item/detail/webp/photos/m84940607474_3.jpg?1786897510"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Verified by same seller, exact title and price; existing MTB candidate requires review."
+      "notes": "Verified by same seller, exact title and price; existing MTB candidate requires review.",
+      "photoPaths": [
+        "migration/images/m84940607474_1.jpg",
+        "migration/images/m84940607474_2.jpg",
+        "migration/images/m84940607474_3.jpg"
+      ]
     },
     {
       "id": "waiting-m89118001279",
@@ -104,11 +122,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m89118001279_1.jpg?1786897528",
         "https://static.mercdn.net/item/detail/webp/photos/m89118001279_2.jpg?1786897528"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Verified by same seller, exact title and price; existing MTB candidate requires review."
+      "notes": "Verified by same seller, exact title and price; existing MTB candidate requires review.",
+      "photoPaths": [
+        "migration/images/m89118001279_1.jpg",
+        "migration/images/m89118001279_2.jpg"
+      ]
     }
   ]
 }
