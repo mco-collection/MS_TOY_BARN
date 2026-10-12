@@ -62,6 +62,8 @@ async function loadProducts(){
    // Non-destructive enrichment: attach source images to existing inventory without changing prices, costs or statuses.
    const linksResponse=await fetch('./migration/verified-image-links.json',{cache:'no-store'});
    if(linksResponse.ok){const linksData=await linksResponse.json();const byId=new Map(products.map(p=>[p.id,p]));for(const link of linksData.links||[]){const old=byId.get(link.existingId),source=byId.get(link.waitingId);if(!old||!source||old.id===source.id)continue;if(!old.photoPaths?.length&&!old.photoUrls?.length){old.photoPaths=source.photoPaths||[];old.photoUrls=source.photoUrls||[];old.photosBackedUp=!!source.photosBackedUp;old.photoSourceWaitingId=source.id;old.photoSourceMercariId=source.sourceMercariId}}}
+   const seventhResponse=await fetch('./migration/waiting-batch-007.json',{cache:'no-store'});
+   if(seventhResponse.ok){const seventhData=await seventhResponse.json();const known=new Set(products.map(p=>p.id));for(const entry of seventhData.items||[]){if(!known.has(entry.id)){products.push({...entry});known.add(entry.id)}else{const existing=products.find(p=>p.id===entry.id);if(existing&&existing.status==='waiting'){existing.photoUrls=entry.photoUrls||existing.photoUrls;existing.photoPaths=entry.photoPaths||existing.photoPaths;existing.photosBackedUp=!!entry.photosBackedUp;existing.migrationStatus=entry.migrationStatus||existing.migrationStatus}}}}
   }catch(err){console.warn('Waiting migration unavailable',err)}
   persist()
   renderAll();
