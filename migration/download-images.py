@@ -6,7 +6,7 @@ from urllib.request import Request, urlopen
 from urllib.parse import urlsplit
 
 ROOT=Path(__file__).resolve().parents[1]
-for batch in ("001","002","003","004","005"):
+for batch in ("001","002","003","004","005","006","007"):
     manifest=ROOT/"migration"/f"waiting-batch-{batch}.json"
     if not manifest.exists(): continue
     doc=json.loads(manifest.read_text(encoding="utf-8"))
