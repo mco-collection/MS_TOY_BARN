@@ -1,0 +1,73 @@
+{
+  "batch": 2,
+  "createdAt": "2026-10-12",
+  "note": "Image URLs inferred from source image numbering, validate downloads. No photos uploaded yet.",
+  "items": [
+    {
+      "sourceMercariId": "m21835794409",
+      "draftId": 287070856,
+      "title": "FUNKO POP！ レア マーベル アイアンマン",
+      "price": 9699,
+      "photoSourceUrls": [
+        "https://static.mercdn.net/item/detail/orig/photos/m21835794409_1.jpg?1723734402",
+        "https://static.mercdn.net/item/detail/orig/photos/m21835794409_2.jpg?1723734402"
+      ],
+      "photoStatus": "source_identified_not_uploaded",
+      "mtbStatus": "not_verified",
+      "mtbId": null
+    },
+    {
+      "sourceMercariId": "m49540748907",
+      "draftId": 533313477,
+      "title": "FUNKO POP! PEANUTS スヌーピー2体セット",
+      "price": 8899,
+      "photoSourceUrls": [
+        "https://static.mercdn.net/item/detail/orig/photos/m49540748907_1.jpg?1786897351",
+        "https://static.mercdn.net/item/detail/orig/photos/m49540748907_2.jpg?1786897351"
+      ],
+      "photoStatus": "source_identified_not_uploaded",
+      "mtbStatus": "not_verified",
+      "mtbId": null
+    },
+    {
+      "sourceMercariId": "m14632806316",
+      "draftId": 1497328501,
+      "title": "FUNKO POP! ヒロアカ オーバーホール #788",
+      "price": 3199,
+      "photoSourceUrls": [
+        "https://static.mercdn.net/item/detail/orig/photos/m14632806316_1.jpg?1786897370",
+        "https://static.mercdn.net/item/detail/orig/photos/m14632806316_2.jpg?1786897370"
+      ],
+      "photoStatus": "source_identified_not_uploaded",
+      "mtbStatus": "not_verified",
+      "mtbId": null
+    },
+    {
+      "sourceMercariId": "m68879806921",
+      "draftId": 466044568,
+      "title": "FUNKO POP! ワンパンマン4体セット",
+      "price": 15899,
+      "photoSourceUrls": [
+        "https://static.mercdn.net/item/detail/orig/photos/m68879806921_1.jpg?1786897378",
+        "https://static.mercdn.net/item/detail/orig/photos/m68879806921_2.jpg?1786897378",
+        "https://static.mercdn.net/item/detail/orig/photos/m68879806921_3.jpg?1786897378"
+      ],
+      "photoStatus": "source_identified_not_uploaded",
+      "mtbStatus": "not_verified",
+      "mtbId": null
+    },
+    {
+      "sourceMercariId": "m80967812190",
+      "draftId": 651571770,
+      "title": "FUNKO POP! レブロン・ジェームズ #1059",
+      "price": 2999,
+      "photoSourceUrls": [
+        "https://static.mercdn.net/item/detail/orig/photos/m80967812190_1.jpg?1786897385",
+        "https://static.mercdn.net/item/detail/orig/photos/m80967812190_2.jpg?1786897385"
+      ],
+      "photoStatus": "source_identified_not_uploaded",
+      "mtbStatus": "not_verified",
+      "mtbId": null
+    }
+  ]
+}
