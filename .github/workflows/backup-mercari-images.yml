@@ -1,6 +1,12 @@
 name: Backup Mercari migration images
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - feature/mercari-migration-audit
+    paths:
+      - '.github/workflows/backup-mercari-images.yml'
+      - 'migration/waiting-batch-*.json'
 permissions:
   contents: write
 jobs:
