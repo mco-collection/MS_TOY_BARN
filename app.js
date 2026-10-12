@@ -49,6 +49,8 @@ async function loadProducts(){
      if(!known.has(entry.id)){products.push({...entry});known.add(entry.id)}
     }
    }
+   const secondResponse=await fetch('./migration/waiting-batch-002.json',{cache:'no-store'});
+   if(secondResponse.ok){const secondData=await secondResponse.json();const known=new Set(products.map(p=>p.id));for(const entry of secondData.items||[]){if(!known.has(entry.id)){products.push({...entry});known.add(entry.id)}}}
   }catch(err){console.warn('Waiting migration unavailable',err)}
   persist()
   renderAll();
