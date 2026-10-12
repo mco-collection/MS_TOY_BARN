@@ -18,11 +18,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m84806157428_1.jpg?1720363811",
         "https://static.mercdn.net/item/detail/webp/photos/m84806157428_2.jpg?1720363811"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge."
+      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge.",
+      "photoPaths": [
+        "migration/images/m84806157428_1.jpg",
+        "migration/images/m84806157428_2.jpg"
+      ]
     },
     {
       "id": "waiting-m51891539316",
@@ -39,11 +43,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m51891539316_1.jpg?1720363800",
         "https://static.mercdn.net/item/detail/webp/photos/m51891539316_2.jpg?1720363800"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge."
+      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge.",
+      "photoPaths": [
+        "migration/images/m51891539316_1.jpg",
+        "migration/images/m51891539316_2.jpg"
+      ]
     },
     {
       "id": "waiting-m83417503504",
@@ -61,11 +69,16 @@
         "https://static.mercdn.net/item/detail/webp/photos/m83417503504_2.jpg?1673242280",
         "https://static.mercdn.net/item/detail/webp/photos/m83417503504_3.jpg?1673242280"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge."
+      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge.",
+      "photoPaths": [
+        "migration/images/m83417503504_1.jpg",
+        "migration/images/m83417503504_2.jpg",
+        "migration/images/m83417503504_3.jpg"
+      ]
     },
     {
       "id": "waiting-m49005941891",
@@ -82,11 +95,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m49005941891_1.jpg?1720103583",
         "https://static.mercdn.net/item/detail/webp/photos/m49005941891_2.jpg?1720103583"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge."
+      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge.",
+      "photoPaths": [
+        "migration/images/m49005941891_1.jpg",
+        "migration/images/m49005941891_2.jpg"
+      ]
     },
     {
       "id": "waiting-m91811718846",
@@ -104,11 +121,16 @@
         "https://static.mercdn.net/item/detail/webp/photos/m91811718846_2.jpg?1716107954",
         "https://static.mercdn.net/item/detail/webp/photos/m91811718846_3.jpg?1716107954"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge."
+      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge.",
+      "photoPaths": [
+        "migration/images/m91811718846_1.jpg",
+        "migration/images/m91811718846_2.jpg",
+        "migration/images/m91811718846_3.jpg"
+      ]
     },
     {
       "id": "waiting-m41858409113",
@@ -125,11 +147,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m41858409113_1.jpg?1715082955",
         "https://static.mercdn.net/item/detail/webp/photos/m41858409113_2.jpg?1715082955"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge."
+      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge.",
+      "photoPaths": [
+        "migration/images/m41858409113_1.jpg",
+        "migration/images/m41858409113_2.jpg"
+      ]
     },
     {
       "id": "waiting-m87220286824",
@@ -146,11 +172,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m87220286824_1.jpg?1786897560",
         "https://static.mercdn.net/item/detail/webp/photos/m87220286824_2.jpg?1786897560"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge."
+      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge.",
+      "photoPaths": [
+        "migration/images/m87220286824_1.jpg",
+        "migration/images/m87220286824_2.jpg"
+      ]
     },
     {
       "id": "waiting-m29207108624",
@@ -167,11 +197,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m29207108624_1.jpg?1732548422",
         "https://static.mercdn.net/item/detail/webp/photos/m29207108624_2.jpg?1732548422"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge."
+      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge.",
+      "photoPaths": [
+        "migration/images/m29207108624_1.jpg",
+        "migration/images/m29207108624_2.jpg"
+      ]
     },
     {
       "id": "waiting-m97885991931",
@@ -188,11 +222,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m97885991931_1.jpg?1732548368",
         "https://static.mercdn.net/item/detail/webp/photos/m97885991931_2.jpg?1732548368"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge."
+      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge.",
+      "photoPaths": [
+        "migration/images/m97885991931_1.jpg",
+        "migration/images/m97885991931_2.jpg"
+      ]
     },
     {
       "id": "waiting-m54230753928",
@@ -209,11 +247,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m54230753928_1.jpg?1706539547",
         "https://static.mercdn.net/item/detail/webp/photos/m54230753928_2.jpg?1706539547"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge."
+      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge.",
+      "photoPaths": [
+        "migration/images/m54230753928_1.jpg",
+        "migration/images/m54230753928_2.jpg"
+      ]
     },
     {
       "id": "waiting-m50940566105",
@@ -230,11 +272,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m50940566105_1.jpg?1707489639",
         "https://static.mercdn.net/item/detail/webp/photos/m50940566105_2.jpg?1707489639"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge."
+      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge.",
+      "photoPaths": [
+        "migration/images/m50940566105_1.jpg",
+        "migration/images/m50940566105_2.jpg"
+      ]
     },
     {
       "id": "waiting-m37361551043",
@@ -251,11 +297,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m37361551043_1.jpg?1723734388",
         "https://static.mercdn.net/item/detail/webp/photos/m37361551043_2.jpg?1723734388"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge."
+      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge.",
+      "photoPaths": [
+        "migration/images/m37361551043_1.jpg",
+        "migration/images/m37361551043_2.jpg"
+      ]
     },
     {
       "id": "waiting-m97653814340",
@@ -272,11 +322,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m97653814340_1.jpg?1656242240",
         "https://static.mercdn.net/item/detail/webp/photos/m97653814340_2.jpg?1656242240"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge."
+      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge.",
+      "photoPaths": [
+        "migration/images/m97653814340_1.jpg",
+        "migration/images/m97653814340_2.jpg"
+      ]
     },
     {
       "id": "waiting-m87751123898",
@@ -293,11 +347,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m87751123898_1.jpg?1746712227",
         "https://static.mercdn.net/item/detail/webp/photos/m87751123898_2.jpg?1746712227"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge."
+      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge.",
+      "photoPaths": [
+        "migration/images/m87751123898_1.jpg",
+        "migration/images/m87751123898_2.jpg"
+      ]
     },
     {
       "id": "waiting-m59437862890",
@@ -314,11 +372,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m59437862890_1.jpg?1768831325",
         "https://static.mercdn.net/item/detail/webp/photos/m59437862890_2.jpg?1768831325"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge."
+      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge.",
+      "photoPaths": [
+        "migration/images/m59437862890_1.jpg",
+        "migration/images/m59437862890_2.jpg"
+      ]
     },
     {
       "id": "waiting-m86554434027",
@@ -336,11 +398,16 @@
         "https://static.mercdn.net/item/detail/webp/photos/m86554434027_2.jpg?1768831319",
         "https://static.mercdn.net/item/detail/webp/photos/m86554434027_3.jpg?1768831319"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge."
+      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge.",
+      "photoPaths": [
+        "migration/images/m86554434027_1.jpg",
+        "migration/images/m86554434027_2.jpg",
+        "migration/images/m86554434027_3.jpg"
+      ]
     },
     {
       "id": "waiting-m21065257244",
@@ -359,11 +426,17 @@
         "https://static.mercdn.net/item/detail/webp/photos/m21065257244_3.jpg?1706539524",
         "https://static.mercdn.net/item/detail/webp/photos/m21065257244_4.jpg?1706539524"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge."
+      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge.",
+      "photoPaths": [
+        "migration/images/m21065257244_1.jpg",
+        "migration/images/m21065257244_2.jpg",
+        "migration/images/m21065257244_3.jpg",
+        "migration/images/m21065257244_4.jpg"
+      ]
     },
     {
       "id": "waiting-m24321194440",
@@ -380,11 +453,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m24321194440_1.jpg?1676205706",
         "https://static.mercdn.net/item/detail/webp/photos/m24321194440_2.jpg?1676205706"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge."
+      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge.",
+      "photoPaths": [
+        "migration/images/m24321194440_1.jpg",
+        "migration/images/m24321194440_2.jpg"
+      ]
     },
     {
       "id": "waiting-m89906113254",
@@ -401,11 +478,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m89906113254_1.jpg?1711268372",
         "https://static.mercdn.net/item/detail/webp/photos/m89906113254_2.jpg?1711268372"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge."
+      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge.",
+      "photoPaths": [
+        "migration/images/m89906113254_1.jpg",
+        "migration/images/m89906113254_2.jpg"
+      ]
     },
     {
       "id": "waiting-m77674950064",
@@ -422,11 +503,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m77674950064_1.jpg?1723734417",
         "https://static.mercdn.net/item/detail/webp/photos/m77674950064_2.jpg?1723734417"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge."
+      "notes": "Old Mercari listing; matched candidate requires manual variant check; do not auto-merge.",
+      "photoPaths": [
+        "migration/images/m77674950064_1.jpg",
+        "migration/images/m77674950064_2.jpg"
+      ]
     }
   ]
 }
