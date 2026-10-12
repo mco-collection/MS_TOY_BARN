@@ -46,13 +46,13 @@ async function loadProducts(){
     const waitingData=await waitingResponse.json();
     const known=new Set(products.map(p=>p.id));
     for(const entry of waitingData.items||[]){
-     if(!known.has(entry.id)){products.push({...entry});known.add(entry.id)}
+     if(!known.has(entry.id)){products.push({...entry});known.add(entry.id)}else{const existing=products.find(p=>p.id===entry.id);if(existing&&existing.status==='waiting'){existing.photoUrls=entry.photoUrls||existing.photoUrls;existing.sourceMercariId=entry.sourceMercariId||existing.sourceMercariId;existing.photoPaths=entry.photoPaths||existing.photoPaths;existing.photosBackedUp=!!entry.photosBackedUp;existing.migrationStatus=entry.migrationStatus||existing.migrationStatus}}
     }
    }
    const secondResponse=await fetch('./migration/waiting-batch-002.json',{cache:'no-store'});
-   if(secondResponse.ok){const secondData=await secondResponse.json();const known=new Set(products.map(p=>p.id));for(const entry of secondData.items||[]){if(!known.has(entry.id)){products.push({...entry});known.add(entry.id)}}}
+   if(secondResponse.ok){const secondData=await secondResponse.json();const known=new Set(products.map(p=>p.id));for(const entry of secondData.items||[]){if(!known.has(entry.id)){products.push({...entry});known.add(entry.id)}else{const existing=products.find(p=>p.id===entry.id);if(existing&&existing.status==='waiting'){existing.photoUrls=entry.photoUrls||existing.photoUrls;existing.sourceMercariId=entry.sourceMercariId||existing.sourceMercariId;existing.photoPaths=entry.photoPaths||existing.photoPaths;existing.photosBackedUp=!!entry.photosBackedUp;existing.migrationStatus=entry.migrationStatus||existing.migrationStatus}}}}
    const thirdResponse=await fetch('./migration/waiting-batch-003.json',{cache:'no-store'});
-   if(thirdResponse.ok){const thirdData=await thirdResponse.json();const known=new Set(products.map(p=>p.id));for(const entry of thirdData.items||[]){if(!known.has(entry.id)){products.push({...entry});known.add(entry.id)}}}
+   if(thirdResponse.ok){const thirdData=await thirdResponse.json();const known=new Set(products.map(p=>p.id));for(const entry of thirdData.items||[]){if(!known.has(entry.id)){products.push({...entry});known.add(entry.id)}else{const existing=products.find(p=>p.id===entry.id);if(existing&&existing.status==='waiting'){existing.photoUrls=entry.photoUrls||existing.photoUrls;existing.sourceMercariId=entry.sourceMercariId||existing.sourceMercariId;existing.photoPaths=entry.photoPaths||existing.photoPaths;existing.photosBackedUp=!!entry.photosBackedUp;existing.migrationStatus=entry.migrationStatus||existing.migrationStatus}}}}
   }catch(err){console.warn('Waiting migration unavailable',err)}
   persist()
   renderAll();
