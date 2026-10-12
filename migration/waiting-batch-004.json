@@ -18,11 +18,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m28606507696_1.jpg?1786897443",
         "https://static.mercdn.net/item/detail/webp/photos/m28606507696_2.jpg?1786897443"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old listing exact title and price, same seller as previous batches. New draft description may have been rewritten; preserve draft description. Review match before merge."
+      "notes": "Old listing exact title and price, same seller as previous batches. New draft description may have been rewritten; preserve draft description. Review match before merge.",
+      "photoPaths": [
+        "migration/images/m28606507696_1.jpg",
+        "migration/images/m28606507696_2.jpg"
+      ]
     },
     {
       "id": "waiting-m28178746546",
@@ -39,11 +43,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m28178746546_1.jpg?1786897449",
         "https://static.mercdn.net/item/detail/webp/photos/m28178746546_2.jpg?1786897449"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old listing exact title and price, same seller as previous batches. New draft description may have been rewritten; preserve draft description. Review match before merge."
+      "notes": "Old listing exact title and price, same seller as previous batches. New draft description may have been rewritten; preserve draft description. Review match before merge.",
+      "photoPaths": [
+        "migration/images/m28178746546_1.jpg",
+        "migration/images/m28178746546_2.jpg"
+      ]
     },
     {
       "id": "waiting-m10086792750",
@@ -60,11 +68,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m10086792750_1.jpg?1786897456",
         "https://static.mercdn.net/item/detail/webp/photos/m10086792750_2.jpg?1786897456"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old listing exact title and price, same seller as previous batches. New draft description may have been rewritten; preserve draft description. Review match before merge."
+      "notes": "Old listing exact title and price, same seller as previous batches. New draft description may have been rewritten; preserve draft description. Review match before merge.",
+      "photoPaths": [
+        "migration/images/m10086792750_1.jpg",
+        "migration/images/m10086792750_2.jpg"
+      ]
     },
     {
       "id": "waiting-m48240486926",
@@ -81,11 +93,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m48240486926_1.jpg?1786897462",
         "https://static.mercdn.net/item/detail/webp/photos/m48240486926_2.jpg?1786897462"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old listing exact title and price, same seller as previous batches. New draft description may have been rewritten; preserve draft description. Review match before merge."
+      "notes": "Old listing exact title and price, same seller as previous batches. New draft description may have been rewritten; preserve draft description. Review match before merge.",
+      "photoPaths": [
+        "migration/images/m48240486926_1.jpg",
+        "migration/images/m48240486926_2.jpg"
+      ]
     },
     {
       "id": "waiting-m22658154148",
@@ -102,11 +118,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m22658154148_1.jpg?1786897474",
         "https://static.mercdn.net/item/detail/webp/photos/m22658154148_2.jpg?1786897474"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "sourceStatus": "available",
       "importedAt": "2026-10-12",
-      "notes": "Old listing exact title and price, same seller as previous batches. New draft description may have been rewritten; preserve draft description. Review match before merge."
+      "notes": "Old listing exact title and price, same seller as previous batches. New draft description may have been rewritten; preserve draft description. Review match before merge.",
+      "photoPaths": [
+        "migration/images/m22658154148_1.jpg",
+        "migration/images/m22658154148_2.jpg"
+      ]
     }
   ]
 }

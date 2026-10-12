@@ -20,10 +20,14 @@
         "https://static.mercdn.net/item/detail/webp/photos/m65572655667_1.jpg?1786897391",
         "https://static.mercdn.net/item/detail/webp/photos/m65572655667_2.jpg?1786897391"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "importedAt": "2026-10-12",
-      "notes": "Original item verified by exact title, price and description. Source photo URLs saved; binary image archive not yet verified."
+      "notes": "Original item verified by exact title, price and description. Source photo URLs saved; binary image archive not yet verified.",
+      "photoPaths": [
+        "migration/images/m65572655667_1.jpg",
+        "migration/images/m65572655667_2.jpg"
+      ]
     },
     {
       "id": "waiting-draft-491570753",
@@ -42,10 +46,14 @@
         "https://static.mercdn.net/item/detail/webp/photos/m82281945759_1.jpg?1786897407",
         "https://static.mercdn.net/item/detail/webp/photos/m82281945759_2.jpg?1786897407"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "importedAt": "2026-10-12",
-      "notes": "Original item verified by exact title, price and description. Source photo URLs saved; binary image archive not yet verified."
+      "notes": "Original item verified by exact title, price and description. Source photo URLs saved; binary image archive not yet verified.",
+      "photoPaths": [
+        "migration/images/m82281945759_1.jpg",
+        "migration/images/m82281945759_2.jpg"
+      ]
     },
     {
       "id": "waiting-draft-2136485165",
@@ -74,10 +82,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m28740201642_2.jpg?1786897414",
         "https://static.mercdn.net/item/detail/webp/photos/m28740201642_3.jpg?1786897414"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "importedAt": "2026-10-12",
-      "notes": "Original item verified by exact title, price and description. Source photo URLs saved; binary image archive not yet verified."
+      "notes": "Original item verified by exact title, price and description. Source photo URLs saved; binary image archive not yet verified.",
+      "photoPaths": [
+        "migration/images/m28740201642_1.jpg",
+        "migration/images/m28740201642_2.jpg",
+        "migration/images/m28740201642_3.jpg"
+      ]
     },
     {
       "id": "waiting-draft-1763232686",
@@ -96,10 +109,14 @@
         "https://static.mercdn.net/item/detail/webp/photos/m80061192008_1.jpg?1786897422",
         "https://static.mercdn.net/item/detail/webp/photos/m80061192008_2.jpg?1786897422"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "importedAt": "2026-10-12",
-      "notes": "Original item verified by exact title, price and description. Source photo URLs saved; binary image archive not yet verified."
+      "notes": "Original item verified by exact title, price and description. Source photo URLs saved; binary image archive not yet verified.",
+      "photoPaths": [
+        "migration/images/m80061192008_1.jpg",
+        "migration/images/m80061192008_2.jpg"
+      ]
     },
     {
       "id": "waiting-draft-820355116",
@@ -119,10 +136,14 @@
         "https://static.mercdn.net/item/detail/webp/photos/m15759316843_1.jpg?1786897434",
         "https://static.mercdn.net/item/detail/webp/photos/m15759316843_2.jpg?1786897434"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "metadata_saved_photo_backup_pending",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "importedAt": "2026-10-12",
-      "notes": "Original item verified by exact title, price and description. Source photo URLs saved; binary image archive not yet verified."
+      "notes": "Original item verified by exact title, price and description. Source photo URLs saved; binary image archive not yet verified.",
+      "photoPaths": [
+        "migration/images/m15759316843_1.jpg",
+        "migration/images/m15759316843_2.jpg"
+      ]
     }
   ]
 }
