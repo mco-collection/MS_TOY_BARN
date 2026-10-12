@@ -1,0 +1,24 @@
+{
+  "batch": 11,
+  "status": "partial_identification",
+  "targetCount": 20,
+  "recordCount": 1,
+  "photoCount": 2,
+  "items": [
+    {
+      "sourceMercariId": "m47713251532",
+      "name": "FUNKO POP！ヒロアカ　宍田獣郎太",
+      "sourceSellerId": "917334456",
+      "sourceStatus": "available",
+      "price": 3299,
+      "photoUrls": [
+        "https://static.mercdn.net/item/detail/webp/photos/m47713251532_1.jpg?1682350160",
+        "https://static.mercdn.net/item/detail/webp/photos/m47713251532_2.jpg?1682350160"
+      ],
+      "photosBackedUp": false,
+      "migrationStatus": "pending_download",
+      "identifiedAt": "2026-10-13",
+      "notes": "Same verified seller; not present in batches 001-010. Image assets not yet downloaded."
+    }
+  ]
+}
