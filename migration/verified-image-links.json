@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "policy": "Verified same-source listing / human review pending for identity; keep waiting records separate and all inventory fields intact.",
+  "links": [
+    {
+      "existingId": "p017",
+      "waitingId": "waiting-m31882910473",
+      "sourceMercariId": "m31882910473",
+      "backup": true,
+      "photos": 2
+    },
+    {
+      "existingId": "p012",
+      "waitingId": "waiting-m19951188924",
+      "sourceMercariId": "m19951188924",
+      "backup": true,
+      "photos": 2
+    },
+    {
+      "existingId": "p008",
+      "waitingId": "waiting-m24633374658",
+      "sourceMercariId": "m24633374658",
+      "backup": true,
+      "photos": 2
+    },
+    {
+      "existingId": "p024",
+      "waitingId": "waiting-m21835794409",
+      "sourceMercariId": "m21835794409",
+      "backup": true,
+      "photos": 2
+    },
+    {
+      "existingId": "p119",
+      "waitingId": "waiting-m49540748907",
+      "sourceMercariId": "m49540748907",
+      "backup": true,
+      "photos": 2
+    },
+    {
+      "existingId": "p116",
+      "waitingId": "waiting-m14632806316",
+      "sourceMercariId": "m14632806316",
+      "backup": true,
+      "photos": 2
+    },
+    {
+      "existingId": "p138",
+      "waitingId": "waiting-m68879806921",
+      "sourceMercariId": "m68879806921",
+      "backup": true,
+      "photos": 3
+    },
+    {
+      "existingId": "p113",
+      "waitingId": "waiting-m80967812190",
+      "sourceMercariId": "m80967812190",
+      "backup": true,
+      "photos": 2
+    },
+    {
+      "existingId": "p111",
+      "waitingId": "waiting-draft-1540196553",
+      "sourceMercariId": "m65572655667",
+      "backup": true,
+      "photos": 2
+    },
+    {
+      "existingId": "p117",
+      "waitingId": "waiting-draft-491570753",
+      "sourceMercariId": "m82281945759",
+      "backup": true,
+      "photos": 2
+    },
+    {
+      "existingId": "p136",
+      "waitingId": "waiting-draft-2136485165",
+      "sourceMercariId": "m28740201642",
+      "backup": true,
+      "photos": 3
+    },
+    {
+      "existingId": "p135",
+      "waitingId": "waiting-draft-1763232686",
+      "sourceMercariId": "m80061192008",
+      "backup": true,
+      "photos": 2
+    },
+    {
+      "existingId": "p122",
+      "waitingId": "waiting-draft-820355116",
+      "sourceMercariId": "m15759316843",
+      "backup": true,
+      "photos": 2
+    },
+    {
+      "existingId": "p134",
+      "waitingId": "waiting-m28606507696",
+      "sourceMercariId": "m28606507696",
+      "backup": true,
+      "photos": 2
+    },
+    {
+      "existingId": "p133",
+      "waitingId": "waiting-m28178746546",
+      "sourceMercariId": "m28178746546",
+      "backup": true,
+      "photos": 2
+    },
+    {
+      "existingId": "p132",
+      "waitingId": "waiting-m10086792750",
+      "sourceMercariId": "m10086792750",
+      "backup": true,
+      "photos": 2
+    },
+    {
+      "existingId": "p131",
+      "waitingId": "waiting-m48240486926",
+      "sourceMercariId": "m48240486926",
+      "backup": true,
+      "photos": 2
+    },
+    {
+      "existingId": "p112",
+      "waitingId": "waiting-m22658154148",
+      "sourceMercariId": "m22658154148",
+      "backup": true,
+      "photos": 2
+    },
+    {
+      "existingId": "p114",
+      "waitingId": "waiting-m84587357436",
+      "sourceMercariId": "m84587357436",
+      "backup": true,
+      "photos": 3
+    },
+    {
+      "existingId": "p129",
+      "waitingId": "waiting-m16223470470",
+      "sourceMercariId": "m16223470470",
+      "backup": true,
+      "photos": 2
+    },
+    {
+      "existingId": "p118",
+      "waitingId": "waiting-m24644868395",
+      "sourceMercariId": "m24644868395",
+      "backup": true,
+      "photos": 2
+    },
+    {
+      "existingId": "p121",
+      "waitingId": "waiting-m84940607474",
+      "sourceMercariId": "m84940607474",
+      "backup": true,
+      "photos": 3
+    },
+    {
+      "existingId": "p127",
+      "waitingId": "waiting-m89118001279",
+      "sourceMercariId": "m89118001279",
+      "backup": true,
+      "photos": 2
+    },
+    {
+      "existingId": "p120",
+      "waitingId": "waiting-m56308998221",
+      "sourceMercariId": "m56308998221",
+      "backup": false,
+      "photos": 2
+    },
+    {
+      "existingId": "p126",
+      "waitingId": "waiting-m22101327285",
+      "sourceMercariId": "m22101327285",
+      "backup": false,
+      "photos": 2
+    },
+    {
+      "existingId": "p125",
+      "waitingId": "waiting-m68670543577",
+      "sourceMercariId": "m68670543577",
+      "backup": false,
+      "photos": 3
+    },
+    {
+      "existingId": "p124",
+      "waitingId": "waiting-m57505863896",
+      "sourceMercariId": "m57505863896",
+      "backup": false,
+      "photos": 2
+    },
+    {
+      "existingId": "p046",
+      "waitingId": "waiting-m52001031209",
+      "sourceMercariId": "m52001031209",
+      "backup": false,
+      "photos": 2
+    }
+  ]
+}
