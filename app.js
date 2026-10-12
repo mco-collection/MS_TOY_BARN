@@ -39,6 +39,17 @@ async function loadProducts(){
    // データ更新版ではproducts.jsonを正として再同期し、古い発送待ち/販売済み状態を残さない。
    products=base;
   }
+  // Keep migrated waiting records separate from existing MTB IDs to avoid accidental overwrites.
+  try{
+   const waitingResponse=await fetch('./migration/waiting-batch-001.json',{cache:'no-store'});
+   if(waitingResponse.ok){
+    const waitingData=await waitingResponse.json();
+    const known=new Set(products.map(p=>p.id));
+    for(const entry of waitingData.items||[]){
+     if(!known.has(entry.id)){products.push({...entry});known.add(entry.id)}
+    }
+   }
+  }catch(err){console.warn('Waiting migration unavailable',err)}
   persist()
   renderAll();
  }catch(e){console.warn(e)}
