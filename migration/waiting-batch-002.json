@@ -26,7 +26,15 @@
       "photoPaths": [
         "migration/images/m21835794409_1.jpg",
         "migration/images/m21835794409_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 737,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "id": "waiting-m49540748907",
@@ -51,7 +59,15 @@
       "photoPaths": [
         "migration/images/m49540748907_1.jpg",
         "migration/images/m49540748907_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 740,
+      "sourceConditionId": 3,
+      "sourceBrandId": null,
+      "sourceShipping": {
+        "duration": "2",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "99"
+      }
     },
     {
       "id": "waiting-m14632806316",
@@ -76,7 +92,15 @@
       "photoPaths": [
         "migration/images/m14632806316_1.jpg",
         "migration/images/m14632806316_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 2648,
+      "sourceConditionId": 3,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "2",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "99"
+      }
     },
     {
       "id": "waiting-m68879806921",
@@ -103,7 +127,15 @@
         "migration/images/m68879806921_1.jpg",
         "migration/images/m68879806921_2.jpg",
         "migration/images/m68879806921_3.jpg"
-      ]
+      ],
+      "sourceCategoryId": 7384,
+      "sourceConditionId": 3,
+      "sourceBrandId": null,
+      "sourceShipping": {
+        "duration": "2",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "99"
+      }
     },
     {
       "id": "waiting-m80967812190",
@@ -128,7 +160,15 @@
       "photoPaths": [
         "migration/images/m80967812190_1.jpg",
         "migration/images/m80967812190_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 738,
+      "sourceConditionId": 3,
+      "sourceBrandId": null,
+      "sourceShipping": {
+        "duration": "2",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "99"
+      }
     }
   ]
 }
