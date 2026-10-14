@@ -1,0 +1,25 @@
+{
+  "batch": 12,
+  "status": "download_requested",
+  "targetCount": 1,
+  "recordCount": 1,
+  "photoCount": 2,
+  "items": [
+    {
+      "sourceMercariId": "m33444333445",
+      "name": "FUNKOPOP！キャプテンマーベル",
+      "sourceSellerId": "917334456",
+      "sourceStatus": "available",
+      "price": 2499,
+      "description": "ファンコポップシリーズ　CAPTAIN MARVELです。\n\n⚠︎即購入OKですが基本土日発送になります。\n\n#POPさんのコレクション整理\n↑POPシリーズ出品しております\n\nよろしくお願いします。\n\nマーベルコミック\nシネマティック・ユニバース\nキャロル\nフィギュア\nアベンジャーズ\nAVENGERS",
+      "photoUrls": [
+        "https://static.mercdn.net/item/detail/webp/photos/m33444333445_1.jpg?1666454431",
+        "https://static.mercdn.net/item/detail/webp/photos/m33444333445_2.jpg?1666454431"
+      ],
+      "photosBackedUp": false,
+      "migrationStatus": "pending_download",
+      "identifiedAt": "2026-10-14",
+      "notes": "Final unarchived item from seller hashtag result; binary images pending."
+    }
+  ]
+}
