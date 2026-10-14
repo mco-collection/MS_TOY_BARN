@@ -26,7 +26,15 @@
       "photoPaths": [
         "migration/images/m28606507696_1.jpg",
         "migration/images/m28606507696_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 740,
+      "sourceConditionId": 3,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "2",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "99"
+      }
     },
     {
       "id": "waiting-m28178746546",
@@ -51,7 +59,15 @@
       "photoPaths": [
         "migration/images/m28178746546_1.jpg",
         "migration/images/m28178746546_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 740,
+      "sourceConditionId": 3,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "2",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "99"
+      }
     },
     {
       "id": "waiting-m10086792750",
@@ -76,7 +92,15 @@
       "photoPaths": [
         "migration/images/m10086792750_1.jpg",
         "migration/images/m10086792750_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 740,
+      "sourceConditionId": 3,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "2",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "99"
+      }
     },
     {
       "id": "waiting-m48240486926",
@@ -101,7 +125,15 @@
       "photoPaths": [
         "migration/images/m48240486926_1.jpg",
         "migration/images/m48240486926_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 7384,
+      "sourceConditionId": 3,
+      "sourceBrandId": null,
+      "sourceShipping": {
+        "duration": "2",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "99"
+      }
     },
     {
       "id": "waiting-m22658154148",
@@ -126,7 +158,15 @@
       "photoPaths": [
         "migration/images/m22658154148_1.jpg",
         "migration/images/m22658154148_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 737,
+      "sourceConditionId": 3,
+      "sourceBrandId": null,
+      "sourceShipping": {
+        "duration": "2",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "99"
+      }
     }
   ]
 }
