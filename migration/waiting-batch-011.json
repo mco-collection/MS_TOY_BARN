@@ -25,7 +25,15 @@
       ],
       "description": "ファンコポップシリーズ　MY HERO ACADEMIA JUROTA SHISHIDAです。\n\n『私は鼻が効くのですなァアアアア！！』\nビーストがフロッキーで見事に再現されています！\n⚠︎即購入OKですが基本土日発送になります。\n\n#POPさんのコレクション整理\n↑POPシリーズ出品しております\n\n海外限定　フィギュア　vinyl figure \n\nよろしくお願いします。\n\n僕のヒーローアカデミア\nジェボーダン\nヒーロー科\n一年B組\n緑谷出久\nオールマイト\n少年ジャンプ",
       "conditionId": 1,
-      "categoryId": 7339
+      "categoryId": 7339,
+      "sourceCategoryId": 7339,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "sourceMercariId": "m13375759842",
@@ -45,7 +53,15 @@
       "photoPaths": [
         "migration/images/m13375759842_1.jpg",
         "migration/images/m13375759842_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 2648,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "sourceMercariId": "m88715092549",
@@ -65,7 +81,15 @@
       "photoPaths": [
         "migration/images/m88715092549_1.jpg",
         "migration/images/m88715092549_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 2648,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "sourceMercariId": "m75548654034",
@@ -85,7 +109,15 @@
       "photoPaths": [
         "migration/images/m75548654034_1.jpg",
         "migration/images/m75548654034_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 7382,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "sourceMercariId": "m84472018920",
@@ -105,7 +137,15 @@
       "photoPaths": [
         "migration/images/m84472018920_1.jpg",
         "migration/images/m84472018920_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 740,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "sourceMercariId": "m87305554682",
@@ -127,7 +167,15 @@
         "migration/images/m87305554682_1.jpg",
         "migration/images/m87305554682_2.jpg",
         "migration/images/m87305554682_3.jpg"
-      ]
+      ],
+      "sourceCategoryId": 737,
+      "sourceConditionId": 3,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "sourceMercariId": "m72327495803",
@@ -147,7 +195,15 @@
       "photoPaths": [
         "migration/images/m72327495803_1.jpg",
         "migration/images/m72327495803_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 7383,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "sourceMercariId": "m60450508362",
@@ -167,7 +223,15 @@
       "photoPaths": [
         "migration/images/m60450508362_1.jpg",
         "migration/images/m60450508362_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 2648,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "sourceMercariId": "m51306930511",
@@ -187,7 +251,15 @@
       "photoPaths": [
         "migration/images/m51306930511_1.jpg",
         "migration/images/m51306930511_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 2648,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "sourceMercariId": "m14869240901",
@@ -207,7 +279,15 @@
       "photoPaths": [
         "migration/images/m14869240901_1.jpg",
         "migration/images/m14869240901_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 740,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "sourceMercariId": "m28778585814",
@@ -227,7 +307,15 @@
       "photoPaths": [
         "migration/images/m28778585814_1.jpg",
         "migration/images/m28778585814_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 740,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "sourceMercariId": "m28959978716",
@@ -247,7 +335,15 @@
       "photoPaths": [
         "migration/images/m28959978716_1.jpg",
         "migration/images/m28959978716_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 740,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "sourceMercariId": "m21581786758",
@@ -269,7 +365,15 @@
         "migration/images/m21581786758_1.jpg",
         "migration/images/m21581786758_2.jpg",
         "migration/images/m21581786758_3.jpg"
-      ]
+      ],
+      "sourceCategoryId": 7382,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "sourceMercariId": "m31169645572",
@@ -291,7 +395,15 @@
         "migration/images/m31169645572_1.jpg",
         "migration/images/m31169645572_2.jpg",
         "migration/images/m31169645572_3.jpg"
-      ]
+      ],
+      "sourceCategoryId": 7384,
+      "sourceConditionId": 1,
+      "sourceBrandId": null,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "sourceMercariId": "m18385928241",
@@ -311,7 +423,15 @@
       "photoPaths": [
         "migration/images/m18385928241_1.jpg",
         "migration/images/m18385928241_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 736,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "sourceMercariId": "m53265287423",
@@ -337,7 +457,15 @@
         "migration/images/m53265287423_3.jpg",
         "migration/images/m53265287423_4.jpg",
         "migration/images/m53265287423_5.jpg"
-      ]
+      ],
+      "sourceCategoryId": 736,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "sourceMercariId": "m18774385225",
@@ -359,7 +487,15 @@
         "migration/images/m18774385225_1.jpg",
         "migration/images/m18774385225_2.jpg",
         "migration/images/m18774385225_3.jpg"
-      ]
+      ],
+      "sourceCategoryId": 736,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "sourceMercariId": "m98932229047",
@@ -379,7 +515,15 @@
       "photoPaths": [
         "migration/images/m98932229047_1.jpg",
         "migration/images/m98932229047_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 7384,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "sourceMercariId": "m14880277411",
@@ -399,7 +543,15 @@
       "photoPaths": [
         "migration/images/m14880277411_1.jpg",
         "migration/images/m14880277411_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 745,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "sourceMercariId": "m65107445982",
@@ -419,7 +571,15 @@
       "photoPaths": [
         "migration/images/m65107445982_1.jpg",
         "migration/images/m65107445982_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 736,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     }
   ],
   "backupRequestedAt": "2026-10-14"
