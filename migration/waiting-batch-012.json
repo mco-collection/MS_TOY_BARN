@@ -16,10 +16,14 @@
         "https://static.mercdn.net/item/detail/webp/photos/m33444333445_1.jpg?1666454431",
         "https://static.mercdn.net/item/detail/webp/photos/m33444333445_2.jpg?1666454431"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "pending_download",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "identifiedAt": "2026-10-14",
-      "notes": "Final unarchived item from seller hashtag result; binary images pending."
+      "notes": "Final unarchived item from seller hashtag result; binary images pending.",
+      "photoPaths": [
+        "migration/images/m33444333445_1.jpg",
+        "migration/images/m33444333445_2.jpg"
+      ]
     }
   ]
 }
