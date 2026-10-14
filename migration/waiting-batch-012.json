@@ -23,7 +23,15 @@
       "photoPaths": [
         "migration/images/m33444333445_1.jpg",
         "migration/images/m33444333445_2.jpg"
-      ]
+      ],
+      "sourceCategoryId": 7384,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     }
   ]
 }
