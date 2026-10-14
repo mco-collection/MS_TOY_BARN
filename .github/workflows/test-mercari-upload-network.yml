@@ -1,0 +1,55 @@
+name: Test Mercari image transfer connectivity
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature/mercari-migration-audit
+    paths:
+      - '.github/workflows/test-mercari-upload-network.yml'
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/mercari-migration-audit
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify HTTPS image download in GitHub runner
+        run: |
+          python - <<'PY'
+          from urllib.request import Request,urlopen
+          from urllib.parse import urlsplit
+          from pathlib import Path
+          import json,datetime
+          p=Path('migration/images/m31882910473_1.jpg')
+          local=p.read_bytes()
+          assert len(local)>100 and local.startswith(bytes.fromhex('ffd8ff'))
+          url='https://static.mercdn.net/item/detail/orig/photos/m31882910473_1.jpg'
+          out={'checked_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),
+               'source':'Mercari public image endpoint (not private upload endpoint)',
+               'github_archived_jpeg_valid':True, 'archived_bytes':len(local)}
+          try:
+            with urlopen(Request(url,headers={'User-Agent':'Mozilla/5.0'}),timeout=20) as res:
+              body=res.read(10000001)
+              out['remote_http_status']=res.status
+              out['remote_jpeg_valid']=body.startswith(bytes.fromhex('ffd8ff'))
+              out['remote_bytes']=len(body)
+          except Exception as e:
+            out['remote_http_status']='connection_failed'
+            out['error_type']=type(e).__name__
+          Path('migration/mercari-upload-network-probe.json').write_text(json.dumps(out,indent=2)+'\n')
+          print(json.dumps(out))
+          PY
+      - name: Commit test result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add migration/mercari-upload-network-probe.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record Mercari image network connectivity test"
+            git push origin HEAD:feature/mercari-migration-audit
+          fi
