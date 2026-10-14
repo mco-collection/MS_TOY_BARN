@@ -15,10 +15,14 @@
         "https://static.mercdn.net/item/detail/webp/photos/m47713251532_1.jpg?1682350160",
         "https://static.mercdn.net/item/detail/webp/photos/m47713251532_2.jpg?1682350160"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "pending_download",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "identifiedAt": "2026-10-13",
-      "notes": "Same verified seller; not present in batches 001-010. Image assets not yet downloaded."
+      "notes": "Same verified seller; not present in batches 001-010. Image assets not yet downloaded.",
+      "photoPaths": [
+        "migration/images/m47713251532_1.jpg",
+        "migration/images/m47713251532_2.jpg"
+      ]
     }
   ],
   "backupRequestedAt": "2026-10-14"
