@@ -1,0 +1,9 @@
+{
+  "checked_at_utc": "2026-10-14T13:37:50.521928+00:00",
+  "source": "Mercari public image endpoint (not private upload endpoint)",
+  "github_archived_jpeg_valid": true,
+  "archived_bytes": 94540,
+  "remote_http_status": 200,
+  "remote_jpeg_valid": true,
+  "remote_bytes": 94540
+}
