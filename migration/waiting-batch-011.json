@@ -116,10 +116,15 @@
         "https://static.mercdn.net/item/detail/webp/photos/m87305554682_2.jpg?1666454464",
         "https://static.mercdn.net/item/detail/webp/photos/m87305554682_3.jpg?1666454464"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "pending_download",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "identifiedAt": "2026-10-14",
-      "notes": "Verified source seller; distinct item; awaiting original photo backup."
+      "notes": "Verified source seller; distinct item; awaiting original photo backup.",
+      "photoPaths": [
+        "migration/images/m87305554682_1.jpg",
+        "migration/images/m87305554682_2.jpg",
+        "migration/images/m87305554682_3.jpg"
+      ]
     },
     {
       "sourceMercariId": "m72327495803",
@@ -132,10 +137,14 @@
         "https://static.mercdn.net/item/detail/webp/photos/m72327495803_1.jpg?1746712340",
         "https://static.mercdn.net/item/detail/webp/photos/m72327495803_2.jpg?1746712340"
       ],
-      "photosBackedUp": false,
-      "migrationStatus": "pending_download",
+      "photosBackedUp": true,
+      "migrationStatus": "photos_backed_up",
       "identifiedAt": "2026-10-14",
-      "notes": "Verified source seller; distinct item; awaiting original photo backup."
+      "notes": "Verified source seller; distinct item; awaiting original photo backup.",
+      "photoPaths": [
+        "migration/images/m72327495803_1.jpg",
+        "migration/images/m72327495803_2.jpg"
+      ]
     }
   ],
   "backupRequestedAt": "2026-10-14"
