@@ -30,7 +30,15 @@
         "migration/images/m74363958670_2.jpg",
         "migration/images/m74363958670_3.jpg",
         "migration/images/m74363958670_4.jpg"
-      ]
+      ],
+      "sourceCategoryId": 7382,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "id": "waiting-m27151778886",
@@ -59,7 +67,15 @@
         "migration/images/m27151778886_2.jpg",
         "migration/images/m27151778886_3.jpg",
         "migration/images/m27151778886_4.jpg"
-      ]
+      ],
+      "sourceCategoryId": 736,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "id": "waiting-m61487323300",
@@ -88,7 +104,15 @@
         "migration/images/m61487323300_2.jpg",
         "migration/images/m61487323300_3.jpg",
         "migration/images/m61487323300_4.jpg"
-      ]
+      ],
+      "sourceCategoryId": 740,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "id": "waiting-m50678009612",
@@ -117,7 +141,15 @@
         "migration/images/m50678009612_2.jpg",
         "migration/images/m50678009612_3.jpg",
         "migration/images/m50678009612_4.jpg"
-      ]
+      ],
+      "sourceCategoryId": 740,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "id": "waiting-m41425540083",
@@ -146,7 +178,15 @@
         "migration/images/m41425540083_2.jpg",
         "migration/images/m41425540083_3.jpg",
         "migration/images/m41425540083_4.jpg"
-      ]
+      ],
+      "sourceCategoryId": 745,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "id": "waiting-m26371056019",
@@ -175,7 +215,15 @@
         "migration/images/m26371056019_2.jpg",
         "migration/images/m26371056019_3.jpg",
         "migration/images/m26371056019_4.jpg"
-      ]
+      ],
+      "sourceCategoryId": 745,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "id": "waiting-m22967246668",
@@ -204,7 +252,15 @@
         "migration/images/m22967246668_2.jpg",
         "migration/images/m22967246668_3.jpg",
         "migration/images/m22967246668_4.jpg"
-      ]
+      ],
+      "sourceCategoryId": 7384,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "id": "waiting-m24373388358",
@@ -233,7 +289,15 @@
         "migration/images/m24373388358_2.jpg",
         "migration/images/m24373388358_3.jpg",
         "migration/images/m24373388358_4.jpg"
-      ]
+      ],
+      "sourceCategoryId": 737,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "id": "waiting-m92198344127",
@@ -272,7 +336,15 @@
         "migration/images/m92198344127_7.jpg",
         "migration/images/m92198344127_8.jpg",
         "migration/images/m92198344127_9.jpg"
-      ]
+      ],
+      "sourceCategoryId": 736,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "id": "waiting-m61093544753",
@@ -301,7 +373,15 @@
         "migration/images/m61093544753_2.jpg",
         "migration/images/m61093544753_3.jpg",
         "migration/images/m61093544753_4.jpg"
-      ]
+      ],
+      "sourceCategoryId": 7384,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "id": "waiting-m94545099655",
@@ -330,7 +410,15 @@
         "migration/images/m94545099655_2.jpg",
         "migration/images/m94545099655_3.jpg",
         "migration/images/m94545099655_4.jpg"
-      ]
+      ],
+      "sourceCategoryId": 740,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "id": "waiting-m97272631023",
@@ -361,7 +449,15 @@
         "migration/images/m97272631023_3.jpg",
         "migration/images/m97272631023_4.jpg",
         "migration/images/m97272631023_5.jpg"
-      ]
+      ],
+      "sourceCategoryId": 7367,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "id": "waiting-m61089508754",
@@ -390,7 +486,15 @@
         "migration/images/m61089508754_2.jpg",
         "migration/images/m61089508754_3.jpg",
         "migration/images/m61089508754_4.jpg"
-      ]
+      ],
+      "sourceCategoryId": 943,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "id": "waiting-m64859201745",
@@ -423,7 +527,15 @@
         "migration/images/m64859201745_4.jpg",
         "migration/images/m64859201745_5.jpg",
         "migration/images/m64859201745_6.jpg"
-      ]
+      ],
+      "sourceCategoryId": 733,
+      "sourceConditionId": 4,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "id": "waiting-m88335542535",
@@ -454,7 +566,15 @@
         "migration/images/m88335542535_3.jpg",
         "migration/images/m88335542535_4.jpg",
         "migration/images/m88335542535_5.jpg"
-      ]
+      ],
+      "sourceCategoryId": 740,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "id": "waiting-m41446297840",
@@ -483,7 +603,15 @@
         "migration/images/m41446297840_2.jpg",
         "migration/images/m41446297840_3.jpg",
         "migration/images/m41446297840_4.jpg"
-      ]
+      ],
+      "sourceCategoryId": 7384,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "id": "waiting-m62312492354",
@@ -512,7 +640,15 @@
         "migration/images/m62312492354_2.jpg",
         "migration/images/m62312492354_3.jpg",
         "migration/images/m62312492354_4.jpg"
-      ]
+      ],
+      "sourceCategoryId": 7384,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "id": "waiting-m47416259238",
@@ -545,7 +681,15 @@
         "migration/images/m47416259238_4.jpg",
         "migration/images/m47416259238_5.jpg",
         "migration/images/m47416259238_6.jpg"
-      ]
+      ],
+      "sourceCategoryId": 737,
+      "sourceConditionId": 1,
+      "sourceBrandId": null,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "id": "waiting-m28154201939",
@@ -580,7 +724,15 @@
         "migration/images/m28154201939_5.jpg",
         "migration/images/m28154201939_6.jpg",
         "migration/images/m28154201939_7.jpg"
-      ]
+      ],
+      "sourceCategoryId": 7382,
+      "sourceConditionId": 1,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     },
     {
       "id": "waiting-m17251859432",
@@ -613,7 +765,15 @@
         "migration/images/m17251859432_4.jpg",
         "migration/images/m17251859432_5.jpg",
         "migration/images/m17251859432_6.jpg"
-      ]
+      ],
+      "sourceCategoryId": 7384,
+      "sourceConditionId": 4,
+      "sourceBrandId": 43871,
+      "sourceShipping": {
+        "duration": "3",
+        "paid_by": "送料込み（出品者負担）",
+        "ship_from": "27"
+      }
     }
   ]
 }
