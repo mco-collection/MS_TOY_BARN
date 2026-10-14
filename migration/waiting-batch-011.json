@@ -2,8 +2,8 @@
   "batch": 11,
   "status": "download_requested",
   "targetCount": 20,
-  "recordCount": 7,
-  "photoCount": 15,
+  "recordCount": 20,
+  "photoCount": 47,
   "items": [
     {
       "sourceMercariId": "m47713251532",
@@ -145,6 +145,220 @@
         "migration/images/m72327495803_1.jpg",
         "migration/images/m72327495803_2.jpg"
       ]
+    },
+    {
+      "sourceMercariId": "m60450508362",
+      "name": "FUNKOPOP！　ヒロアカ　壊理",
+      "sourceSellerId": "917334456",
+      "sourceStatus": "available",
+      "price": 3499,
+      "description": "ファンコポップシリーズ　MY HERO\nACADEMIA ERIです。\n\nヒロアカシリーズエリちゃん（ツノバージョン）のPOP！になります！\nエリちゃんだけでもいろんなバージョンがあって集めたくなります！\n⚠︎即購入OKですが基本土日発送になります。\n\n#POPさんのコレクション整理\n↑POPシリーズ出品しております\n\n海外限定　フィギュア　vinyl figure \n\nよろしくお願いします。\n\n週刊少年ジャンプ\nオーバーホール\nヴィラン連合\nオールマイト\n緑谷出久\nデク\nルミリオン",
+      "photoUrls": [
+        "https://static.mercdn.net/item/detail/webp/photos/m60450508362_1.jpg?1768831330",
+        "https://static.mercdn.net/item/detail/webp/photos/m60450508362_2.jpg?1768831330"
+      ],
+      "photosBackedUp": false,
+      "migrationStatus": "pending_download",
+      "identifiedAt": "2026-10-14",
+      "notes": "Verified seller and item via hashtag search."
+    },
+    {
+      "sourceMercariId": "m51306930511",
+      "name": "FUNKOPOP！　ヒロアカ　切島 鋭児郎",
+      "sourceSellerId": "917334456",
+      "sourceStatus": "available",
+      "price": 3199,
+      "description": "ファンコポップシリーズ　My Hero Academia Eijiro Kirishimaです。\n\n⚠︎即購入OKですが基本土日発送になります。\n\n#POPさんのコレクション整理\n↑POPシリーズ出品しております\n\n海外限定　フィギュア　vinyl figure \n\nよろしくお願いします。\n\n週刊少年ジャンプ\n緑谷出久\n爆轟　勝己\n麗日　お茶子\n轟焦凍\n蛙吹梅雨\nオールマイト",
+      "photoUrls": [
+        "https://static.mercdn.net/item/detail/webp/photos/m51306930511_1.jpg?1768831289",
+        "https://static.mercdn.net/item/detail/webp/photos/m51306930511_2.jpg?1768831289"
+      ],
+      "photosBackedUp": false,
+      "migrationStatus": "pending_download",
+      "identifiedAt": "2026-10-14",
+      "notes": "Verified seller and item via hashtag search."
+    },
+    {
+      "sourceMercariId": "m14869240901",
+      "name": "FUNKO POP！Mister Sprinkles 3体セット",
+      "sourceSellerId": "917334456",
+      "sourceStatus": "available",
+      "price": 10299,
+      "description": "ファンコポップシリーズ　Mister Sprinklesです。\n\nポップカルチャー限定ミスタースプリンクルズストロベリー、チョコレート、バニラの3体セットです。\n箱から出して飾るとめちゃくちゃかわいいです！\n\n⚠︎即購入OKですが基本土日発送になります。\n\n#POPさんのコレクション整理\n↑POPシリーズ出品しております\n\n海外限定　フィギュア　vinyl figure \n\nよろしくお願いします。\n\nアメトイ\nICE CREAM\nソフトクリーム\nsoft cream\nICON\nPOP CLUTCHA\nSPECIAL EDITION",
+      "photoUrls": [
+        "https://static.mercdn.net/item/detail/webp/photos/m14869240901_1.jpg?1732548493",
+        "https://static.mercdn.net/item/detail/webp/photos/m14869240901_2.jpg?1732548493"
+      ],
+      "photosBackedUp": false,
+      "migrationStatus": "pending_download",
+      "identifiedAt": "2026-10-14",
+      "notes": "Verified seller and item via hashtag search."
+    },
+    {
+      "sourceMercariId": "m28778585814",
+      "name": "FUNKOPOP！　マトリックス　ネオ",
+      "sourceSellerId": "917334456",
+      "sourceStatus": "available",
+      "price": 4299,
+      "description": "ファンコポップシリーズ　MATRIX NEOです。\n\nマトリックスシリーズより救世主ネオのPOPになります。\nBAM!限定のグローインザダークバージョンで暗闇で光らせるとめちゃくちゃかっこいいです！\n\n⚠︎即購入OKですが基本土日発送になります。\n\n#POPさんのコレクション整理\n↑POPシリーズ出品しております\n\n海外限定　フィギュア　vinyl figure \n\nよろしくお願いします。\n\nモーフィアス\nトリニティ\nキアヌ・リーヴス\nローレンス・フィッシュバーン\nNetflix\nGLOW IN THE DARK\nGITD",
+      "photoUrls": [
+        "https://static.mercdn.net/item/detail/webp/photos/m28778585814_1.jpg?1746712406",
+        "https://static.mercdn.net/item/detail/webp/photos/m28778585814_2.jpg?1746712406"
+      ],
+      "photosBackedUp": false,
+      "migrationStatus": "pending_download",
+      "identifiedAt": "2026-10-14",
+      "notes": "Verified seller and item via hashtag search."
+    },
+    {
+      "sourceMercariId": "m28959978716",
+      "name": "FUNKO POP！　ベラ・ポーチ",
+      "sourceSellerId": "917334456",
+      "sourceStatus": "available",
+      "price": 2999,
+      "description": "ファンコポップシリーズ　BELLA POARCHです。\n\n\nFunkoの「POP! Rocks」シリーズから、人気キャラクター「Bella Poarch」のフィギュアです。\n\n⚠︎即購入OKですが基本土日発送になります。\n\n#POPさんのコレクション整理\n↑POPシリーズ出品しております\n\n海外限定　フィギュア　vinyl figure \n\nよろしくお願いします。\n\nMillie B.\nSoph Aspin Send\nTikTok\nbuild A B*tch\nInstagram",
+      "photoUrls": [
+        "https://static.mercdn.net/item/detail/webp/photos/m28959978716_1.jpg?1730564499",
+        "https://static.mercdn.net/item/detail/webp/photos/m28959978716_2.jpg?1730564499"
+      ],
+      "photosBackedUp": false,
+      "migrationStatus": "pending_download",
+      "identifiedAt": "2026-10-14",
+      "notes": "Verified seller and item via hashtag search."
+    },
+    {
+      "sourceMercariId": "m21581786758",
+      "name": "FUNKO POP！　ワンピース　ヤマト",
+      "sourceSellerId": "917334456",
+      "sourceStatus": "available",
+      "price": 9599,
+      "description": "ファンコポップシリーズ　ONE PIECE YAMATOです。\n\nヤマトの6インチPOPのGLOW IN THE DARKで\n光を当てると暗闇でうっすらと光ってかっこいいです！\n\n⚠︎即購入OKですが基本土日発送になります。\n\n#POPさんのコレクション整理\n↑POPシリーズ出品しております\n\n海外限定　フィギュア　vinyl figure \n\nよろしくお願いします。\n\nカイドウ\n光月　おでん\n少年ジャンプ\n尾田栄一郎\n麦わらの一味\nトニートニーチョッパー\nトラファルガー・ロー",
+      "photoUrls": [
+        "https://static.mercdn.net/item/detail/webp/photos/m21581786758_1.jpg?1716107934",
+        "https://static.mercdn.net/item/detail/webp/photos/m21581786758_2.jpg?1716107934",
+        "https://static.mercdn.net/item/detail/webp/photos/m21581786758_3.jpg?1716107934"
+      ],
+      "photosBackedUp": false,
+      "migrationStatus": "pending_download",
+      "identifiedAt": "2026-10-14",
+      "notes": "Verified seller and item via hashtag search."
+    },
+    {
+      "sourceMercariId": "m31169645572",
+      "name": "FUNKO POP！　ココポップス　ココくん",
+      "sourceSellerId": "917334456",
+      "sourceStatus": "available",
+      "price": 4199,
+      "description": "ファンコポップシリーズ　Kelloggs COCO pops COCO THE MONKEYです。\n\nケロッグチョコクリスピーのキャラクターココくんのPOPになります。\nボックスもチョコクリスピー柄ぽくてかわいいです！\n\n⚠︎即購入OKですが基本土日発送になります。\n\n#POPさんのコレクション整理\n↑POPシリーズ出品しております\n\n海外限定　フィギュア　vinyl figure \n\nよろしくお願いします。\n\nチョコワ\nトニー・ザ・タイガー\nメルビン\nサム\nchocolate crispy\nコーンフレーク",
+      "photoUrls": [
+        "https://static.mercdn.net/item/detail/webp/photos/m31169645572_1.jpg?1711268463",
+        "https://static.mercdn.net/item/detail/webp/photos/m31169645572_2.jpg?1711268463",
+        "https://static.mercdn.net/item/detail/webp/photos/m31169645572_3.jpg?1711268463"
+      ],
+      "photosBackedUp": false,
+      "migrationStatus": "pending_download",
+      "identifiedAt": "2026-10-14",
+      "notes": "Verified seller and item via hashtag search."
+    },
+    {
+      "sourceMercariId": "m18385928241",
+      "name": "FUNKO POP！マーベル　自慢好きロキ",
+      "sourceSellerId": "917334456",
+      "sourceStatus": "available",
+      "price": 1999,
+      "description": "ファンコポップシリーズ　marvel LOKI BOASTFUL LOKIです。\n\nロキに登場した「在り続ける者」のPOPになります！\nボビングヘッドになっていてとてもかわいいです！\n\n⚠︎即購入OKですが基本土日発送になります。\n\n#POPさんのコレクション整理\n↑POPシリーズ出品しております\n\n海外限定　フィギュア　vinyl figure \n\nよろしくお願いします。\n\ndisney\nマイティーソー\nキャプテンアメリカ\nアイアンマン\nアベンジャーズ\nマーベルコミック\nボブルヘッド",
+      "photoUrls": [
+        "https://static.mercdn.net/item/detail/webp/photos/m18385928241_1.jpg?1707489660",
+        "https://static.mercdn.net/item/detail/webp/photos/m18385928241_2.jpg?1707489660"
+      ],
+      "photosBackedUp": false,
+      "migrationStatus": "pending_download",
+      "identifiedAt": "2026-10-14",
+      "notes": "Verified seller and item via hashtag search."
+    },
+    {
+      "sourceMercariId": "m53265287423",
+      "name": "FUNKO POP！マーベル　ソー",
+      "sourceSellerId": "917334456",
+      "sourceStatus": "available",
+      "price": 9299,
+      "description": "ファンコポップシリーズ　marvel THORです。\n\nダイキャスト製のポップでかなりズッシリと重みがあります！\n専用のクリアケースに入っていてめちゃくちゃかっこいいです！\n\nこちらはCHASEではありません\n⚠︎即購入OKですが基本土日発送になります。\n\n#POPさんのコレクション整理\n↑POPシリーズ出品しております\n\n海外限定　フィギュア　vinyl figure \n\nよろしくお願いします。\n\nマイティ・ソー\nDIECAST\nアメコミ\nアベンジャーズ\nキャプテンアメリカ\nディズニー\nDISNEY",
+      "photoUrls": [
+        "https://static.mercdn.net/item/detail/webp/photos/m53265287423_1.jpg?1707489617",
+        "https://static.mercdn.net/item/detail/webp/photos/m53265287423_2.jpg?1707489617",
+        "https://static.mercdn.net/item/detail/webp/photos/m53265287423_3.jpg?1707489617",
+        "https://static.mercdn.net/item/detail/webp/photos/m53265287423_4.jpg?1707489617",
+        "https://static.mercdn.net/item/detail/webp/photos/m53265287423_5.jpg?1707489617"
+      ],
+      "photosBackedUp": false,
+      "migrationStatus": "pending_download",
+      "identifiedAt": "2026-10-14",
+      "notes": "Verified seller and item via hashtag search."
+    },
+    {
+      "sourceMercariId": "m18774385225",
+      "name": "FUNKO POP！　ジャックスケリントン",
+      "sourceSellerId": "917334456",
+      "sourceStatus": "available",
+      "price": 10099,
+      "description": "ファンコポップシリーズ　JACK SKELLINGTONです。\n\nFUNKO創業25周年記念の25000個限定POPになります！\n専用ケースもあってピンバッジ、メダル、証明カードがセットになっています。\nこちらは新品未開封になります。\n\n⚠︎即購入OKですが基本土日発送になります。\n\n#POPさんのコレクション整理\n↑POPシリーズ出品しております\n\n海外限定　フィギュア　vinyl figure \n\nよろしくお願いします。\n\nジャックスケリントン\nナイトメアービフォアクリスマス\nハロウィン\nティムバートン\nディズニー\nDisney\nサリー",
+      "photoUrls": [
+        "https://static.mercdn.net/item/detail/webp/photos/m18774385225_1.jpg?1702130263",
+        "https://static.mercdn.net/item/detail/webp/photos/m18774385225_2.jpg?1702130263",
+        "https://static.mercdn.net/item/detail/webp/photos/m18774385225_3.jpg?1702130263"
+      ],
+      "photosBackedUp": false,
+      "migrationStatus": "pending_download",
+      "identifiedAt": "2026-10-14",
+      "notes": "Verified seller and item via hashtag search."
+    },
+    {
+      "sourceMercariId": "m98932229047",
+      "name": "FUNKO POP！キャプテンマーベル",
+      "sourceSellerId": "917334456",
+      "sourceStatus": "available",
+      "price": 3599,
+      "description": "ファンコポップシリーズ　MARVEL CAPTAIN MARVELです。\n\n⚠︎即購入OKですが基本土日発送になります。\n\n#POPさんのコレクション整理\n↑POPシリーズ出品しております\n\n海外限定　フィギュア　vinyl figure \n\nよろしくお願いします。\n\nマーベルコミックス\nX-MEN\nアベンジャーズ\nキャプテンアメリカ\nアイアンマン\nスパイダーマン\n2023 FALL CONVENTION",
+      "photoUrls": [
+        "https://static.mercdn.net/item/detail/webp/photos/m98932229047_1.jpg?1698069655",
+        "https://static.mercdn.net/item/detail/webp/photos/m98932229047_2.jpg?1698069655"
+      ],
+      "photosBackedUp": false,
+      "migrationStatus": "pending_download",
+      "identifiedAt": "2026-10-14",
+      "notes": "Verified seller and item via hashtag search."
+    },
+    {
+      "sourceMercariId": "m14880277411",
+      "name": "FUNKO POP！ミッキーのジャックと豆の木",
+      "sourceSellerId": "917334456",
+      "sourceStatus": "available",
+      "price": 2999,
+      "description": "ファンコポップシリーズ　50 ARCHIVES BEANSTALK MICKEY です。\n\n\nアーカイブミッキーシリーズはいろいろ種類がありますが豆の木バージョンになります！\n\n⚠︎即購入OKですが基本土日発送になります。\n\n#POPさんのコレクション整理\n↑POPシリーズ出品しております\n\n海外限定　フィギュア　vinyl figure \n\nよろしくお願いします。\n\nウォルトディズニー\nwaltdisney\nミッキーフレンズ\nミニーマウス\nグーフィ\nドナルドダック\nデイジーダック",
+      "photoUrls": [
+        "https://static.mercdn.net/item/detail/webp/photos/m14880277411_1.jpg?1694353822",
+        "https://static.mercdn.net/item/detail/webp/photos/m14880277411_2.jpg?1694353822"
+      ],
+      "photosBackedUp": false,
+      "migrationStatus": "pending_download",
+      "identifiedAt": "2026-10-14",
+      "notes": "Verified seller and item via hashtag search."
+    },
+    {
+      "sourceMercariId": "m65107445982",
+      "name": "FUNKOPOP！ボーストフルロキ",
+      "sourceSellerId": "917334456",
+      "sourceStatus": "available",
+      "price": 2099,
+      "description": "FUNKOPOP！marvel LOKI BOASTFUL LOKIです。\n\n⚠︎即購入OKですが基本土日発送になります。\n\n#POPさんのコレクション整理\n↑POPシリーズ出品しております\n\n海外限定　フィギュア　vinyl figure \n\nよろしくお願いします。\n　\n\nマイティーソー\nキャプテンアメリカ\nアイアンマン\nアベンジャーズ\nマーベルコミック\ndisney",
+      "photoUrls": [
+        "https://static.mercdn.net/item/detail/webp/photos/m65107445982_1.jpg?1681039324",
+        "https://static.mercdn.net/item/detail/webp/photos/m65107445982_2.jpg?1681039324"
+      ],
+      "photosBackedUp": false,
+      "migrationStatus": "pending_download",
+      "identifiedAt": "2026-10-14",
+      "notes": "Verified seller and item via hashtag search."
     }
   ],
   "backupRequestedAt": "2026-10-14"
