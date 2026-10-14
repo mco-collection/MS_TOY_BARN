@@ -2,8 +2,8 @@
   "batch": 11,
   "status": "download_requested",
   "targetCount": 20,
-  "recordCount": 5,
-  "photoCount": 10,
+  "recordCount": 7,
+  "photoCount": 15,
   "items": [
     {
       "sourceMercariId": "m47713251532",
@@ -103,6 +103,39 @@
         "migration/images/m84472018920_1.jpg",
         "migration/images/m84472018920_2.jpg"
       ]
+    },
+    {
+      "sourceMercariId": "m87305554682",
+      "name": "FUNKOPOP！　アベンジャーズ　6体セット",
+      "sourceSellerId": "917334456",
+      "sourceStatus": "available",
+      "price": 12099,
+      "description": "ファンコポップシリーズ　MARVEL DEADAPOOL AS BOB ROSS、SPIDER-MAN（STEALTHSUIT）、HAPPY HOGAN、THOR、WAR MACHINE、TONY STARK6体セットです。\n6体すべてボビングヘッドになっていて可愛いです！\n『479』マイティーソーは購入時よりテープが貼ってありました。\n\n\n⚠︎即購入OKですが基本土日発送になります。\n\n#POPさんのコレクション整理\n↑POPシリーズ出品しております\n\nよろしくお願いします。\n\nデッドプール\nスパイダーマン\nハッピーホーガン\nトニースターク\nアイアンマン\nマーベルコミック\nバブルヘッド",
+      "photoUrls": [
+        "https://static.mercdn.net/item/detail/webp/photos/m87305554682_1.jpg?1666454464",
+        "https://static.mercdn.net/item/detail/webp/photos/m87305554682_2.jpg?1666454464",
+        "https://static.mercdn.net/item/detail/webp/photos/m87305554682_3.jpg?1666454464"
+      ],
+      "photosBackedUp": false,
+      "migrationStatus": "pending_download",
+      "identifiedAt": "2026-10-14",
+      "notes": "Verified source seller; distinct item; awaiting original photo backup."
+    },
+    {
+      "sourceMercariId": "m72327495803",
+      "name": "FUNKOPOP！　ドラゴンボールZ ダーブラ",
+      "sourceSellerId": "917334456",
+      "sourceStatus": "available",
+      "price": 3699,
+      "description": "ファンコポップシリーズ　DRAGON BALL Z DABURAです。\n\n2024 FALL CONVENTION限定のバビディに操られているMマークのついたダーブラのPOPになります！\n\n⚠︎即購入OKですが基本土日発送になります。\n\n#POPさんのコレクション整理\n↑POPシリーズ出品しております\n\n海外限定　フィギュア　vinyl figure \n\nよろしくお願いします。\n\nベジータ\n少年ジャンプ\n鳥山明\n悟空\n東映アニメーション\n超サイヤ人\n＋魔人ブウ編",
+      "photoUrls": [
+        "https://static.mercdn.net/item/detail/webp/photos/m72327495803_1.jpg?1746712340",
+        "https://static.mercdn.net/item/detail/webp/photos/m72327495803_2.jpg?1746712340"
+      ],
+      "photosBackedUp": false,
+      "migrationStatus": "pending_download",
+      "identifiedAt": "2026-10-14",
+      "notes": "Verified source seller; distinct item; awaiting original photo backup."
     }
   ],
   "backupRequestedAt": "2026-10-14"
