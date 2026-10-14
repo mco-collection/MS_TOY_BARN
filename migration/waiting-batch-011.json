@@ -1,6 +1,6 @@
 {
   "batch": 11,
-  "status": "partial_identification",
+  "status": "download_requested",
   "targetCount": 20,
   "recordCount": 1,
   "photoCount": 2,
@@ -20,5 +20,6 @@
       "identifiedAt": "2026-10-13",
       "notes": "Same verified seller; not present in batches 001-010. Image assets not yet downloaded."
     }
-  ]
+  ],
+  "backupRequestedAt": "2026-10-14"
 }
