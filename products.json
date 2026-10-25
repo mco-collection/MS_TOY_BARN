@@ -1749,5 +1749,149 @@
     "memo": "メルカリ取引完了・売上反映済み",
     "soldYear": 2026,
     "soldMonth": 8
+  },
+  {
+    "id": "mercari-draft-2071018648",
+    "pop": "1811",
+    "name": "志村菜奈",
+    "series": "僕のヒーローアカデミア",
+    "price": 2480,
+    "status": "waiting",
+    "draftId": 2071018648,
+    "purchasePrice": null,
+    "shipping": null,
+    "feeRate": 0.1,
+    "listingTitle": "FUNKO POP! 僕のヒーローアカデミア 志村菜奈 #1811",
+    "photoUrls": [
+      "https://static.mercdn.net/draft/photos/9615774045679399971_2071018648_1.jpg",
+      "https://static.mercdn.net/draft/photos/9615774045679399971_2071018648_2.jpg"
+    ],
+    "memo": "メルカリ「ノマド＝POPさん」下書き。未公開。管理番号 CP-M02-01。4インチ：定形外郵便を予定、発送4〜7日。仕入原価は既存のMTB手元データを優先し要照合。",
+    "source": "mercari_draft_2026-10-25",
+    "draftCreatedAt": "2026-10-25",
+    "managementCode": "CP-M02-01"
+  },
+  {
+    "id": "mercari-draft-1122035511",
+    "pop": "1763",
+    "name": "サムライソード",
+    "series": "チェンソーマン",
+    "price": 2980,
+    "status": "waiting",
+    "draftId": 1122035511,
+    "purchasePrice": null,
+    "shipping": null,
+    "feeRate": 0.1,
+    "listingTitle": "FUNKO POP! チェンソーマン サムライソード #1763",
+    "photoUrls": [
+      "https://static.mercdn.net/draft/photos/9615774045679399971_1122035511_1.jpg",
+      "https://static.mercdn.net/draft/photos/9615774045679399971_1122035511_2.jpg"
+    ],
+    "memo": "メルカリ「ノマド＝POPさん」下書き。未公開。管理番号 CP-M02-02。4インチ：定形外郵便を予定、発送4〜7日。仕入原価は既存のMTB手元データを優先し要照合。",
+    "source": "mercari_draft_2026-10-25",
+    "draftCreatedAt": "2026-10-25",
+    "managementCode": "CP-M02-02"
+  },
+  {
+    "id": "mercari-draft-552104537",
+    "pop": "1559",
+    "name": "ニコラス・D・ウルフウッド",
+    "series": "TRIGUN",
+    "price": 2980,
+    "status": "waiting",
+    "draftId": 552104537,
+    "purchasePrice": null,
+    "shipping": null,
+    "feeRate": 0.1,
+    "listingTitle": "FUNKO POP! TRIGUN ニコラス・D・ウルフウッド #1559",
+    "photoUrls": [
+      "https://static.mercdn.net/draft/photos/9615774045679399971_552104537_1.jpg",
+      "https://static.mercdn.net/draft/photos/9615774045679399971_552104537_2.jpg"
+    ],
+    "memo": "メルカリ「ノマド＝POPさん」下書き。未公開。管理番号 CP-M02-03。4インチ：定形外郵便を予定、発送4〜7日。仕入原価は既存のMTB手元データを優先し要照合。",
+    "source": "mercari_draft_2026-10-25",
+    "draftCreatedAt": "2026-10-25",
+    "managementCode": "CP-M02-03"
+  },
+  {
+    "id": "mercari-draft-1892722597",
+    "pop": "1197",
+    "name": "はがねコテツ",
+    "series": "NARUTO 疾風伝",
+    "price": 2480,
+    "status": "waiting",
+    "draftId": 1892722597,
+    "purchasePrice": null,
+    "shipping": null,
+    "feeRate": 0.1,
+    "listingTitle": "FUNKO POP! NARUTO 疾風伝 はがねコテツ #1197",
+    "photoUrls": [
+      "https://static.mercdn.net/draft/photos/9615774045679399971_1892722597_1.jpg",
+      "https://static.mercdn.net/draft/photos/9615774045679399971_1892722597_2.jpg"
+    ],
+    "memo": "メルカリ「ノマド＝POPさん」下書き。未公開。管理番号 CP-M02-04。4インチ：定形外郵便を予定、発送4〜7日。仕入原価は既存のMTB手元データを優先し要照合。",
+    "source": "mercari_draft_2026-10-25",
+    "draftCreatedAt": "2026-10-25",
+    "managementCode": "CP-M02-04"
+  },
+  {
+    "id": "mercari-draft-1851195474",
+    "pop": "1048",
+    "name": "ラクサス",
+    "series": "FAIRY TAIL",
+    "price": 2980,
+    "status": "waiting",
+    "draftId": 1851195474,
+    "purchasePrice": null,
+    "shipping": null,
+    "feeRate": 0.1,
+    "listingTitle": "FUNKO POP! FAIRY TAIL ラクサス #1048",
+    "photoUrls": [
+      "https://static.mercdn.net/draft/photos/9615774045679399971_1851195474_1.jpg",
+      "https://static.mercdn.net/draft/photos/9615774045679399971_1851195474_2.jpg"
+    ],
+    "memo": "メルカリ「ノマド＝POPさん」下書き。未公開。管理番号 CP-M02-05。4インチ：定形外郵便を予定、発送4〜7日。仕入原価は既存のMTB手元データを優先し要照合。",
+    "source": "mercari_draft_2026-10-25",
+    "draftCreatedAt": "2026-10-25",
+    "managementCode": "CP-M02-05"
+  },
+  {
+    "id": "mercari-draft-5674912",
+    "pop": "1630",
+    "name": "トランクス＆ギル",
+    "series": "ドラゴンボールGT",
+    "price": 2980,
+    "status": "waiting",
+    "draftId": 5674912,
+    "purchasePrice": null,
+    "shipping": null,
+    "feeRate": 0.1,
+    "listingTitle": "FUNKO POP! ドラゴンボールGT トランクス＆ギル #1630",
+    "photoUrls": [
+      "https://static.mercdn.net/draft/photos/9615774045679399971_5674912_1.jpg",
+      "https://static.mercdn.net/draft/photos/9615774045679399971_5674912_2.jpg"
+    ],
+    "memo": "メルカリ「ノマド＝POPさん」下書き。未公開。管理番号 CP-M02-06。4インチ：定形外郵便を予定、発送4〜7日。仕入原価は既存のMTB手元データを優先し要照合。",
+    "source": "mercari_draft_2026-10-25",
+    "draftCreatedAt": "2026-10-25",
+    "managementCode": "CP-M02-06"
+  },
+  {
+    "id": "mercari-draft-1792160388",
+    "pop": "1595",
+    "name": "殺生丸の母",
+    "series": "犬夜叉",
+    "price": 3980,
+    "status": "waiting",
+    "draftId": 1792160388,
+    "purchasePrice": null,
+    "shipping": null,
+    "feeRate": 0.1,
+    "listingTitle": "FUNKO POP! 犬夜叉 殺生丸の母 #1595",
+    "photoUrls": [],
+    "memo": "メルカリ「ノマド＝POPさん」下書き。未公開。管理番号 CP-01-02。4インチ：定形外郵便を予定、発送4〜7日。仕入原価は既存のMTB手元データを優先し要照合。",
+    "source": "mercari_draft_2026-10-25",
+    "draftCreatedAt": "2026-10-25",
+    "managementCode": "CP-01-02"
   }
 ]
