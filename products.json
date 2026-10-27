@@ -2339,5 +2339,25 @@
     "source": "mercari_draft_2026-10-26",
     "draftCreatedAt": "2026-10-25",
     "managementCode": "MN-01-02"
+  },
+  {
+    "id": "mercari-draft-1987961565",
+    "pop": "",
+    "name": "ホーム・アローン2 ケビン＆ハリー＆マーヴ 3体セット",
+    "series": "Home Alone 2",
+    "price": 9980,
+    "status": "waiting",
+    "draftId": 1987961565,
+    "purchasePrice": null,
+    "shipping": null,
+    "feeRate": 0.1,
+    "listingTitle": "FUNKO POP! ホーム・アローン2 ケビン＆ハリー＆マーヴ",
+    "photoUrls": [
+      "https://static.mercdn.net/draft/photos/9615774045679399971_1987961565_1.jpg",
+      "https://static.mercdn.net/draft/photos/9615774045679399971_1987961565_2.jpg"
+    ],
+    "memo": "メルカリPOPさん下書き・未公開。仮価格・原価未照合。3体セットのため配送方法と発送元を要確認。",
+    "source": "mercari_draft_2026-10-27",
+    "draftCreatedAt": "2026-10-27"
   }
 ]
