@@ -1625,11 +1625,15 @@
     "name": "バルトロメオ",
     "series": "One Piece",
     "price": 4398,
-    "status": "listing",
+    "status": "sold",
     "purchasePrice": 3382,
     "shipping": null,
     "feeRate": 0.1,
-    "memo": ""
+    "memo": "2026-10-21 メルカリ取引完了・売上反映確認。送料実績は未確認。",
+    "mercariId": "m95028776597",
+    "soldYear": 2026,
+    "soldMonth": 10,
+    "mercariSyncedAt": "2026-10-30T12:05:00+09:00"
   },
   {
     "id": "p131",
