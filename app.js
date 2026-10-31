@@ -3,8 +3,13 @@ const homeCard=document.getElementById('homeCard'), productPanel=document.getEle
 const metrics=document.querySelector('.metrics'), hero=document.querySelector('.hero');
 let products=[], currentTab='listing', editingId=null, salesMonth=0, productQuery='', productSort='default', chartStyle='mix';
 const productSearch=document.getElementById('productSearch'), clearSearch=document.getElementById('clearSearch'), productSortSelect=document.getElementById('productSort');
-const DATA_VERSION=409;
+const DATA_VERSION=410;
 const STORAGE_KEY='mstb_products_v3';
+const SOLD_KEY='mstb_sold_records_v1';
+function readSoldRecords(){try{return JSON.parse(localStorage.getItem(SOLD_KEY)||'{}')||{}}catch(e){return {}}}
+function storeSoldRecords(){const records=readSoldRecords();for(const p of products){if(p.status==='sold')records[p.id]={status:'sold',price:p.price,shipping:p.shipping??null,soldYear:p.soldYear??null,soldMonth:p.soldMonth??null,savedAt:new Date().toISOString()};else if(records[p.id])delete records[p.id]}localStorage.setItem(SOLD_KEY,JSON.stringify(records))}
+function applySoldRecords(){const records=readSoldRecords();for(const p of products){const v=records[p.id];if(v&&p.status!=='sold'){p.status='sold';p.price=v.price;p.shipping=v.shipping;p.soldYear=v.soldYear;p.soldMonth=v.soldMonth}}}
+
 const yen=n=>'¥'+Number(n||0).toLocaleString('ja-JP');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function calcProfit(p){if(p.status!=='sold'||p.purchasePrice==null||p.shipping==null)return null;return Math.round(p.price*(1-(p.feeRate??.1))-p.shipping-p.purchasePrice)}
@@ -71,11 +76,12 @@ async function loadProducts(){
    const tenthResponse=await fetch('./migration/waiting-batch-010.json',{cache:'no-store'});
    if(tenthResponse.ok){const tenthData=await tenthResponse.json();const known=new Set(products.map(p=>p.id));for(const entry of tenthData.items||[]){if(!known.has(entry.id)){products.push({...entry});known.add(entry.id)}else{const existing=products.find(p=>p.id===entry.id);if(existing&&existing.status==='waiting'){existing.photoUrls=entry.photoUrls||existing.photoUrls;existing.photoPaths=entry.photoPaths||existing.photoPaths;existing.photosBackedUp=!!entry.photosBackedUp;existing.migrationStatus=entry.migrationStatus||existing.migrationStatus}}}}
   }catch(err){console.warn('Waiting migration unavailable',err)}
+  applySoldRecords();
   persist()
   renderAll();
  }catch(e){console.warn(e)}
 }
-function persist(){localStorage.setItem(STORAGE_KEY,JSON.stringify(products));localStorage.setItem('mstb_data_version',String(DATA_VERSION))}
+function persist(){localStorage.setItem(STORAGE_KEY,JSON.stringify(products));localStorage.setItem('mstb_data_version',String(DATA_VERSION));storeSoldRecords()}
 function save(){persist();renderAll()}
 function renderAll(){
  const listed=products.filter(p=>p.status==='listing'), sold=products.filter(p=>p.status==='sold'), shipping=products.filter(p=>p.status==='shipping');
