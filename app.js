@@ -3,7 +3,7 @@ const homeCard=document.getElementById('homeCard'), productPanel=document.getEle
 const metrics=document.querySelector('.metrics'), hero=document.querySelector('.hero');
 let products=[], currentTab='listing', editingId=null, salesMonth=0, productQuery='', productSort='default', chartStyle='mix';
 const productSearch=document.getElementById('productSearch'), clearSearch=document.getElementById('clearSearch'), productSortSelect=document.getElementById('productSort');
-const DATA_VERSION=408;
+const DATA_VERSION=409;
 const STORAGE_KEY='mstb_products_v3';
 const yen=n=>'¥'+Number(n||0).toLocaleString('ja-JP');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -31,9 +31,9 @@ async function loadProducts(){
   const res=await fetch('./products.json?v=408',{cache:'no-store'}), base=await res.json();
   const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');
   const savedVersion=localStorage.getItem('mstb_data_version');
-  if(saved&&savedVersion===String(DATA_VERSION)){
+  if(Array.isArray(saved)){
    const byId=new Map(saved.map(x=>[x.id,x]));
-   products=base.map(b=>{const old=byId.get(b.id);return old?{...b,...old}:b});
+   products=base.map(b=>{const old=byId.get(b.id);if(!old)return b;const merged={...b,...old};if(b.status==='sold'&&old.status!=='sold')return {...merged,status:'sold',soldYear:b.soldYear,soldMonth:b.soldMonth,shipping:b.shipping??merged.shipping,price:b.price};return merged});
    const ids=new Set(products.map(x=>x.id)); saved.forEach(x=>{if(!ids.has(x.id))products.push(x)});
   }else{
    // データ更新版ではproducts.jsonを正として再同期し、古い発送待ち/販売済み状態を残さない。
