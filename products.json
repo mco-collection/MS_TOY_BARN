@@ -2367,5 +2367,20 @@
     "memo": "メルカリPOPさん下書き・未公開。仮価格・原価未照合。3体セットのため配送方法と発送元を要確認。",
     "source": "mercari_draft_2026-10-27",
     "draftCreatedAt": "2026-10-27"
+  },
+  {
+    "id": "inventory-war-hammer-titan-gitd-6",
+    "pop": "",
+    "name": "戦鎚の巨人 GITD 6インチ",
+    "series": "進撃の巨人",
+    "price": 0,
+    "status": "waiting",
+    "purchasePrice": 3088,
+    "shipping": null,
+    "feeRate": 0.1,
+    "variant": "GITD",
+    "size": "6 inch",
+    "source": "purchase_cost_record",
+    "memo": "仕入れ完全原価 ¥3,088（2026-09-30 原価表）。FUNKO売上対決は対象外。メルカリ出品価格・販売状態は未確認。"
   }
 ]
