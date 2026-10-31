@@ -1891,12 +1891,12 @@
     "price": 3980,
     "status": "waiting",
     "draftId": 1792160388,
-    "purchasePrice": null,
+    "purchasePrice": 1916,
     "shipping": null,
     "feeRate": 0.1,
     "listingTitle": "FUNKO POP! 犬夜叉 殺生丸の母 #1595",
     "photoUrls": [],
-    "memo": "メルカリ「ノマド＝POPさん」下書き。未公開。管理番号 CP-01-02。4インチ：定形外郵便を予定、発送4〜7日。仕入原価は既存のMTB手元データを優先し要照合。",
+    "memo": "メルカリ「ノマド＝POPさん」下書き。未公開。管理番号 CP-01-02。4インチ：定形外郵便を予定、発送4〜7日。仕入原価は既存のMTB手元データを優先し要照合。 完全原価 1916円（2026-09-30 第一回招集兵士原価表と管理番号で照合）。",
     "source": "mercari_draft_2026-10-25",
     "draftCreatedAt": "2026-10-25",
     "managementCode": "CP-01-02"
@@ -2026,7 +2026,7 @@
     "price": 11800,
     "status": "waiting",
     "draftId": 1032436211,
-    "purchasePrice": null,
+    "purchasePrice": 7299,
     "shipping": null,
     "feeRate": 0.1,
     "listingTitle": "FUNKO POP! ジョジョ ジョナサン ジョセフ カーズ 3体セット",
@@ -2034,9 +2034,10 @@
       "https://static.mercdn.net/draft/photos/9615774045679399971_1032436211_1.jpg",
       "https://static.mercdn.net/draft/photos/9615774045679399971_1032436211_2.jpg"
     ],
-    "memo": "メルカリ下書き・未公開。仕入原価は要照合。配送方法と発送元は要確認。",
+    "memo": "メルカリ下書き・未公開。仕入原価は要照合。配送方法と発送元は要確認。 完全原価 7299円（2026-09-30 第一回招集兵士原価表と管理番号で照合）。",
     "source": "mercari_draft_2026-10-26",
-    "draftCreatedAt": "2026-10-25"
+    "draftCreatedAt": "2026-10-25",
+    "managementCode": "MN-01-01"
   },
   {
     "id": "mercari-draft-535804569",
@@ -2166,7 +2167,7 @@
     "price": 4980,
     "status": "waiting",
     "draftId": 1732674484,
-    "purchasePrice": null,
+    "purchasePrice": 2433,
     "shipping": null,
     "feeRate": 0.1,
     "listingTitle": "FUNKO POP! BLEACH 朽木ルキア with コン #1731",
@@ -2174,7 +2175,7 @@
       "https://static.mercdn.net/draft/photos/9615774045679399971_1732674484_1.jpg",
       "https://static.mercdn.net/draft/photos/9615774045679399971_1732674484_2.jpg"
     ],
-    "memo": "メルカリ下書き・未公開。仕入原価は要照合。配送方法と発送元は要確認。",
+    "memo": "メルカリ下書き・未公開。仕入原価は要照合。配送方法と発送元は要確認。 完全原価 2433円（2026-09-30 第一回招集兵士原価表と管理番号で照合）。",
     "source": "mercari_draft_2026-10-26",
     "draftCreatedAt": "2026-10-25",
     "managementCode": "MN-01-04"
@@ -2208,7 +2209,7 @@
     "price": 5980,
     "status": "waiting",
     "draftId": 433325591,
-    "purchasePrice": null,
+    "purchasePrice": 2950,
     "shipping": null,
     "feeRate": 0.1,
     "listingTitle": "FUNKO POP! 葬送のフリーレン ミミック #1990 限定版",
@@ -2216,7 +2217,7 @@
       "https://static.mercdn.net/draft/photos/9615774045679399971_433325591_1.jpg",
       "https://static.mercdn.net/draft/photos/9615774045679399971_433325591_2.jpg"
     ],
-    "memo": "メルカリ下書き・未公開。仕入原価は要照合。配送方法と発送元は要確認。",
+    "memo": "メルカリ下書き・未公開。仕入原価は要照合。配送方法と発送元は要確認。 完全原価 2950円（2026-09-30 第一回招集兵士原価表と管理番号で照合）。",
     "source": "mercari_draft_2026-10-26",
     "draftCreatedAt": "2026-10-25",
     "managementCode": "CP-01-03"
@@ -2229,7 +2230,7 @@
     "price": 3980,
     "status": "waiting",
     "draftId": 519844505,
-    "purchasePrice": null,
+    "purchasePrice": 1916,
     "shipping": null,
     "feeRate": 0.1,
     "listingTitle": "FUNKO POP! 鬼滅の刃 蜘蛛の鬼 父 #1686 2024秋限定",
@@ -2237,7 +2238,7 @@
       "https://static.mercdn.net/draft/photos/9615774045679399971_519844505_1.jpg",
       "https://static.mercdn.net/draft/photos/9615774045679399971_519844505_2.jpg"
     ],
-    "memo": "メルカリ下書き・未公開。仕入原価は要照合。配送方法と発送元は要確認。",
+    "memo": "メルカリ下書き・未公開。仕入原価は要照合。配送方法と発送元は要確認。 完全原価 1916円（2026-09-30 第一回招集兵士原価表と管理番号で照合）。",
     "source": "mercari_draft_2026-10-26",
     "draftCreatedAt": "2026-10-25",
     "managementCode": "CP-01-05"
@@ -2250,7 +2251,7 @@
     "price": 5480,
     "status": "waiting",
     "draftId": 1481602085,
-    "purchasePrice": null,
+    "purchasePrice": 2432,
     "shipping": null,
     "feeRate": 0.1,
     "listingTitle": "FUNKO POP! 犬夜叉 殺生丸 #1301 蓄光 2023夏限定",
@@ -2258,7 +2259,7 @@
       "https://static.mercdn.net/draft/photos/9615774045679399971_1481602085_1.jpg",
       "https://static.mercdn.net/draft/photos/9615774045679399971_1481602085_2.jpg"
     ],
-    "memo": "メルカリ下書き・未公開。仕入原価は要照合。配送方法と発送元は要確認。",
+    "memo": "メルカリ下書き・未公開。仕入原価は要照合。配送方法と発送元は要確認。 完全原価 2432円（2026-09-30 第一回招集兵士原価表と管理番号で照合）。",
     "source": "mercari_draft_2026-10-26",
     "draftCreatedAt": "2026-10-25",
     "managementCode": "CP-01-04"
@@ -2271,7 +2272,7 @@
     "price": 4280,
     "status": "waiting",
     "draftId": 1154815270,
-    "purchasePrice": null,
+    "purchasePrice": 2432,
     "shipping": null,
     "feeRate": 0.1,
     "listingTitle": "FUNKO POP! ナルト 猫耳 #1980 2025夏限定",
@@ -2279,7 +2280,7 @@
       "https://static.mercdn.net/draft/photos/9615774045679399971_1154815270_1.jpg",
       "https://static.mercdn.net/draft/photos/9615774045679399971_1154815270_2.jpg"
     ],
-    "memo": "メルカリ下書き・未公開。仕入原価は要照合。配送方法と発送元は要確認。",
+    "memo": "メルカリ下書き・未公開。仕入原価は要照合。配送方法と発送元は要確認。 完全原価 2432円（2026-09-30 第一回招集兵士原価表と管理番号で照合）。",
     "source": "mercari_draft_2026-10-26",
     "draftCreatedAt": "2026-10-25",
     "managementCode": "CP-01-06"
@@ -2292,7 +2293,7 @@
     "price": 3280,
     "status": "waiting",
     "draftId": 1689471057,
-    "purchasePrice": null,
+    "purchasePrice": 1397,
     "shipping": null,
     "feeRate": 0.1,
     "listingTitle": "FUNKO POP! 進撃の巨人 ポルコ・ガリアード #1402",
@@ -2300,7 +2301,7 @@
       "https://static.mercdn.net/draft/photos/9615774045679399971_1689471057_1.jpg",
       "https://static.mercdn.net/draft/photos/9615774045679399971_1689471057_2.jpg"
     ],
-    "memo": "メルカリ下書き・未公開。仕入原価は要照合。配送方法と発送元は要確認。",
+    "memo": "メルカリ下書き・未公開。仕入原価は要照合。配送方法と発送元は要確認。 完全原価 1397円（2026-09-30 第一回招集兵士原価表と管理番号で照合）。",
     "source": "mercari_draft_2026-10-26",
     "draftCreatedAt": "2026-10-25",
     "managementCode": "CP-01-01"
@@ -2313,7 +2314,7 @@
     "price": 3480,
     "status": "waiting",
     "draftId": 2106720811,
-    "purchasePrice": null,
+    "purchasePrice": 1397,
     "shipping": null,
     "feeRate": 0.1,
     "listingTitle": "FUNKO POP! NARUTO 我愛羅 #1649 2024夏限定",
@@ -2321,7 +2322,7 @@
       "https://static.mercdn.net/draft/photos/9615774045679399971_2106720811_1.jpg",
       "https://static.mercdn.net/draft/photos/9615774045679399971_2106720811_2.jpg"
     ],
-    "memo": "メルカリ下書き・未公開。仕入原価は要照合。配送方法と発送元は要確認。",
+    "memo": "メルカリ下書き・未公開。仕入原価は要照合。配送方法と発送元は要確認。 完全原価 1397円（2026-09-30 第一回招集兵士原価表と管理番号で照合）。",
     "source": "mercari_draft_2026-10-26",
     "draftCreatedAt": "2026-10-25",
     "managementCode": "MN-01-05"
@@ -2334,7 +2335,7 @@
     "price": 10960,
     "status": "waiting",
     "draftId": 1042662180,
-    "purchasePrice": null,
+    "purchasePrice": 5900,
     "shipping": null,
     "feeRate": 0.1,
     "listingTitle": "FUNKO POP! カーズ マックィーン＆メーター 限定2体セット",
@@ -2342,7 +2343,7 @@
       "https://static.mercdn.net/draft/photos/9615774045679399971_1042662180_1.jpg",
       "https://static.mercdn.net/draft/photos/9615774045679399971_1042662180_2.jpg"
     ],
-    "memo": "メルカリ下書き・未公開。仕入原価は要照合。配送方法と発送元は要確認。",
+    "memo": "メルカリ下書き・未公開。仕入原価は要照合。配送方法と発送元は要確認。 完全原価 5900円（2026-09-30 第一回招集兵士原価表と管理番号で照合）。",
     "source": "mercari_draft_2026-10-26",
     "draftCreatedAt": "2026-10-25",
     "managementCode": "MN-01-02"
