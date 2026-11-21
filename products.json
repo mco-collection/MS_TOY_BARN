@@ -1315,7 +1315,7 @@
     "pop": "",
     "name": "宍田獣郎太",
     "series": "My Hero Academia",
-    "price": 3099,
+    "price": 3299,
     "status": "listing",
     "mercariId": "m47713251532",
     "mercariSyncedAt": "2026-08-07T23:46:00+09:00"
@@ -1325,7 +1325,7 @@
     "pop": "",
     "name": "ココポップス ココくん",
     "series": "Coco Pops",
-    "price": 3999,
+    "price": 4199,
     "status": "listing",
     "mercariId": "m31169645572",
     "mercariSyncedAt": "2026-08-07T23:46:00+09:00"
@@ -1335,7 +1335,7 @@
     "pop": "",
     "name": "ミッキーのジャックと豆の木",
     "series": "Disney",
-    "price": 2799,
+    "price": 2999,
     "status": "listing",
     "mercariId": "m14880277411",
     "mercariSyncedAt": "2026-08-07T23:46:00+09:00"
@@ -1345,7 +1345,7 @@
     "pop": "",
     "name": "うずまきナルト",
     "series": "Naruto",
-    "price": 4699,
+    "price": 4899,
     "status": "listing",
     "mercariId": "m18854496560",
     "mercariSyncedAt": "2026-08-07T23:46:00+09:00"
@@ -1355,7 +1355,7 @@
     "pop": "",
     "name": "ハローキティ 2体セット",
     "series": "Hello Kitty / Sanrio",
-    "price": 7599,
+    "price": 7799,
     "status": "listing",
     "mercariId": "m31724542735",
     "mercariSyncedAt": "2026-08-07T23:46:00+09:00"
@@ -2343,8 +2343,8 @@
     "pop": "",
     "name": "カーズ マックィーン＆メーター 限定2体セット",
     "series": "",
-    "price": 10960,
-    "status": "waiting",
+    "price": 10699,
+    "status": "shipping",
     "draftId": 1042662180,
     "purchasePrice": 5900,
     "shipping": null,
@@ -2354,10 +2354,12 @@
       "https://static.mercdn.net/draft/photos/9615774045679399971_1042662180_1.jpg",
       "https://static.mercdn.net/draft/photos/9615774045679399971_1042662180_2.jpg"
     ],
-    "memo": "メルカリ下書き・未公開。仕入原価は要照合。配送方法と発送元は要確認。 完全原価 5900円（2026-09-30 第一回招集兵士原価表と管理番号で照合）。",
-    "source": "mercari_draft_2026-10-26",
+    "memo": "メルカリ下書き・未公開。仕入原価は要照合。配送方法と発送元は要確認。 完全原価 5900円（2026-09-30 第一回招集兵士原価表と管理番号で照合）。 メルカリ売却確認：10699円。2026-11-22発送予定（本人申告）。取引完了未確認。",
+    "source": "mercari_sale_2026-11-21",
     "draftCreatedAt": "2026-10-25",
-    "managementCode": "MN-01-02"
+    "managementCode": "MN-01-02",
+    "mercariId": "m29254663190",
+    "shippingPlannedDate": "2026-11-22"
   },
   {
     "id": "mercari-draft-1987961565",
@@ -2399,7 +2401,7 @@
     "pop": "",
     "name": "リラックマ 6体セット フロッキー限定",
     "series": "",
-    "price": 23999,
+    "price": 22999,
     "status": "listing",
     "purchasePrice": 12918,
     "shipping": null,
