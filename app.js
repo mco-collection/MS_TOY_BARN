@@ -3,7 +3,8 @@ const homeCard=document.getElementById('homeCard'), productPanel=document.getEle
 const metrics=document.querySelector('.metrics'), hero=document.querySelector('.hero');
 let products=[], currentTab='listing', editingId=null, salesMonth=0, productQuery='', productSort='default', chartStyle='mix';
 const productSearch=document.getElementById('productSearch'), clearSearch=document.getElementById('clearSearch'), productSortSelect=document.getElementById('productSort');
-const DATA_VERSION=410;
+const DATA_VERSION=411;
+const MERCARI_SYNC_411_IDS=new Set(['m001','m002','m003','m004','m005','mercari-m46864057037','mercari-draft-1042662180']);
 const STORAGE_KEY='mstb_products_v3';
 const SOLD_KEY='mstb_sold_records_v1';
 function readSoldRecords(){try{return JSON.parse(localStorage.getItem(SOLD_KEY)||'{}')||{}}catch(e){return {}}}
@@ -38,7 +39,7 @@ async function loadProducts(){
   const savedVersion=localStorage.getItem('mstb_data_version');
   if(Array.isArray(saved)){
    const byId=new Map(saved.map(x=>[x.id,x]));
-   products=base.map(b=>{const old=byId.get(b.id);if(!old)return b;const merged={...b,...old};if(b.status==='sold'&&old.status!=='sold')return {...merged,status:'sold',soldYear:b.soldYear,soldMonth:b.soldMonth,shipping:b.shipping??merged.shipping,price:b.price};return merged});
+   products=base.map(b=>{const old=byId.get(b.id);if(!old)return b;const merged={...b,...old};if(Number(savedVersion||0)<411&&MERCARI_SYNC_411_IDS.has(b.id)){merged.price=b.price;if(b.id==='mercari-draft-1042662180'){merged.status='shipping';merged.mercariId=b.mercariId;merged.shippingPlannedDate=b.shippingPlannedDate;merged.memo=b.memo;}}if(b.status==='sold'&&old.status!=='sold')return {...merged,status:'sold',soldYear:b.soldYear,soldMonth:b.soldMonth,shipping:b.shipping??merged.shipping,price:b.price};return merged});
    const ids=new Set(products.map(x=>x.id)); saved.forEach(x=>{if(!ids.has(x.id))products.push(x)});
   }else{
    // データ更新版ではproducts.jsonを正として再同期し、古い発送待ち/販売済み状態を残さない。
